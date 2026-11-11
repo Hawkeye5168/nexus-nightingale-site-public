@@ -1,0 +1,79 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-012",
+    "disease_name": "Angelman Syndrome",
+    "short_name": "AS",
+    "gene": "UBE3A",
+    "uniprot": "Q05086",
+    "protein_name": "Ubiquitin-protein ligase E3A (E6AP)",
+    "protein_length_aa": 875,
+    "omim_id": 105830,
+    "orpha_code": 72,
+    "category": "Neurodevelopmental / Haploinsufficiency",
+    "inheritance": "Maternal UBE3A allele loss — paternal allele is imprinted (silenced) in neurons; 15q11-q13 deletion or UBE3A mutation on the maternal chromosome",
+    "mechanism": "Haploinsufficiency via imprinting. In neurons, the paternal UBE3A allele is normally silenced by genomic imprinting, so only the maternal allele is expressed. Loss of the maternal allele (deletion, mutation, or paternal uniparental disomy) leaves neurons with no functional UBE3A. This is a loss-of-function, but the fix is NOT to add enzyme — it is to UNSILENCE the intact paternal allele.",
+    "mechanism_class": "haploinsufficiency",
+    "recommended_modality": "unsilence (reactivate paternal UBE3A — ASO, investigational)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. Angelman is a loss-of-function/haploinsufficiency disease — UBE3A is absent, not accumulated. Degrading any residual UBE3A would worsen the disease. The correct route is to UNSILENCE the intact paternal UBE3A allele (the paternal copy is present but epigenetically off).",
+    "prevalence": "~1 in 12,000-20,000 — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "6-12 months (developmental delay, ataxia, seizures, happy demeanor)",
+    "approved_treatments": [],
+    "combination_therapy": "",
+    "investigational": [
+      "Antisense oligonucleotides to unsilence paternal UBE3A (e.g. targeting UBE3A-ATS antisense transcript — clinical)",
+      "AAV9-UBE3A gene therapy (preclinical)",
+      "Symptomatic: anti-seizure medication (levetiracetam, etc.)"
+    ],
+    "clinical_trials_count": 8,
+    "key_pmid": 37599585,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "Q05086 (UBE3A, 875 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/Q05086",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 72 (Angelman syndrome)",
+        "url": "https://www.orpha.net/en/disease/detail/72",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "105830 (Angelman Syndrome)",
+        "url": "https://omim.org/entry/105830",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "Expert Rev Neurother 2023",
+        "accession": "37599585",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37599585/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "Q05086 = UBE3A (Ubiquitin-protein ligase E3A), 875 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "Maternal UBE3A allele loss / imprinting — SOURCE CHECKED (OMIM 105830)",
+      "inheritance": "Maternal UBE3A loss, paternal imprinted — SOURCE CHECKED (OMIM 105830; Orphanet)",
+      "orpha_code": "72 = Angelman syndrome (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "No approved therapy — N/A (no small-molecule drug to cite)",
+      "fda_date": "No FDA-approved disease-modifying therapy — N/A"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 72 confirmed live via Orphanet API.",
+      "CLARIFIED: Angelman is HAPLOINSUFFICIENCY via imprinting — the fix is UNSILENCING the paternal allele (ASO), not degradation, not enzyme replacement, not a channel drug."
+    ],
+    "human_summary": "Angelman syndrome is a neurodevelopmental disorder caused by loss of the maternal UBE3A allele, leaving neurons without UBE3A because the paternal allele is normally silenced by imprinting. It causes severe developmental delay, ataxia, seizures, and a characteristic happy demeanor. The therapeutic frontier is antisense-mediated unsilencing of the intact paternal allele.",
+    "clinical_trials_total": 56,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "8 curated interventional trials; 56 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

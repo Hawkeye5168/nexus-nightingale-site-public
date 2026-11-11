@@ -1,0 +1,79 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-013",
+    "disease_name": "Myotonic Dystrophy Type 1",
+    "short_name": "DM1 / Steinert disease",
+    "gene": "DMPK",
+    "uniprot": "Q09013",
+    "protein_name": "Myotonin-protein kinase",
+    "protein_length_aa": 629,
+    "omim_id": 160900,
+    "orpha_code": 273,
+    "category": "Trinucleotide Repeat / RNA Toxicity",
+    "inheritance": "Autosomal dominant — CTG trinucleotide repeat expansion in the 3' UTR of DMPK",
+    "mechanism": "RNA toxicity (not protein toxicity). The expanded CUG repeat in DMPK mRNA forms nuclear foci that sequester RNA-binding proteins (e.g. MBNL1) and misregulate alternative splicing, causing myotonia, muscle weakness, cardiac conduction defects, and cataracts. The toxic species is the mutant RNA, not the protein.",
+    "mechanism_class": "rna_toxicity",
+    "recommended_modality": "aso (antisense to degrade the toxic CUG-repeat RNA)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible (protein-level). The toxic species is the mutant DMPK mRNA (CUG-repeat foci), not the DMPK protein. A protein degrader would not address the RNA-level toxicity. The correct route is antisense oligonucleotides that degrade the toxic RNA, or splice-modulating small molecules.",
+    "prevalence": "~1 in 8,000 (most common adult muscular dystrophy) — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Adult onset (20-40 years); congenital form in infancy (severe)",
+    "approved_treatments": [],
+    "combination_therapy": "",
+    "investigational": [
+      "Antisense oligonucleotides targeting the CUG-repeat RNA (e.g. baliforsen/IONIS-DMPKRx — clinical)",
+      "Small-molecule MBNL1 splice modulators (preclinical)",
+      "CRISPR/Cas9 excision of the CTG repeat (preclinical)"
+    ],
+    "clinical_trials_count": 15,
+    "key_pmid": 40983775,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "Q09013 (DMPK, 629 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/Q09013",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 273 (Steinert myotonic dystrophy)",
+        "url": "https://www.orpha.net/en/disease/detail/273",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "160900 (Myotonic Dystrophy 1)",
+        "url": "https://omim.org/entry/160900",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "Nat Rev Neurol 2025",
+        "accession": "40983775",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40983775/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "Q09013 = DMPK (Myotonin-protein kinase), 629 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "CTG repeat expansion in DMPK 3' UTR — SOURCE CHECKED (OMIM 160900)",
+      "inheritance": "Autosomal dominant — SOURCE CHECKED (OMIM 160900; Orphanet)",
+      "orpha_code": "273 = Steinert myotonic dystrophy (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "No approved disease-modifying therapy — N/A",
+      "fda_date": "No FDA-approved disease-modifying therapy — N/A"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 273 confirmed live via Orphanet API.",
+      "CLARIFIED: DM1 is RNA-TOXICITY (mutant CUG-repeat mRNA sequesters splicing factors), NOT protein toxicity. The correct modality is antisense RNA degradation, not a protein degrader."
+    ],
+    "human_summary": "Myotonic dystrophy type 1 is an autosomal dominant disorder caused by a CTG repeat expansion in DMPK, whose expanded CUG-repeat mRNA forms toxic nuclear foci that disrupt RNA splicing. It causes myotonia, progressive muscle weakness, cardiac conduction defects, and cataracts. Antisense therapy targeting the toxic RNA is the leading disease-modifying approach.",
+    "clinical_trials_total": 180,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "15 curated interventional trials; 180 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

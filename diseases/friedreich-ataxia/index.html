@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friedreich Ataxia — NEXUS NIGHTINGALE disease dossier</title>
+<meta name="description" content="Friedreich Ataxia (FXN): mechanism, inheritance, approved treatment and the NIGHTINGALE route. Source-linked research registry entry ORPHAN-002.">
+<link rel="canonical" href="https://sabretek.ltd/diseases/friedreich-ataxia/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Friedreich Ataxia — NEXUS NIGHTINGALE">
+<meta property="og:description" content="Friedreich Ataxia (FXN): mechanism, inheritance, approved treatment and the NIGHTINGALE route. Source-linked research registry entry ORPHAN-002.">
+<meta property="og:url" content="https://sabretek.ltd/diseases/friedreich-ataxia/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{
+    --navy:#173F5F; --navy-deep:#0E2A40; --steel:#41789B;
+    --cerulean:#76B5C5; --cyan:#A9CFD9; --slate:#D1D9E0;
+    --offwhite:#F3F7F9; --white:#FFFFFF; --verified:#1FA88C; --warning:#E0A94B; --flag:#C7562F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+       color:var(--navy); background:var(--offwhite); line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--cerulean); text-decoration:none;} a:hover{text-decoration:underline;}
+  nav{position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center;
+      justify-content:space-between; padding:14px 40px; background:rgba(243,247,249,0.94);
+      backdrop-filter:blur(10px); border-bottom:1px solid var(--slate);}
+  nav .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:1px; color:var(--navy);}
+  nav .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  nav .brand span i{font-style:normal; color:var(--steel);}
+  nav .links{display:flex; gap:22px; font-size:14px;}
+  nav .links a{color:var(--navy); font-weight:600;}
+
+  header.dhero{padding:128px 24px 52px; background:linear-gradient(180deg,var(--offwhite) 0%,#E7EEF2 100%);
+    border-bottom:1px solid var(--slate);}
+  .dhero .wrap{max-width:1060px; margin:0 auto;}
+  .kicker{text-transform:uppercase; letter-spacing:4px; font-size:11.5px; font-weight:800; color:var(--cerulean); margin-bottom:14px;}
+  header.dhero h1{font-size:clamp(30px,4.6vw,50px); line-height:1.08; font-weight:800; margin-bottom:14px; max-width:20ch;}
+  header.dhero .sub{font-size:18px; color:var(--steel); margin-bottom:20px;}
+  .badges{display:flex; gap:8px; flex-wrap:wrap;}
+  .badge{display:inline-block; font-size:12px; font-weight:700; padding:6px 11px; border-radius:999px;
+    background:var(--white); border:1px solid var(--slate); color:var(--steel);}
+  .badge.ok{color:var(--verified); border-color:rgba(31,168,140,0.35); background:rgba(31,168,140,0.07);}
+  .badge.warn{color:#8A6417; border-color:rgba(224,169,75,0.5); background:rgba(224,169,75,0.10);}
+
+  main{max-width:1060px; margin:0 auto; padding:48px 24px 80px;}
+  section.block{margin-bottom:44px;}
+  section.block h2{font-size:24px; line-height:1.2; margin-bottom:14px;}
+  section.block h2 .num{color:var(--cerulean); font-weight:800; margin-right:8px;}
+  section.block p{font-size:16.5px; color:#2C4E66; margin-bottom:0.9em; max-width:78ch;}
+  .lead{font-size:18.5px; color:var(--steel);}
+
+  .glance{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;}
+  .fact{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:16px 18px;}
+  .fact .k{font-size:10.5px; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; color:var(--cerulean); margin-bottom:5px;}
+  .fact .v{font-size:14.5px; font-weight:600; color:var(--navy); line-height:1.45; word-break:break-word;}
+  .fact .v small{display:block; font-weight:400; color:var(--steel); font-size:12.5px; margin-top:3px;}
+
+  .route{background:var(--navy); color:var(--white); border-radius:14px; padding:28px 30px;}
+  .route h2{color:var(--white);} .route p{color:var(--cyan);} .route p strong{color:var(--white);} .route .why{color:var(--slate); font-size:15px;}
+  .route .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+  .route .pill{font-size:12px; font-weight:800; padding:6px 12px; border-radius:999px;
+    background:rgba(169,207,217,0.14); color:var(--cyan); border:1px solid rgba(169,207,217,0.3);}
+  .route .pill.yes{background:rgba(31,168,140,0.18); color:#8FE3D2; border-color:rgba(31,168,140,0.4);}
+  .route .pill.no{background:rgba(199,86,47,0.18); color:#F2B39B; border-color:rgba(199,86,47,0.4);}
+
+  .drug{background:var(--white); border:1px solid var(--slate); border-radius:12px; padding:20px 22px; margin-bottom:12px;}
+  .drug-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px;}
+  .drug-head h3{font-size:18px;}
+  .drug .meta{font-size:12.5px; color:var(--cerulean); font-weight:700; margin-bottom:8px;}
+  .drug p{font-size:14.5px; color:var(--steel); margin:0;}
+  .pill-date{font-size:11.5px; font-weight:800; color:var(--verified); background:rgba(31,168,140,0.08);
+    border:1px solid rgba(31,168,140,0.25); padding:4px 9px; border-radius:999px; white-space:nowrap;}
+
+  ul.plain{margin:0 0 0 1.15em; color:#2C4E66; font-size:15.5px;}
+  ul.plain li{margin-bottom:0.4em;}
+  ul.verif{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  ul.verif li{background:var(--white); border:1px solid var(--slate); border-left:4px solid var(--verified);
+    border-radius:8px; padding:11px 14px; font-size:14px; color:#2C4E66;}
+  ul.verif li.warn{border-left-color:var(--warning); background:#FDF8EF; color:#7A5B1E;}
+
+  table.src{width:100%; border-collapse:collapse; font-size:13.5px;}
+  table.src th, table.src td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--slate); vertical-align:top;}
+  table.src th{font-size:10.5px; text-transform:uppercase; letter-spacing:1px; color:var(--steel);}
+  table.src a{word-break:break-all;}
+
+  .note{background:#EDF3F6; border-left:4px solid var(--steel); border-radius:8px; padding:16px 20px;
+    font-size:14.5px; color:#2F5B76;}
+  .warnbox{background:#FDF8EF; border-left:4px solid var(--warning); border-radius:8px; padding:16px 20px;
+    font-size:14px; color:#7A5B1E; margin-top:12px;}
+
+  details.corr{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:14px 18px;}
+  details.corr summary{cursor:pointer; font-weight:700; font-size:14px; color:var(--steel);}
+  details.corr ul{margin:10px 0 0 1.15em; font-size:14px; color:var(--steel);}
+
+  .pager{display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--slate); padding-top:24px; margin-top:48px;}
+  .pager a{font-size:14px; font-weight:700; color:var(--navy); border:1px solid var(--slate);
+    border-radius:8px; padding:11px 16px; background:var(--white);}
+  .pager a:hover{border-color:var(--navy); text-decoration:none;}
+  .pager .spacer{flex:1;}
+
+  footer{background:var(--navy-deep); color:var(--slate); padding:44px 40px 30px;}
+  footer .fwrap{max-width:1060px; margin:0 auto; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  footer p{font-size:13px; margin-bottom:6px;} footer a{color:var(--cyan);}
+  footer .legal{border-top:1px solid rgba(169,207,217,0.2); margin-top:28px; padding-top:18px;
+    max-width:1060px; margin-left:auto; margin-right:auto; font-size:12px; text-align:center;}
+
+  @media(max-width:820px){
+    nav{padding:14px 20px;} nav .links{display:none;}
+    header.dhero{padding:108px 18px 40px;}
+    main{padding:32px 18px 64px;}
+    .route{padding:22px;}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="/" style="text-decoration:none;">
+    <img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE">
+    <span><b>NEXUS</b> <i>NIGHTINGALE</i></span>
+  </a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/#pipeline">Pipeline</a>
+    <a href="/course/">Course</a>
+    <a href="/#diseases">Diseases</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="dhero">
+  <div class="wrap">
+    <div class="kicker">Disease dossier · ORPHAN-002</div>
+    <h1>Friedreich Ataxia</h1>
+    <p class="sub">FXN · Neurodegenerative / Trinucleotide Repeat</p>
+    <div class="badges">
+      <span class="badge ok">Source-linked research registry</span>
+      <span class="badge">ORPHA 95</span>
+      <span class="badge">OMIM 229300</span>
+    </div>
+  </div>
+</header>
+
+<main>
+    <p class="note"><strong>Source check 7 Nov 2026:</strong> UniProt identity, Orphanet code, ClinicalTrials.gov total and key citation rechecked. Exact prevalence and regulatory dates are not all revalidated.</p>
+  <section class="block">
+    <h2><span class="num">01</span>At a glance</h2>
+    <div class="glance"><div class="fact"><div class="k">Gene</div><div class="v">FXN</div></div><div class="fact"><div class="k">Protein</div><div class="v">Frataxin, mitochondrial (mature form 81–210)<small>UniProt Q16595 · 210 aa precursor · PDB 3T3K construct 82–210 (Q148R)</small></div></div><div class="fact"><div class="k">Inheritance</div><div class="v">Autosomal recessive — biallelic GAA trinucleotide repeat expansion in intron 1 of FXN</div></div><div class="fact"><div class="k">Age of onset</div><div class="v">Typically 5-15 years (gait ataxia); can be later in milder forms</div></div><div class="fact"><div class="k">Prevalence</div><div class="v">1–9 per 100,000 (Orphanet); ~1 in 20,000–1 in 50,000 in people of Caucasian descent<small>Orphanet ORPHA:95; carrier-frequency estimate not independently verified</small></div></div><div class="fact"><div class="k">Category</div><div class="v">Neurodegenerative / Trinucleotide Repeat</div></div><div class="fact"><div class="k">Mechanism class</div><div class="v">enzyme_lof</div></div><div class="fact"><div class="k">Clinical trials</div><div class="v">12 registry-listed trials<small>115 ClinicalTrials.gov total (7 Nov 2026)</small></div></div></div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">02</span>What it is</h2>
+    <p class="lead">Friedreich ataxia is the most common hereditary ataxia. Progressive gait and limb ataxia, dysarthria, and cardiomyopathy typically begin in adolescence. Most cases are caused by a GAA repeat expansion that silences frataxin, a mitochondrial protein needed for iron-sulfur cluster assembly.</p>
+    
+  </section>
+
+  <section class="block">
+    <h2><span class="num">03</span>What goes wrong</h2>
+    <p>Loss-of-function. The expanded GAA repeat in FXN intron 1 forms a triplex/heterochromatin structure that impedes transcription elongation and induces locus-specific transcriptional silencing of FXN. This reduces frataxin substantially — commonly cited as ~5–30% of normal — impairing mitochondrial iron-sulfur cluster (ISC) biogenesis and leading to iron accumulation and oxidative stress.</p>
+    <p class="note">Structural note: the pipeline resolves FXN to PDB 3T3K, the Q148R disease-variant construct covering residues 82–210. It is not wild-type frataxin and not the full 210-residue precursor.</p>
+    <p class="note">The newer FXN evidence map (7 Nov 2026) uses experimental structures <strong>1EKG</strong> (1.8 Å) and <strong>3S4M</strong> (1.3 Å) for its figures. They are different constructs from 3T3K and are not interchangeable; the evidence map states the construct and its limits.</p>
+  </section>
+
+  <section class="block">
+    <div class="route">
+      <h2><span class="num">04</span>How NIGHTINGALE routes it</h2>
+      <div class="pillrow">
+        <span class="pill">mechanism: enzyme_lof</span>
+        <span class="pill no">not a degradation target</span>
+      </div>
+      <p style="color:#DCEBF2;"><strong style="color:#FFFFFF;">Recommended modality:</strong> upregulator (Nrf2 activator approved) + gene therapy (investigational)</p>
+      <p class="why">NOT eligible. FRDA is a loss-of-function disease — frataxin is depleted, not accumulated. Degrading frataxin further would worsen the disease. Correct route is frataxin restoration (upregulators, gene therapy), not protein degradation.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">05</span>Treatment today</h2>
+    <div class="drug"><div class="drug-head"><h3>Omaveloxolone (Skyclarys)</h3><span class="pill-date">2023-02-28 (Reata Pharmaceuticals, NDA 216718)</span></div><div class="meta">Nrf2 activator · 554.7 Da · PubChem CID 71811910</div><p>Activates the Nrf2 antioxidant pathway, reducing oxidative stress and improving mitochondrial function. It does NOT restore frataxin expression directly; it mitigates downstream oxidative damage.</p></div>
+    <p style="margin-top:14px;padding:12px 14px;border-left:3px solid var(--warning);background:var(--white);border-radius:6px;"><strong>UK access:</strong> The <a href="https://www.gov.uk/government/news/mhra-approves-first-uk-treatment-for-friedreichs-ataxia-omaveloxolone" rel="noopener">MHRA</a> approved omaveloxolone on 23 April 2025. <a href="https://www.nice.org.uk/guidance/ta1061" rel="noopener">NICE TA1061</a> was terminated on 6 May 2025 after Biogen withdrew its submission, and <a href="https://scottishmedicines.org.uk/medicines-advice/omaveloxolone-skyclarys-full-smc2845" rel="noopener">SMC2845</a> did not recommend it on 9 March 2026. It is <strong>not routinely available on the NHS</strong>; individual funding routes exist but are discretionary.</p>
+    <p class="note"><strong>Trial evidence:</strong> MOXIe part 2 (<a href="https://clinicaltrials.gov/study/NCT02255435" rel="noopener">NCT02255435</a>) randomised 103 people; 82 were in the full analysis set. The published 48-week result reports a between-group mFARS difference of −2.40 ± 0.96 (p = 0.014), with transient aminotransferase increases and more headache, nausea and fatigue in the omaveloxolone arm (<a href="https://pubmed.ncbi.nlm.nih.gov/33068037/" rel="noopener">Lynch et al., Ann Neurol 2021</a>). This is a group result, not a guarantee of individual or long-term benefit.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">06</span>In the pipeline</h2>
+    <ul class="plain"><li>Frataxin gene therapy (AAV-mediated, preclinical/early clinical)</li><li>Etravirine (NNRTI) — reported to increase frataxin expression (Phase 2 FAEST1, NCT04273165, COMPLETED Jan 2023)</li><li>Omaveloxolone + idebenone (Nrf2 + mitochondrial antioxidant)</li><li>Histone deacetylase inhibitors (e.g. HDAC3) — preclinical frataxin upregulation</li></ul>
+    
+    <p><strong>Key reference (frataxin maturation):</strong> PMID 18725397 · <a href="https://pubmed.ncbi.nlm.nih.gov/18725397/" rel="noopener">PubMed</a></p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">07</span>Source checks</h2>
+    <p class="lead">Every line below is the registry's own verification record — what was checked, against which source, and what is still open.</p>
+    <ul class="verif"><li class=""><strong>uniprot:</strong> Q16595 = FXN (Frataxin, mitochondrial), 210 aa precursor — SOURCE CHECKED via UniProt REST API (live)</li><li class=""><strong>gene mutation:</strong> GAA repeat expansion in intron 1 of FXN — SOURCE CHECKED (PMC4654050: expanded GAA repeats impede transcription elongation + induce silencing)</li><li class=""><strong>inheritance:</strong> Autosomal recessive — SOURCE CHECKED (OMIM 229300; Orphanet ORPHAcode 95)</li><li class=""><strong>orpha code:</strong> 95 = Friedreich ataxia — SOURCE CHECKED via Orphanet public entry (accessed 2026-11-02)</li><li class=""><strong>MHRA:</strong> omaveloxolone approved 2025-04-23 — SOURCE CHECKED (GOV.UK)</li><li class=""><strong>NICE:</strong> TA1061 terminated 2025-05-06 — SOURCE CHECKED (NICE)</li><li class=""><strong>SMC:</strong> SMC2845 not recommended 2026-03-09 — SOURCE CHECKED (SMC)</li><li class=""><strong>drug mw:</strong> 554.7 Da, CID 71811910, C33H44F2N2O3 — SOURCE CHECKED via PubChem REST API (live)</li><li class=""><strong>fda date:</strong> 2023-02-28 (NDA 216718) — SOURCE CHECKED via FDA accessdata (live)</li></ul>
+    
+  </section>
+
+  <section class="block">
+    <h2><span class="num">08</span>Sources</h2>
+    <table class="src">
+      <tr><th>Fact</th><th>Source</th><th>Accession</th><th>Retrieved</th></tr>
+      <tr><td>Gene/protein identity</td><td>UniProt</td><td><a href="https://rest.uniprot.org/uniprotkb/Q16595" rel="noopener">Q16595 (FXN, Frataxin mitochondrial, 210 aa)</a></td><td>2026-10-04</td></tr><tr><td>Disease classification &amp; definition</td><td>Orphanet</td><td><a href="https://www.orpha.net/en/disease/detail/95" rel="noopener">ORPHAcode 95 (Friedreich ataxia)</a></td><td>2026-10-04</td></tr><tr><td>Inheritance &amp; genetics</td><td>OMIM</td><td><a href="https://omim.org/entry/229300" rel="noopener">229300 (Friedreich Ataxia, FRDA)</a></td><td>2026-10-04</td></tr><tr><td>GAA repeat silencing mechanism</td><td>PMC</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4654050/" rel="noopener">PMC4654050 (expanded GAA repeats impede transcription elongation and induce FXN silencing)</a></td><td>2026-10-04</td></tr>
+      <tr><td>Frataxin level</td><td>GeneReviews</td><td><a href="https://www.ncbi.nlm.nih.gov/books/NBK1281/" rel="noopener">Friedreich Ataxia (NBK1281)</a></td><td>2026-11-02</td></tr><tr><td>Drug molecular weight</td><td>PubChem</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/71811910/property/MolecularWeight/JSON" rel="noopener">CID 71811910 (omaveloxolone, 554.7 Da)</a></td><td>2026-10-04</td></tr><tr><td>FDA approval</td><td>FDA</td><td><a href="https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/216718Orig1s000Approv.pdf" rel="noopener">NDA 216718 (Skyclarys/omaveloxolone, 2023-02-28)</a></td><td>2026-10-04</td></tr>
+      <tr><td>UK approval</td><td>MHRA</td><td><a href="https://www.gov.uk/government/news/mhra-approves-first-uk-treatment-for-friedreichs-ataxia-omaveloxolone" rel="noopener">Omaveloxolone approved 2025-04-23</a></td><td>2026-11-02</td></tr>
+      <tr><td>NICE appraisal</td><td>NICE</td><td><a href="https://www.nice.org.uk/guidance/ta1061" rel="noopener">TA1061 terminated 2025-05-06</a></td><td>2026-11-02</td></tr>
+      <tr><td>Scottish appraisal</td><td>SMC</td><td><a href="https://scottishmedicines.org.uk/medicines-advice/omaveloxolone-skyclarys-full-smc2845" rel="noopener">SMC2845 not recommended 2026-03-09</a></td><td>2026-11-02</td></tr>
+      <tr><td>Clinical trial count</td><td>ClinicalTrials.gov</td><td><a href="https://clinicaltrials.gov/search?cond=Friedreich%20Ataxia" rel="noopener">115 studies in total; 12 registry-listed trials</a></td><td>2026-11-02</td></tr>
+      <tr><td>Structural target</td><td>RCSB PDB</td><td><a href="https://www.rcsb.org/structure/3T3K" rel="noopener">3T3K — Q148R frataxin construct, 1.24 Å</a></td><td>2026-11-02</td></tr>
+    </table>
+    <div class="note" style="margin-top:16px;">
+      Source record: <a href="/diseases/data/ORPHAN-002.json" download>ORPHAN-002.json</a> — orphan registry v2.0-fresh-2026-10-04; UK access and trial-count clarifications added 2026-11-02.
+      Protocol: TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet
+    </div>
+    <div class="note" style="margin-top:10px; font-size:13.5px;">Fresh orphan registry entry built 2026-10-04. Supersedes the prior Friedreich dossier which contained 6 wrong PDB citations, a 1000x etravirine dose error, and a wrong omaveloxolone approval date.</div>
+  </section>
+
+  <section class="block"><details class="corr"><summary>Corrections carried into registry v2 (6)</summary><ul><li>FIXED: prior dossier cited PDB 1UXL as &#x27;human frataxin&#x27; — it is actually SOD1 I113T mutant. Removed.</li><li>FIXED: prior dossier had 6 of 8 PDB citations wrong (1UXL, 2CQN, 3BOW, 3IFZ, 3LZH, 4D2B). Correct frataxin structures are 1EKG (1.8 A), 3S4M, 3T3K (Q148R, 1.24 A) and 3T3J (N146K, 1.70 A).</li><li>FIXED: etravirine dose listed as &#x27;200 mcg/day&#x27; — correct is 200 mg/day (1000x error). NCT04303156 -&gt; NCT04273165 (FAEST1).</li><li>FIXED: omaveloxolone approval date listed &#x27;2022-02-18&#x27; — correct is 2023-02-28.</li><li>FIXED: prior data marked FRDA AUTOTAC &#x27;uncertain/possibly eligible&#x27; — correct is NOT eligible (loss-of-function).</li><li>SOURCE CHECKED (2026-10-04): ORPHAcode 95 confirmed live via Orphanet API.</li></ul></details></section>
+
+  <section class="block">
+    <h2><span class="num">09</span>Scope and limits</h2>
+    <div class="note">
+      This page is a research summary for teaching and scientific communication. It is not medical advice,
+      a diagnosis, or a treatment recommendation. NEXUS NIGHTINGALE is a computational research pipeline;
+      it is not clinically validated and none of its output has regulatory approval. Prevalence and approval
+      figures marked <em>unverified</em> must be confirmed against the cited source before external use.
+    </div>
+  </section>
+
+  <div class="pager"><a href="/#diseases">← All diseases</a><span class="spacer"></span><a href="/diseases/hutchinson-gilford-progeria/">← HGPS (Progeria)</a> <a href="/diseases/lesch-nyhan-syndrome/">LNS →</a></div>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited program.</p>
+      <p>Source: orphan registry v2.0-fresh-2026-10-04 · TJ Compassion + L.O.V.E. verification.</p></div>
+    <div><p><a href="/#diseases">All diseases</a></p><p><a href="/course/">The course</a></p><p><a href="/#contact">Contact</a></p></div>
+  </div>
+  <div class="legal">© 2026 Sabre-Tek Limited. · Research and teaching use only — not clinical advice.</div>
+</footer>
+</body>
+</html>

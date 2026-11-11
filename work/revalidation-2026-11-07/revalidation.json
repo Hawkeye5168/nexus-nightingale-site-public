@@ -1,0 +1,930 @@
+{
+  "summary": {
+    "generated": "2026-11-07",
+    "pages": 15,
+    "uniprot_current": 15,
+    "ct_current": 15,
+    "ct_stale": 0,
+    "orphanet_current": 15,
+    "orphanet_blocked": 0,
+    "omim_current": 15,
+    "omim_conflicts": 1,
+    "pdb_checked": 1,
+    "pubmed_current": 15,
+    "hard_conflicts": 0
+  },
+  "rows": [
+    {
+      "id": "ORPHAN-001",
+      "slug": "hutchinson-gilford-progeria",
+      "disease": "Hutchinson-Gilford Progeria Syndrome",
+      "gene": "LMNA",
+      "uniprot": "P02545",
+      "published_length": 664,
+      "published_prevalence": "~1 in 4 million (commonly cited; some sources state 1 in 8 million) — UNVERIFIED exact figure this session, requires confirmation against GeneReviews/Orphanet",
+      "orpha_code": 740,
+      "omim_id": 176670,
+      "published_ct_total": 11,
+      "registry_trials": 5,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P02545",
+          "gene": "LMNA",
+          "length": 664,
+          "protein": "Prelamin-A/C"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "740",
+          "title": "Orphanet: Hutchinson-Gilford progeria syndrome",
+          "prevalence": "<1 / 1 000 000",
+          "omim": "176670"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Hutchinson-Gilford Progeria Syndrome",
+          "api_total": 11,
+          "published_total": 11
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "27400896",
+          "title": "Clinical Trial of the Protein Farnesylation Inhibitors Lonafarnib, Pravastatin, and Zoledronic Acid in Children With Hutchinson-Gilford Progeria Syndrome."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "176670"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "<1 / 1 000 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-002",
+      "slug": "friedreich-ataxia",
+      "disease": "Friedreich Ataxia",
+      "gene": "FXN",
+      "uniprot": "Q16595",
+      "published_length": 210,
+      "published_prevalence": "1–9 per 100,000 (Orphanet); ~1 in 20,000–1 in 50,000 in people of Caucasian descent",
+      "orpha_code": 95,
+      "omim_id": 229300,
+      "published_ct_total": 115,
+      "registry_trials": 12,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "Q16595",
+          "gene": "FXN",
+          "length": 210,
+          "protein": "Frataxin, mitochondrial"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "95",
+          "title": "Orphanet: Friedreich ataxia",
+          "prevalence": "1-9 / 100 000",
+          "omim": "601992 229300"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Friedreich Ataxia",
+          "api_total": 115,
+          "published_total": 115
+        },
+        "pdb": [
+          {
+            "id": "3T3K",
+            "status": "CURRENT",
+            "title": "1.24 A Structure of Friedreich's ataxia frataxin variant Q148R"
+          }
+        ],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "18725397",
+          "title": "The in vivo mitochondrial two-step maturation of human frataxin."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "601992",
+            "229300"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 100 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-003",
+      "slug": "lesch-nyhan-syndrome",
+      "disease": "Lesch-Nyhan Syndrome",
+      "gene": "HPRT1",
+      "uniprot": "P00492",
+      "published_length": 218,
+      "published_prevalence": "~1 in 380,000 (commonly cited; X-linked, almost exclusively males) — UNVERIFIED exact figure this session",
+      "orpha_code": 510,
+      "omim_id": 300322,
+      "published_ct_total": 7,
+      "registry_trials": 3,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P00492",
+          "gene": "HPRT1",
+          "length": 218,
+          "protein": "Hypoxanthine-guanine phosphoribosyltransferase"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "510",
+          "title": "Orphanet: Lesch-Nyhan syndrome",
+          "prevalence": "1-9 / 1 000 000",
+          "omim": "300322 308950"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Lesch-Nyhan Syndrome",
+          "api_total": 7,
+          "published_total": 7
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "10338013",
+          "title": "Ternary complex structure of human HGPRTase, PRPP, Mg2+, and the inhibitor HPP reveals the involvement of the flexible loop in substrate binding."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "300322",
+            "308950"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 1 000 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-004",
+      "slug": "huntington-disease",
+      "disease": "Huntington Disease",
+      "gene": "HTT",
+      "uniprot": "P42858",
+      "published_length": 3142,
+      "published_prevalence": "~1 in 10,000 (Caucasian); ~30,000 symptomatic in US — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 399,
+      "omim_id": 143100,
+      "published_ct_total": 302,
+      "registry_trials": 60,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P42858",
+          "gene": "HTT",
+          "length": 3142,
+          "protein": "Huntingtin"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "399",
+          "title": "Orphanet: Huntington disease",
+          "prevalence": "1-9 / 100 000",
+          "omim": "143100"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Huntington Disease",
+          "api_total": 302,
+          "published_total": 302
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 34413240,
+          "title": "Huntington's disease: diagnosis and management."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "143100"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 100 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-005",
+      "slug": "duchenne-muscular-dystrophy",
+      "disease": "Duchenne Muscular Dystrophy",
+      "gene": "DMD",
+      "uniprot": "P11532",
+      "published_length": 3685,
+      "published_prevalence": "~1 in 3,500-5,000 live male births (commonly cited) — UNVERIFIED exact figure this session",
+      "orpha_code": 98896,
+      "omim_id": 310200,
+      "published_ct_total": 503,
+      "registry_trials": 40,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P11532",
+          "gene": "DMD",
+          "length": 3685,
+          "protein": "Dystrophin"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "98896",
+          "title": "Orphanet: Duchenne muscular dystrophy",
+          "prevalence": "1-9 / 100 000",
+          "omim": "310200"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Duchenne Muscular Dystrophy",
+          "api_total": 503,
+          "published_total": 503
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "3282674",
+          "title": "The complete sequence of dystrophin predicts a rod-shaped cytoskeletal protein."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "310200"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 100 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-006",
+      "slug": "gaucher-disease",
+      "disease": "Gaucher Disease",
+      "gene": "GBA1",
+      "uniprot": "P04062",
+      "published_length": 536,
+      "published_prevalence": "~1 in 40,000-60,000 general population; ~1 in 850 in Ashkenazi Jewish population (commonly cited) — UNVERIFIED exact figure this session",
+      "orpha_code": 355,
+      "omim_id": 230800,
+      "published_ct_total": 183,
+      "registry_trials": 25,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P04062",
+          "gene": "GBA1",
+          "length": 536,
+          "protein": "Lysosomal acid glucosylceramidase"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "355",
+          "title": "Orphanet: Gaucher disease",
+          "prevalence": "1-9 / 100 000",
+          "omim": "610539 230800 231005 230900 231000 608013"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Gaucher Disease",
+          "api_total": 183,
+          "published_total": 183
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 28218669,
+          "title": "A Review of Gaucher Disease Pathophysiology, Clinical Presentation and Treatments."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "610539",
+            "230800",
+            "231005",
+            "230900",
+            "231000",
+            "608013"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 100 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-007",
+      "slug": "fabry-disease",
+      "disease": "Fabry Disease",
+      "gene": "GLA",
+      "uniprot": "P06280",
+      "published_length": 429,
+      "published_prevalence": "~1 in 40,000-60,000 males (classic form); higher in some populations — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 324,
+      "omim_id": 301500,
+      "published_ct_total": 258,
+      "registry_trials": 30,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P06280",
+          "gene": "GLA",
+          "length": 429,
+          "protein": "Alpha-galactosidase A"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "324",
+          "title": "Orphanet: Fabry disease",
+          "prevalence": "1-5 / 10 000",
+          "omim": "301500"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Fabry Disease",
+          "api_total": 258,
+          "published_total": 258
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "26415523",
+          "title": "Functional and Clinical Consequences of Novel α-Galactosidase A Mutations in Fabry Disease."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "301500"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-5 / 10 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-008",
+      "slug": "pompe-disease",
+      "disease": "Pompe Disease (Glycogen Storage Disease Type II)",
+      "gene": "GAA",
+      "uniprot": "P10253",
+      "published_length": 952,
+      "published_prevalence": "~1 in 40,000 (all forms combined); infantile form ~1 in 138,000 — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 365,
+      "omim_id": 232300,
+      "published_ct_total": 180,
+      "registry_trials": 35,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P10253",
+          "gene": "GAA",
+          "length": 952,
+          "protein": "Lysosomal alpha-glucosidase"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "365",
+          "title": "Orphanet: Glycogen storage disease due to acid maltase deficiency",
+          "prevalence": "Unknown",
+          "omim": "232300"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Pompe Disease",
+          "api_total": 180,
+          "published_total": 180
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "18429042",
+          "title": "Molecular and functional characterization of eight novel GAA mutations in Italian infants with Pompe disease."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "232300"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "Unknown",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-009",
+      "slug": "ttr-amyloidosis",
+      "disease": "Hereditary Transthyretin Amyloidosis",
+      "gene": "TTR",
+      "uniprot": "P02766",
+      "published_length": 147,
+      "published_prevalence": "~1 in 100,000 (Val30Met endemic in Portugal/Sweden/Japan; higher there) — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 271861,
+      "omim_id": 105210,
+      "published_ct_total": 270,
+      "registry_trials": 40,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P02766",
+          "gene": "TTR",
+          "length": 147,
+          "protein": "Transthyretin"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "271861",
+          "title": "Orphanet: Hereditary ATTR amyloidosis",
+          "prevalence": "1-9 / 1 000 000",
+          "omim": "105210"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Hereditary Transthyretin Amyloidosis",
+          "api_total": 270,
+          "published_total": 270
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 33188616,
+          "title": "Hereditary transthyretin amyloidosis overview."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "105210"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 1 000 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-010",
+      "slug": "alpha-1-antitrypsin-deficiency",
+      "disease": "Alpha-1 Antitrypsin Deficiency",
+      "gene": "SERPINA1",
+      "uniprot": "P01009",
+      "published_length": 418,
+      "published_prevalence": "~1 in 2,500-5,000 (PI*ZZ, European descent) — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 60,
+      "omim_id": 613490,
+      "published_ct_total": 147,
+      "registry_trials": 25,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P01009",
+          "gene": "SERPINA1",
+          "length": 418,
+          "protein": "Alpha-1-antitrypsin"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "60",
+          "title": "Orphanet: Alpha-1-antitrypsin deficiency",
+          "prevalence": "1-5 / 10 000",
+          "omim": "613490"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Alpha-1 Antitrypsin Deficiency",
+          "api_total": 147,
+          "published_total": 147
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 32268028,
+          "title": "Alpha(1)-Antitrypsin Deficiency."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "613490"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-5 / 10 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-011",
+      "slug": "cystic-fibrosis",
+      "disease": "Cystic Fibrosis (F508del)",
+      "gene": "CFTR",
+      "uniprot": "P13569",
+      "published_length": 1480,
+      "published_prevalence": "~1 in 2,500-3,500 live births (Caucasian); carrier ~1 in 25 — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 586,
+      "omim_id": 219700,
+      "published_ct_total": 1784,
+      "registry_trials": 80,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P13569",
+          "gene": "CFTR",
+          "length": 1480,
+          "protein": "Cystic fibrosis transmembrane conductance regulator"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "586",
+          "title": "Orphanet: Cystic fibrosis",
+          "prevalence": "1-5 / 10 000",
+          "omim": "219700"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Cystic Fibrosis",
+          "api_total": 1784,
+          "published_total": 1784
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "23891399",
+          "title": "Effect of ivacaftor on CFTR forms with missense mutations associated with defects in protein processing or function."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "219700"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-5 / 10 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-012",
+      "slug": "angelman-syndrome",
+      "disease": "Angelman Syndrome",
+      "gene": "UBE3A",
+      "uniprot": "Q05086",
+      "published_length": 875,
+      "published_prevalence": "~1 in 12,000-20,000 — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 72,
+      "omim_id": 105830,
+      "published_ct_total": 56,
+      "registry_trials": 8,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "Q05086",
+          "gene": "UBE3A",
+          "length": 875,
+          "protein": "Ubiquitin-protein ligase E3A"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "72",
+          "title": "Orphanet: Angelman syndrome",
+          "prevalence": "1-9 / 100 000",
+          "omim": "105830"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Angelman Syndrome",
+          "api_total": 56,
+          "published_total": 56
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 37599585,
+          "title": "Current and emerging treatment options for Angelman syndrome."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "105830"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 100 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-013",
+      "slug": "myotonic-dystrophy-1",
+      "disease": "Myotonic Dystrophy Type 1",
+      "gene": "DMPK",
+      "uniprot": "Q09013",
+      "published_length": 629,
+      "published_prevalence": "~1 in 8,000 (most common adult muscular dystrophy) — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 273,
+      "omim_id": 160900,
+      "published_ct_total": 180,
+      "registry_trials": 15,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "Q09013",
+          "gene": "DMPK",
+          "length": 629,
+          "protein": "Myotonin-protein kinase"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "273",
+          "title": "Orphanet: Steinert myotonic dystrophy",
+          "prevalence": "1-5 / 10 000",
+          "omim": "160900"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Myotonic Dystrophy Type 1",
+          "api_total": 180,
+          "published_total": 180
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 40983775,
+          "title": "Myotonic dystrophy type 1: clinical diversity, molecular insights and therapeutic perspectives."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "160900"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-5 / 10 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-014",
+      "slug": "neonatal-diabetes",
+      "disease": "Permanent Neonatal Diabetes Mellitus (KCNJ11)",
+      "gene": "KCNJ11",
+      "uniprot": "Q14654",
+      "published_length": 390,
+      "published_prevalence": "~1 in 100,000-260,000 live births — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 224,
+      "omim_id": 618856,
+      "published_ct_total": 5,
+      "registry_trials": 5,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "Q14654",
+          "gene": "KCNJ11",
+          "length": 390,
+          "protein": "ATP-sensitive inward rectifier potassium channel 11"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "224",
+          "title": "Orphanet: Neonatal diabetes mellitus",
+          "prevalence": "Unknown",
+          "omim": null
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "KCNJ11",
+          "api_total": 5,
+          "published_total": 5
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": 32027066,
+          "title": "Update of variants identified in the pancreatic β-cell K(ATP) channel genes KCNJ11 and ABCC8 in individuals with congenital hyperinsulinism and diabetes."
+        },
+        "omim": {
+          "status": "CURRENT",
+          "id": "618856",
+          "source": "OMIM 606176 cross-reference text: PNDM2 (618856) is caused by heterozygous mutation in KCNJ11 (600937).",
+          "correction": "Public page and record had 606176 (PNDM1 / GCK); corrected to 618856 (PNDM2 / KCNJ11)."
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "Unknown",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    },
+    {
+      "id": "ORPHAN-015",
+      "slug": "wilson-disease",
+      "disease": "Wilson Disease",
+      "gene": "ATP7B",
+      "uniprot": "P35670",
+      "published_length": 1465,
+      "published_prevalence": "~1 in 30,000 — commonly cited; UNVERIFIED exact figure this session",
+      "orpha_code": 905,
+      "omim_id": 277900,
+      "published_ct_total": 84,
+      "registry_trials": 10,
+      "claims": {
+        "uniprot": {
+          "status": "CURRENT",
+          "accession": "P35670",
+          "gene": "ATP7B",
+          "length": 1465,
+          "protein": "Copper-transporting ATPase 2"
+        },
+        "orphanet": {
+          "status": "CURRENT",
+          "source": "browser",
+          "page_orpha": "905",
+          "title": "Orphanet: Wilson disease",
+          "prevalence": "1-9 / 100 000",
+          "omim": "277900"
+        },
+        "clinical_trials_total": {
+          "status": "CURRENT",
+          "query": "Wilson Disease",
+          "api_total": 84,
+          "published_total": 84
+        },
+        "pdb": [],
+        "pubmed": {
+          "status": "CURRENT",
+          "pmid": "10441329",
+          "title": "Null mutation of the murine ATP7B (Wilson disease) gene results in intracellular copper accumulation and late-onset hepatic nodular transformation."
+        },
+        "omim": {
+          "status": "CROSS-REFERENCED",
+          "source": "Orphanet",
+          "omim_list": [
+            "277900"
+          ]
+        },
+        "prevalence": {
+          "status": "UNVERIFIED",
+          "orphanet_range": "1-9 / 100 000",
+          "reason": "Public prevalence text stays UNVERIFIED; Orphanet range recorded for comparison, not as an exact figure."
+        },
+        "drug_regulatory": {
+          "status": "UNVERIFIED",
+          "reason": "Approval dates were not all re-fetched from FDA/MHRA/NICE/SMC in this pass."
+        }
+      },
+      "notes": [],
+      "overall": "CURRENT (checked claims)"
+    }
+  ]
+}

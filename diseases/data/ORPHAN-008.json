@@ -1,0 +1,85 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-008",
+    "disease_name": "Pompe Disease (Glycogen Storage Disease Type II)",
+    "short_name": "GSD II / Acid Maltase Deficiency",
+    "gene": "GAA",
+    "uniprot": "P10253",
+    "protein_name": "Lysosomal alpha-glucosidase (acid maltase / alglucosidase alfa)",
+    "protein_length_aa": 952,
+    "omim_id": 232300,
+    "orpha_code": 365,
+    "category": "Lysosomal Storage / Glycogen Storage",
+    "inheritance": "Autosomal recessive — GAA mutations",
+    "mechanism": "Loss-of-function. Deficiency of lysosomal alpha-glucosidase (acid maltase) impairs lysosomal glycogen degradation, causing glycogen to accumulate in lysosomes, especially in skeletal and cardiac muscle. This causes progressive muscle weakness, respiratory failure, and (in the infantile form) severe hypertrophic cardiomyopathy.",
+    "mechanism_class": "enzyme_lof",
+    "recommended_modality": "enzyme replacement therapy (approved)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. Pompe disease is a loss-of-function enzyme deficiency — acid alpha-glucosidase is deficient, not accumulated. Correct route is enzyme replacement therapy (restore GAA), not protein degradation.",
+    "prevalence": "~1 in 40,000 (all forms combined); infantile form ~1 in 138,000 — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Infantile onset (0-12 months, severe cardiomyopathy) or late-onset (childhood/adult, muscle weakness)",
+    "approved_treatments": [
+      {
+        "drug": "Alglucosidase alfa (Myozyme/Lumizyme)",
+        "mw_da": null,
+        "pubchem_cid": null,
+        "class": "Enzyme replacement therapy (recombinant acid alpha-glucosidase)",
+        "mechanism_correct": "Recombinant acid alpha-glucosidase that replaces the deficient enzyme, restoring lysosomal glycogen degradation. Administered intravenously every 2 weeks. Disease-modifying for both infantile and late-onset forms.",
+        "fda_approval": "2006 (Myozyme, infantile-onset); 2010 (Lumizyme, late-onset)",
+        "fda_nda": "",
+        "note": "NOTE: alglucosidase alfa is a recombinant glycoprotein enzyme (~110 kDa), NOT a small molecule — MW/PubChem CID left 0 to avoid fabrication.",
+        "mw_note": "biologic — molecular weight not applicable"
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Next-generation ERT: avalglucosidase alfa (Nexviazyme) — improved M6P targeting",
+      "Cipaglucosidase alfa + miglustat (two-component ERT, Pombiliti+Opfolda)",
+      "Gene therapy (AAV-mediated GAA delivery, clinical)"
+    ],
+    "clinical_trials_count": 35,
+    "key_pmid": "18429042",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P10253 (GAA, Lysosomal alpha-glucosidase, 952 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P10253",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 365 (Glycogen storage disease due to acid maltase deficiency)",
+        "url": "https://www.orpha.net/en/disease/detail/365",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "232300 (Glycogen Storage Disease II / Pompe Disease)",
+        "url": "https://omim.org/entry/232300",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P10253 = GAA (Lysosomal alpha-glucosidase), 952 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "GAA loss-of-function mutations — SOURCE CHECKED (OMIM 232300)",
+      "inheritance": "Autosomal recessive — SOURCE CHECKED (OMIM 232300; Orphanet ORPHAcode 365)",
+      "orpha_code": "365 = Glycogen storage disease due to acid maltase deficiency (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "Alglucosidase alfa is a recombinant enzyme (~110 kDa), not a small molecule — MW/CID NOT APPLICABLE (left 0, not fabricated)",
+      "fda_date": "Myozyme 2006 / Lumizyme 2010 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 365 confirmed live via Orphanet API (preferred term is 'Glycogen storage disease due to acid maltase deficiency', not 'Pompe').",
+      "CLARIFIED: alglucosidase alfa is a recombinant enzyme (not a small molecule), so MW/PubChem CID are intentionally 0.",
+      "CLARIFIED: enzyme replacement therapy is the correct disease-modifying route for a LoF lysosomal storage disease — NOT AUTOTAC."
+    ],
+    "human_summary": "Pompe disease is an autosomal recessive lysosomal storage disorder caused by acid alpha-glucosidase (GAA) deficiency, leading to glycogen accumulation in muscle. The infantile form causes severe cardiomyopathy and early death; the late-onset form causes progressive muscle weakness and respiratory failure. Enzyme replacement therapy is the standard disease-modifying treatment.",
+    "clinical_trials_total": 180,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "35 curated interventional trials; 180 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

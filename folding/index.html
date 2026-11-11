@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fold Explorer — NEXUS NIGHTINGALE</title>
+<meta name="description" content="Real NEXUS-9 supervised fold results against named PDB references. TM-score and RMSD are shown as measured, including low scores and construct limits.">
+<link rel="canonical" href="https://sabretek.ltd/folding/">
+<style>
+  :root{
+    --navy:#173F5F; --navy-deep:#0E2A40; --steel:#41789B;
+    --cerulean:#76B5C5; --cyan:#A9CFD9; --slate:#D1D9E0;
+    --offwhite:#F3F7F9; --white:#FFFFFF; --warning:#E0A94B;
+    --verified:#1FA88C; --flag:#C7562F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    color:var(--navy); background:var(--offwhite); line-height:1.55;}
+  a{color:var(--steel);text-decoration:none;} a:hover{text-decoration:underline;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+    justify-content:space-between;padding:14px 40px;background:rgba(243,247,249,.94);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--slate);}
+  nav .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:1px;}
+  nav .brand img{height:40px;width:40px;border-radius:50%;object-fit:cover;}
+  nav .brand b{color:var(--navy);} nav .brand i{font-style:normal;color:var(--steel);}
+  nav .links{display:flex;gap:22px;font-size:14px;letter-spacing:.4px;}
+  nav .links a{color:var(--navy);font-weight:600;}
+  .hero{padding:120px 24px 30px;text-align:center;}
+  .kicker{font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--steel);font-weight:700;}
+  .hero h1{font-size:clamp(30px,5vw,54px);line-height:1.05;margin:10px 0 10px;color:var(--navy);}
+  .hero h1 em{font-style:normal;color:var(--steel);}
+  .hero p{max-width:820px;margin:0 auto;color:#31536b;font-size:16px;}
+  .wrap{max-width:1280px;margin:0 auto;padding:20px 24px 70px;}
+  .app{display:grid;grid-template-columns:260px minmax(0,1fr) 310px;gap:16px;align-items:stretch;}
+  .panel{background:var(--white);border:1px solid var(--slate);border-radius:8px;}
+  .list{padding:10px;max-height:620px;overflow:auto;}
+  .list h2{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#6b8394;margin:6px 6px 8px;}
+  .item{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;
+    border:0;border-radius:5px;background:transparent;padding:9px 8px;cursor:pointer;
+    font:inherit;color:var(--navy);border-left:3px solid transparent;}
+  .item:hover{background:#EDF4F7;}
+  .item.on{background:#E4EFF4;border-left-color:var(--cerulean);}
+  .item b{font-size:13px;} .item span{font-size:12px;color:#5a7688;font-variant-numeric:tabular-nums;}
+  .viewer{display:flex;flex-direction:column;min-height:620px;overflow:hidden;}
+  .viewer-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 14px;border-bottom:1px solid var(--slate);}
+  .viewer-head strong{font-size:15px;} .viewer-head span{font-size:12px;color:#5a7688;font-family:ui-monospace,Consolas,monospace;}
+  canvas{width:100%;height:560px;display:block;cursor:grab;background:radial-gradient(circle at 50% 45%,#F8FBFC 0%,#E8F1F5 65%,#DCE9EF 100%);}
+  canvas:active{cursor:grabbing;}
+  .hint{font-size:11px;color:#6b8394;padding:7px 14px;border-top:1px solid var(--slate);}
+  .detail{padding:16px;display:flex;flex-direction:column;gap:12px;}
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;padding:4px 8px;border-radius:4px;}
+  .badge.good{background:#DDF3EE;color:#0C6B5A;} .badge.mid{background:#FBF0D8;color:#7A5512;}
+  .badge.low{background:#FBE3DC;color:#8A3420;}
+  .scores{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .score b{display:block;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums;}
+  .score small{font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#6b8394;}
+  dl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:12px;}
+  dt{color:#6b8394;} dd{color:var(--navy);overflow-wrap:anywhere;}
+  .note{font-size:12px;color:#4a6577;background:#F0F6F8;border-left:3px solid var(--cerulean);padding:9px 10px;}
+  .about{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .about .panel{padding:18px 20px;}
+  .about h2{font-size:17px;margin-bottom:8px;} .about p{font-size:13px;color:#3f5d70;margin-bottom:8px;}
+  footer{border-top:1px solid var(--slate);padding:22px 24px;text-align:center;font-size:12px;color:#6b8394;}
+  @media(max-width:1000px){.app{grid-template-columns:1fr;} .list{max-height:220px;} .viewer{min-height:480px;} canvas{height:420px;} .about{grid-template-columns:1fr;} nav .links{display:none;} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">
+    <img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE">
+    <span><b>NEXUS</b> <i>NIGHTINGALE</i></span>
+  </div>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/pipeline/">Architecture</a>
+    <a href="/diseases/">Diseases</a>
+    <a href="/folding/">Fold Explorer</a>
+    <a href="/course/">Course</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">NEXUS-9 · Structure</div>
+  <h1>Fold <em>Explorer</em></h1>
+  <p>Real 1,000-iteration supervised fold runs against named PDB references. Each card shows the measured TM-score and RMSD from the corrected 2 Nov 2026 build. Nothing here is a de-novo prediction.</p>
+</header>
+
+<main class="wrap">
+  <div class="app">
+    <aside class="panel list" aria-label="Targets">
+      <h2>Targets · ranked by TM</h2>
+      <div id="list"></div>
+    </aside>
+
+    <section class="panel viewer" aria-label="Structure viewer">
+      <div class="viewer-head"><strong id="title">Loading…</strong><span id="pdbTag"></span></div>
+      <canvas id="cv" width="900" height="560" aria-label="Rotating CA backbone"></canvas>
+      <div class="hint">Drag to rotate · scroll to zoom · the trace is the reference PDB, not a predicted model</div>
+    </section>
+
+    <aside class="panel detail" aria-label="Result">
+      <div id="quality" class="badge mid">…</div>
+      <div class="scores">
+        <div class="score"><b id="tm">—</b><small>TM-score</small></div>
+        <div class="score"><b id="rmsd">—</b><small>RMSD (Å)</small></div>
+      </div>
+      <dl>
+        <dt>Gene</dt><dd id="gene">—</dd>
+        <dt>UniProt</dt><dd id="uniprot">—</dd>
+        <dt>Disease</dt><dd id="disease">—</dd>
+        <dt>Reference PDB</dt><dd id="pdb">—</dd>
+        <dt>Construct</dt><dd id="construct">—</dd>
+        <dt>Iterations</dt><dd id="iterations">—</dd>
+        <dt>CA residues</dt><dd id="residues">—</dd>
+      </dl>
+      <p class="note" id="note">The score measures recovery of the reference construct. A low score can mean the PDB is a different domain or construct — it is published here rather than hidden.</p>
+    </aside>
+  </div>
+
+  <section class="about">
+    <div class="panel">
+      <h2>What this page is</h2>
+      <p>This is a viewer for completed NEXUS runs. Each result was produced by the folding engine on the 2 November 2026 build, against the PDB the engine resolved. The 3D trace is the reference structure used for scoring.</p>
+      <p>It is a static page, so it cannot fold a new sequence in the browser. The live console runs the Windows build against the local NEXUS engine.</p>
+    </div>
+    <div class="panel">
+      <h2>What it does not claim</h2>
+      <p>These are supervised, template-guided refinements — not blind predictions and not AlphaFold comparisons. A near-1.0 TM means the engine recovered the reference construct it was refined against; it is a check of the folder and the scorer, not evidence of de-novo accuracy.</p>
+      <p>The 2 Nov 2026 build replaces the 3×3 superposition in the scorer with a quaternion superposition. The earlier low scores were produced by a numerically unstable alignment, not by the folding path; identical structures now score 1.0 by construction.</p>
+      <p>No efficacy, drug, or clinical claim is made. Research use only. Not clinically validated.</p>
+    </div>
+  </section>
+</main>
+
+<footer>Sabre-Tek Limited · NEXUS NIGHTINGALE · 1,000-iteration results from the 2 Nov 2026 build · <a href="/">sabretek.ltd</a></footer>
+
+<script>
+(function(){
+  const cv = document.getElementById('cv');
+  const ctx = cv.getContext('2d');
+  let targets = [];
+  let current = null;
+  let points = [];
+  let angleX = -0.35, angleY = 0.6, zoom = 1, auto = true;
+  let drag = false, lx = 0, ly = 0;
+
+  function quality(tm){
+    if (tm >= 0.8) return ['good','Reference recovered'];
+    if (tm >= 0.5) return ['mid','Partial recovery'];
+    return ['low','Low / engine or construct limit'];
+  }
+
+  function pick(t){
+    current = t;
+    document.querySelectorAll('.item').forEach(el => el.classList.toggle('on', el.dataset.id === t.id));
+    document.getElementById('title').textContent = t.id + ' · ' + t.disease;
+    document.getElementById('pdbTag').textContent = t.pdb;
+    document.getElementById('gene').textContent = t.gene;
+    document.getElementById('uniprot').textContent = t.uniprot;
+    document.getElementById('disease').textContent = t.disease;
+    document.getElementById('pdb').textContent = t.pdb;
+    document.getElementById('construct').textContent = t.construct;
+    document.getElementById('iterations').textContent = t.iterations ? t.iterations.toLocaleString() : '—';
+    document.getElementById('residues').textContent = String(t.residues);
+    document.getElementById('tm').textContent = t.tm.toFixed(4);
+    document.getElementById('rmsd').textContent = t.rmsd.toFixed(2);
+    const q = quality(t.tm);
+    const b = document.getElementById('quality');
+    b.className = 'badge ' + q[0];
+    b.textContent = q[1];
+    document.getElementById('note').textContent =
+      t.tm >= 0.5
+        ? 'The engine recovered this reference construct at TM ' + t.tm.toFixed(4) + '. This is supervised refinement, not a blind prediction.'
+        : 'This reference scored TM ' + t.tm.toFixed(4) + '. The cause can be a different domain/construct, or the supervised optimizer failing to converge for this topology. The low score is published rather than hidden.';
+    fetch('data/' + t.id + '.json').then(r => r.json()).then(d => { points = d.points || []; }).catch(() => { points = []; });
+  }
+
+  function draw(){
+    const w = cv.width, h = cv.height;
+    ctx.clearRect(0,0,w,h);
+    if (!points.length) { requestAnimationFrame(draw); return; }
+    let cx=0, cy=0, cz=0;
+    for (const p of points){ cx+=p[0]; cy+=p[1]; cz+=p[2]; }
+    cx/=points.length; cy/=points.length; cz/=points.length;
+    let r=0;
+    for (const p of points){ r=Math.max(r, Math.hypot(p[0]-cx,p[1]-cy,p[2]-cz)); }
+    const s = Math.min(w,h)*0.38/r*zoom;
+    const ca=Math.cos(angleY), sa=Math.sin(angleY), cb=Math.cos(angleX), sb=Math.sin(angleX);
+    const proj=[];
+    for (const p of points){
+      let x=p[0]-cx, y=p[1]-cy, z=p[2]-cz;
+      let x1=x*ca - z*sa, z1=x*sa + z*ca;
+      let y1=y*cb - z1*sb, z2=y*sb + z1*cb;
+      proj.push([w/2 + x1*s, h/2 - y1*s, z2]);
+    }
+    const zmin=Math.min(...proj.map(p=>p[2])), zmax=Math.max(...proj.map(p=>p[2]));
+    ctx.lineWidth=1.15;
+    for (let i=0;i<proj.length-1;i++){
+      const t=(proj[i][2]-zmin)/(zmax-zmin||1);
+      ctx.strokeStyle='rgba(46,102,132,'+(0.28+0.55*t)+')';
+      ctx.beginPath(); ctx.moveTo(proj[i][0],proj[i][1]); ctx.lineTo(proj[i+1][0],proj[i+1][1]); ctx.stroke();
+    }
+    for (let i=0;i<proj.length;i++){
+      const t=(proj[i][2]-zmin)/(zmax-zmin||1);
+      ctx.fillStyle='rgba(31,168,140,'+(0.35+0.6*t)+')';
+      ctx.beginPath(); ctx.arc(proj[i][0],proj[i][1],1.4+1.5*t,0,Math.PI*2); ctx.fill();
+    }
+    if (auto && !drag) angleY += 0.0035;
+    requestAnimationFrame(draw);
+  }
+
+  cv.addEventListener('pointerdown', e => { drag=true; lx=e.clientX; ly=e.clientY; cv.setPointerCapture(e.pointerId); });
+  cv.addEventListener('pointermove', e => {
+    if(!drag) return;
+    angleY += (e.clientX-lx)*0.01; angleX += (e.clientY-ly)*0.01;
+    angleX=Math.max(-1.45,Math.min(1.45,angleX)); lx=e.clientX; ly=e.clientY;
+  });
+  cv.addEventListener('pointerup', () => { drag=false; });
+  cv.addEventListener('wheel', e => { e.preventDefault(); zoom=Math.max(0.6,Math.min(2.2,zoom - e.deltaY*0.001)); }, {passive:false});
+
+  fetch('targets.json').then(r => r.json()).then(list => {
+    targets = list.sort((a,b)=>b.tm-a.tm);
+    const box = document.getElementById('list');
+    targets.forEach((t,i) => {
+      const b=document.createElement('button');
+      b.className='item'+(i===0?' on':''); b.dataset.id=t.id;
+      b.innerHTML='<b>'+t.id+'</b><span>'+t.tm.toFixed(3)+'</span>';
+      b.addEventListener('click',()=>pick(t));
+      box.appendChild(b);
+    });
+    if(targets.length) pick(targets[0]);
+  }).catch(()=>{ document.getElementById('title').textContent='Data not loaded'; });
+  draw();
+})();
+</script>
+</body>
+</html>

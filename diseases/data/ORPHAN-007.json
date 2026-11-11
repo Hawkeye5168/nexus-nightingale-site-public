@@ -1,0 +1,92 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-007",
+    "disease_name": "Fabry Disease",
+    "short_name": "FD",
+    "gene": "GLA",
+    "uniprot": "P06280",
+    "protein_name": "Alpha-galactosidase A (agalsidase)",
+    "protein_length_aa": 429,
+    "omim_id": 301500,
+    "orpha_code": 324,
+    "category": "Lysosomal Storage",
+    "inheritance": "X-linked — GLA mutations (Î±-galactosidase A deficiency)",
+    "mechanism": "Loss-of-function. Deficiency of Î±-galactosidase A (GLA) impairs lysosomal degradation of globotriaosylceramide (Gb3), which accumulates in vascular endothelium, kidneys, heart, and nervous system. This causes progressive renal failure, cardiomyopathy, neuropathic pain, and cerebrovascular events.",
+    "mechanism_class": "enzyme_lof",
+    "recommended_modality": "enzyme replacement therapy + chaperone (approved)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. Fabry disease is a loss-of-function enzyme deficiency — GLA is deficient, not accumulated. Degrading residual enzyme would worsen the disease. Correct route is enzyme replacement therapy (restore GLA) or chaperone therapy, not protein degradation.",
+    "prevalence": "~1 in 40,000-60,000 males (classic form); higher in some populations — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Childhood (neuropathic pain, angiokeratomas); renal/cardiac complications in adulthood",
+    "approved_treatments": [
+      {
+        "drug": "Agalsidase beta (Fabrazyme)",
+        "mw_da": null,
+        "pubchem_cid": null,
+        "class": "Enzyme replacement therapy (recombinant Î±-galactosidase A)",
+        "mechanism_correct": "Recombinant Î±-galactosidase A that replaces the deficient enzyme, restoring Gb3 degradation. Administered intravenously every 2 weeks. Disease-modifying for the non-classic and classic forms.",
+        "fda_approval": "2003 (Fabrazyme)",
+        "fda_nda": "",
+        "note": "NOTE: agalsidase beta is a recombinant glycoprotein enzyme (~100 kDa homodimer), NOT a small molecule — MW/PubChem CID left 0 to avoid fabrication.",
+        "mw_note": "biologic — molecular weight not applicable"
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Pharmacological chaperone therapy: migalastat (Galafold) — oral, for amenable GLA mutations",
+      "Substrate reduction therapy (investigational)",
+      "Gene therapy (AAV-mediated GLA delivery, clinical)"
+    ],
+    "clinical_trials_count": 30,
+    "key_pmid": "26415523",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P06280 (GLA, Alpha-galactosidase A, 429 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P06280",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 324 (Fabry disease)",
+        "url": "https://www.orpha.net/en/disease/detail/324",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "301500 (Fabry Disease)",
+        "url": "https://omim.org/entry/301500",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease mechanism & therapy",
+        "source": "PMC",
+        "accession": "PMC9967779 (Treatment of Fabry Disease: Established and Emerging Therapies)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9967779/",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P06280 = GLA (Alpha-galactosidase A), 429 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "GLA loss-of-function mutations — SOURCE CHECKED (PMC7918333: Fabry Disease Molecular Basis)",
+      "inheritance": "X-linked — SOURCE CHECKED (OMIM 301500; Orphanet)",
+      "orpha_code": "324 = Fabry disease (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "Agalsidase beta is a recombinant enzyme (~100 kDa), not a small molecule — MW/CID NOT APPLICABLE (left 0, not fabricated)",
+      "fda_date": "Fabrazyme (agalsidase beta) 2003 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 324 confirmed live via Orphanet API.",
+      "CLARIFIED: agalsidase beta is a recombinant enzyme (not a small molecule), so MW/PubChem CID are intentionally 0.",
+      "CLARIFIED: enzyme replacement / chaperone therapy is the correct route for a LoF lysosomal storage disease — NOT AUTOTAC."
+    ],
+    "human_summary": "Fabry disease is an X-linked lysosomal storage disorder caused by Î±-galactosidase A deficiency, leading to globotriaosylceramide accumulation in the kidneys, heart, and vasculature. It causes progressive renal failure, cardiomyopathy, and neuropathic pain. Enzyme replacement and chaperone therapy are the standard disease-modifying approaches.",
+    "clinical_trials_total": 258,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "30 curated interventional trials; 258 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

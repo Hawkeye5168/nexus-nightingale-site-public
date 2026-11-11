@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The NIGHTINGALE Course — ten chapters on therapeutic discovery</title>
+<meta name="description" content="Ten chapters on how a protein target becomes a citation-referenced therapeutic dossier. Read the writing or listen to each chapter.">
+<link rel="canonical" href="https://sabretek.ltd/course/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The NIGHTINGALE Course">
+<meta property="og:description" content="Ten chapters on how a protein target becomes a therapeutic dossier — read or listen.">
+<meta property="og:url" content="https://sabretek.ltd/course/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{
+    --navy:#173F5F; --navy-deep:#0E2A40; --steel:#41789B;
+    --cerulean:#76B5C5; --cyan:#A9CFD9; --slate:#D1D9E0;
+    --offwhite:#F3F7F9; --white:#FFFFFF; --verified:#1FA88C;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+       color:var(--navy); background:var(--offwhite); line-height:1.6;
+       -webkit-font-smoothing:antialiased;}
+  a{color:var(--cerulean); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  nav{position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center;
+      justify-content:space-between; padding:14px 40px; background:rgba(243,247,249,0.94);
+      backdrop-filter:blur(10px); border-bottom:1px solid var(--slate);}
+  nav .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:1px;}
+  nav .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  nav .brand span b{color:var(--navy);} nav .brand span i{font-style:normal; color:var(--steel);}
+  nav .links{display:flex; gap:22px; font-size:14px; letter-spacing:0.3px;}
+  nav .links a{color:var(--navy); font-weight:600;}
+  nav .links a.here{color:var(--cerulean);}
+
+  header.chero{padding:132px 24px 56px; text-align:center;
+    background:linear-gradient(180deg,var(--offwhite) 0%,#E7EEF2 100%);}
+  .kicker{text-transform:uppercase; letter-spacing:5px; font-size:12px; color:var(--steel);
+          font-weight:700; margin-bottom:16px;}
+  header.chero h1{font-size:clamp(32px,5vw,54px); line-height:1.08; font-weight:800; margin-bottom:18px;}
+  header.chero h1 em{font-style:normal; color:var(--cerulean);}
+  header.chero p{font-size:18px; color:var(--steel); max-width:64ch; margin:0 auto;}
+
+  main.coursewrap{max-width:1240px; margin:0 auto; padding:48px 28px 96px;
+    display:grid; grid-template-columns:340px minmax(0,1fr); gap:44px; align-items:start;}
+  aside.chapters{position:sticky; top:92px;}
+  .sidehead{display:flex; align-items:baseline; justify-content:space-between;
+            text-transform:uppercase; letter-spacing:2px; font-size:11px; font-weight:800;
+            color:var(--steel); margin-bottom:12px;}
+  .sidehead span:last-child{letter-spacing:0.4px; text-transform:none; font-weight:600; color:var(--cerulean);}
+  .chapter-list{display:flex; flex-direction:column; gap:8px;}
+  button.chapter{display:flex; align-items:center; gap:14px; width:100%; text-align:left;
+    background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:12px 14px;
+    cursor:pointer; font:inherit; color:var(--navy); transition:transform .12s ease, box-shadow .12s ease, background .3s ease;}
+  button.chapter:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(23,63,95,0.10);}
+  button.chapter .num{font-weight:800; font-size:13px; color:var(--cerulean); width:26px; flex:none;}
+  button.chapter .meta{display:flex; flex-direction:column; min-width:0; flex:1;}
+  button.chapter .t{font-weight:650; font-size:14.5px; line-height:1.25;}
+  button.chapter .d{font-size:11.5px; color:var(--steel); margin-top:2px;}
+  button.chapter .p{font-size:11px; color:var(--cerulean);}
+  button.chapter[aria-current="true"]{background:var(--navy); border-color:var(--navy); color:var(--white);}
+  button.chapter[aria-current="true"] .num, button.chapter[aria-current="true"] .p{color:var(--cyan);}
+  button.chapter[aria-current="true"] .d{color:var(--cyan);}
+
+  section.reader{background:var(--white); border:1px solid var(--slate); border-radius:16px;
+    box-shadow:0 12px 40px rgba(23,63,95,0.08); padding:36px 44px 40px; min-height:60vh;}
+  .reader-kicker{text-transform:uppercase; letter-spacing:3px; font-size:11px; font-weight:800;
+                 color:var(--cerulean); margin-bottom:8px;}
+  section.reader h2{font-size:clamp(24px,3.2vw,34px); line-height:1.15; font-weight:800; margin-bottom:22px;}
+  .playerrow{display:flex; align-items:center; gap:16px; flex-wrap:wrap; padding:14px 16px;
+    background:var(--offwhite); border:1px solid var(--slate); border-radius:12px; margin-bottom:30px;}
+  .playerrow audio{flex:1; min-width:240px; height:40px;}
+  .dl{font-size:12.5px; font-weight:700; color:var(--steel); white-space:nowrap;}
+  .dl:hover{color:var(--navy); text-decoration:none;}
+
+  .chapter-body{max-width:72ch; font-size:17.5px; line-height:1.78;}
+  .chapter-body p{margin:0 0 1.05em;}
+  .chapter-body p:first-of-type{font-size:19.5px; color:var(--steel);}
+  .chapter-body h2, .chapter-body h3{margin:1.6em 0 0.5em; line-height:1.25;}
+  .chapter-body h2{font-size:24px;} .chapter-body h3{font-size:20px;}
+  .chapter-body ul, .chapter-body ol{margin:0 0 1.1em 1.3em;}
+  .chapter-body li{margin-bottom:0.35em;}
+  .chapter-body strong{color:var(--navy-deep);}
+  .chapter-body blockquote{border-left:4px solid var(--cerulean); padding:6px 0 6px 18px;
+    color:var(--steel); margin:0 0 1.2em;}
+
+  .chapter-nav{display:flex; justify-content:space-between; gap:16px; margin-top:40px;
+    padding-top:24px; border-top:1px solid var(--slate);}
+  .chapter-nav button{background:transparent; border:1px solid var(--slate); border-radius:8px;
+    padding:12px 18px; font:inherit; font-size:14px; font-weight:700; color:var(--navy); cursor:pointer;}
+  .chapter-nav button:hover:not(:disabled){border-color:var(--navy);}
+  .chapter-nav button:disabled{opacity:0.35; cursor:default;}
+
+  .podcast-banner{max-width:1100px; margin:28px auto 0; padding:22px 26px;
+    background:var(--white); border:1px solid var(--slate); border-left:4px solid var(--cerulean);
+    border-radius:0 12px 12px 0; display:flex; align-items:center; justify-content:space-between;
+    gap:24px; box-shadow:0 8px 24px rgba(23,63,95,0.06);}
+  .podcast-banner .tag{font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--steel); font-weight:700; margin-bottom:5px;}
+  .podcast-banner h2{font-size:22px; color:var(--navy); margin-bottom:5px;}
+  .podcast-banner p{font-size:14px; color:var(--steel); max-width:700px;}
+  .podcast-banner .go{flex:0 0 auto; background:var(--navy); color:var(--white);
+    border-radius:7px; padding:10px 15px; font-size:13px; font-weight:700; text-decoration:none;}
+  .podcast-banner .go:hover{filter:brightness(.95); text-decoration:none;}
+
+  footer{background:var(--navy-deep); color:var(--slate); padding:52px 40px 34px;}
+  footer .fwrap{max-width:1100px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr; gap:36px;}
+  footer h4{color:var(--white); margin-bottom:12px; font-size:15px;}
+  footer p{font-size:13.5px; margin-bottom:8px;}
+  footer a{color:var(--cyan);}
+  footer .legal{border-top:1px solid rgba(169,207,217,0.2); margin-top:36px; padding-top:20px;
+    text-align:center; font-size:12.5px; max-width:1100px; margin-left:auto; margin-right:auto;}
+
+  @media(max-width:980px){
+    main.coursewrap{grid-template-columns:1fr; gap:28px; padding:32px 18px 72px;}
+    aside.chapters{position:static;}
+    .chapter-list{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+    section.reader{padding:26px 22px 30px;}
+    nav{padding:14px 20px;} nav .links{display:none;}
+    footer .fwrap{grid-template-columns:1fr;}
+    .podcast-banner{flex-direction:column; align-items:flex-start; margin:18px; padding:20px;}
+  }
+  @media(max-width:560px){
+    .chapter-list{grid-template-columns:1fr;}
+    header.chero{padding:112px 20px 40px;}
+    .chapter-body{font-size:16.5px;}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="/" style="text-decoration:none;">
+    <img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE">
+    <span><b>NEXUS</b> <i>NIGHTINGALE</i></span>
+  </a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/#pipeline">Pipeline</a>
+    <a href="/course/" class="here">Course</a>
+    <a href="/course/road-to-nexus-nightingale/">Road to NEXUS</a>
+    <a href="/#verification">Source checks</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="chero">
+  <div class="kicker">Sabre-Tek Limited · Teaching</div>
+  <h1>The NIGHTINGALE <em>Course</em></h1>
+  <p>Ten chapters on how a protein target becomes a therapeutic dossier. Pick a chapter to read the writing, or press play and listen to it.</p>
+</header>
+<div style="max-width:1100px;margin:18px auto 0;padding:14px 18px;background:var(--white);border:1px solid var(--slate);border-left:4px solid var(--cerulean);border-radius:8px;color:#2f536b;font-size:13.5px;line-height:1.5;"><b>Text edition 2.0 · 11 November 2026.</b> The ten chapters have been rebuilt around the fourteen-stage pipeline, the twenty-four-source evidence layer and the thirty-section dossier standard. The audio is voiced by Ryan and matches this edition.</div>
+
+<section class="podcast-banner">
+  <div>
+    <div class="tag">Course podcast series</div>
+    <h2>Road to NEXUS Nightingale</h2>
+    <p>Long-form conversations about the work behind the course: the fourteen-stage pipeline, the new thirty-section dossier layout, the orphan-disease catalogue, what failed, what the data says, and what comes next.</p>
+  </div>
+  <a class="go" href="/course/road-to-nexus-nightingale/">Listen to the series →</a>
+</section>
+
+<main class="coursewrap">
+  <aside class="chapters">
+    <div class="sidehead"><span>Ten chapters</span><span id="total">10 chapters</span></div>
+    <div class="chapter-list" id="chapterList"></div>
+  </aside>
+
+  <section class="reader">
+    <div class="reader-kicker" id="readerKicker">Chapter 1</div>
+    <h2 id="readerTitle">Loading…</h2>
+    <div class="playerrow">
+      <audio id="player" controls preload="metadata"></audio>
+      <a class="dl" id="dl" href="#" download>Download MP3</a>
+    </div>
+    <article class="chapter-body" id="text"><p>Loading the chapter…</p></article>
+    <div class="chapter-nav">
+      <button id="prev" type="button">← Previous</button>
+      <button id="next" type="button">Next →</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div>
+      <h4>NEXUS NIGHTINGALE</h4>
+      <p>A sovereign therapeutic pipeline — protein folding, molecule design and a 24-database evidence chain, producing citation-referenced therapeutic dossiers on a single desktop computer.</p>
+      <p>A Sabre-Tek Limited program.</p>
+    </div>
+    <div>
+      <h4>Course</h4>
+      <p><a href="/">The pipeline</a></p>
+      <p><a href="/#example">Worked example</a></p>
+      <p><a href="/#verification">Source checks</a></p>
+      <p><a href="/#contact">Contact</a></p>
+    </div>
+  </div>
+  <div class="legal">© 2026 Sabre-Tek Limited. All rights reserved. · Teaching material — research use only; not clinical advice.</div>
+</footer>
+
+<script>
+const CHAPTERS = [{"n":1,"short":"Foundations","title":"Foundations: What a Protein Is and Why It Folds","slug":"chapter_01_foundations","audio":"audio/chapter_01_foundations_v2.mp3","text":"chapters/chapter_01_foundations_v2.html","len":"4:58","secs":298},{"n":2,"short":"Two Ways to Fold","title":"The Two Ways to Fold — and What We Can Honestly Claim","slug":"chapter_02_folding_modes","audio":"audio/chapter_02_folding_modes_v2.mp3","text":"chapters/chapter_02_folding_modes_v2.html","len":"3:23","secs":203},{"n":3,"short":"The Gate","title":"The Gate: Destroy, Protect, or Something Else","slug":"chapter_03_the_gate","audio":"audio/chapter_03_the_gate_v2.mp3","text":"chapters/chapter_03_the_gate_v2.html","len":"3:54","secs":234},{"n":4,"short":"Modality Toolbox","title":"The Modality Toolbox: Thirteen Routes, Not One","slug":"chapter_04_nine_modalities","audio":"audio/chapter_04_nine_modalities_v2.mp3","text":"chapters/chapter_04_nine_modalities_v2.html","len":"4:55","secs":295},{"n":5,"short":"Degradation","title":"Targeted Degradation, Without the Hype","slug":"chapter_05_autotac_full","audio":"audio/chapter_05_autotac_full_v2.mp3","text":"chapters/chapter_05_autotac_full_v2.html","len":"3:43","secs":223},{"n":6,"short":"Evidence","title":"The Twenty-Four Evidence Sources","slug":"chapter_06_databases","audio":"audio/chapter_06_databases_v2.mp3","text":"chapters/chapter_06_databases_v2.html","len":"3:49","secs":229},{"n":7,"short":"The Dossier","title":"The Thirty-Section Dossier","slug":"chapter_07_dossier","audio":"audio/chapter_07_dossier_v2.mp3","text":"chapters/chapter_07_dossier_v2.html","len":"3:43","secs":223},{"n":8,"short":"Resistance","title":"Resistance: The Moving Target","slug":"chapter_08_resistance","audio":"audio/chapter_08_resistance_v2.mp3","text":"chapters/chapter_08_resistance_v2.html","len":"3:30","secs":210},{"n":9,"short":"Honesty","title":"The Honesty Machinery","slug":"chapter_09_honesty","audio":"audio/chapter_09_honesty_v2.mp3","text":"chapters/chapter_09_honesty_v2.html","len":"2:56","secs":176},{"n":10,"short":"Hard Problems","title":"The Hard Problems: What We Have Not Yet Solved","slug":"chapter_10_hard_problems","audio":"audio/chapter_10_hard_problems_v2.mp3","text":"chapters/chapter_10_hard_problems_v2.html","len":"3:31","secs":211}];
+const player = document.getElementById('player');
+const listEl = document.getElementById('chapterList');
+const textEl = document.getElementById('text');
+const kickerEl = document.getElementById('readerKicker');
+const titleEl = document.getElementById('readerTitle');
+const dlEl = document.getElementById('dl');
+const prevEl = document.getElementById('prev');
+const nextEl = document.getElementById('next');
+const totalEl = document.getElementById('total');
+let current = 0;
+let loadToken = 0;
+
+const totalSecs = CHAPTERS.reduce((a, c) => a + c.secs, 0);
+totalEl.textContent = Math.floor(totalSecs / 3600) + 'h ' + Math.round((totalSecs % 3600) / 60) + 'm total';
+
+CHAPTERS.forEach((c, i) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'chapter';
+  b.innerHTML = '<span class="num">' + String(c.n).padStart(2, '0') + '</span>' +
+                '<span class="meta"><span class="t">' + c.short + '</span>' +
+                '<span class="d">' + c.len + '</span></span>' +
+                '<span class="p">▶</span>';
+  b.addEventListener('click', () => select(i, true));
+  b.dataset.i = i;
+  listEl.appendChild(b);
+});
+
+function fmt(total) {
+  const m = Math.floor(total / 60), s = Math.floor(total % 60);
+  return m + ':' + String(s).padStart(2, '0');
+}
+
+async function select(i, autoplay) {
+  current = Math.max(0, Math.min(CHAPTERS.length - 1, i));
+  const c = CHAPTERS[current];
+  const token = ++loadToken;
+
+  [...listEl.children].forEach((b, j) => {
+    if (j === current) b.setAttribute('aria-current', 'true');
+    else b.removeAttribute('aria-current');
+  });
+
+  kickerEl.textContent = 'Chapter ' + c.n + ' · ' + c.len;
+  titleEl.textContent = c.title;
+  dlEl.href = c.audio;
+  dlEl.setAttribute('download', c.slug + '.mp3');
+  prevEl.disabled = current === 0;
+  nextEl.disabled = current === CHAPTERS.length - 1;
+
+  textEl.innerHTML = '<p>Loading the chapter…</p>';
+  try {
+    const res = await fetch(c.text, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(res.status);
+    const html = await res.text();
+    if (token === loadToken) textEl.innerHTML = html;
+  } catch (e) {
+    if (token === loadToken) textEl.innerHTML = '<p>The chapter text could not be loaded. ' +
+      '<a href="' + c.text + '">Open it directly</a>.</p>';
+  }
+
+  player.src = c.audio;
+  player.load();
+  if (autoplay) player.play().catch(() => {});
+  try { localStorage.setItem('nn-course-chapter', String(current + 1)); } catch (e) {}
+  history.replaceState(null, '', '#ch' + String(c.n).padStart(2, '0'));
+  if (window.innerWidth < 980) document.querySelector('.reader').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+prevEl.addEventListener('click', () => select(current - 1, true));
+nextEl.addEventListener('click', () => select(current + 1, true));
+
+let start = 0;
+const m = location.hash.match(/^#ch(\d{2})$/);
+if (m) {
+  const n = parseInt(m[1], 10);
+  const idx = CHAPTERS.findIndex(c => c.n === n);
+  if (idx >= 0) start = idx;
+} else {
+  try {
+    const saved = parseInt(localStorage.getItem('nn-course-chapter') || '0', 10);
+    if (saved >= 1 && saved <= CHAPTERS.length) start = saved - 1;
+  } catch (e) {}
+}
+select(start, false);
+</script>
+</body>
+</html>

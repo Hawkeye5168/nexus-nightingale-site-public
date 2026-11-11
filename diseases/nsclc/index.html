@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSCLC / EGFR-mutant — NEXUS NIGHTINGALE public release</title>
+<meta name="description" content="NSCLC / EGFR-mutant: mechanism, resistance, trial evidence and the NIGHTINGALE research route. Public release of NSCLC-001 v4.0; 30 sources; research use only.">
+<link rel="canonical" href="https://sabretek.ltd/diseases/nsclc/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NSCLC / EGFR-mutant — NEXUS NIGHTINGALE public release">
+<meta property="og:description" content="NSCLC / EGFR-mutant: mechanism, resistance, trial evidence and the NIGHTINGALE research route. Public release of NSCLC-001 v4.0; 30 sources; research use only.">
+<meta property="og:url" content="https://sabretek.ltd/diseases/nsclc/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{
+    --navy:#173F5F; --navy-deep:#0E2A40; --steel:#41789B;
+    --cerulean:#76B5C5; --cyan:#A9CFD9; --slate:#D1D9E0;
+    --offwhite:#F3F7F9; --white:#FFFFFF; --verified:#1FA88C; --warning:#E0A94B; --flag:#C7562F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+       color:var(--navy); background:var(--offwhite); line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--cerulean); text-decoration:none;} a:hover{text-decoration:underline;}
+  nav{position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center;
+      justify-content:space-between; padding:14px 40px; background:rgba(243,247,249,0.94);
+      backdrop-filter:blur(10px); border-bottom:1px solid var(--slate);}
+  nav .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:1px; color:var(--navy);}
+  nav .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  nav .brand span i{font-style:normal; color:var(--steel);}
+  nav .links{display:flex; gap:22px; font-size:14px;}
+  nav .links a{color:var(--navy); font-weight:600;}
+
+  header.dhero{padding:128px 24px 52px; background:linear-gradient(180deg,var(--offwhite) 0%,#E7EEF2 100%);
+    border-bottom:1px solid var(--slate);}
+  .dhero .wrap{max-width:1060px; margin:0 auto;}
+  .kicker{text-transform:uppercase; letter-spacing:4px; font-size:11.5px; font-weight:800; color:var(--cerulean); margin-bottom:14px;}
+  header.dhero h1{font-size:clamp(30px,4.6vw,50px); line-height:1.08; font-weight:800; margin-bottom:14px; max-width:20ch;}
+  header.dhero .sub{font-size:18px; color:var(--steel); margin-bottom:20px;}
+  .badges{display:flex; gap:8px; flex-wrap:wrap;}
+  .badge{display:inline-block; font-size:12px; font-weight:700; padding:6px 11px; border-radius:999px;
+    background:var(--white); border:1px solid var(--slate); color:var(--steel);}
+  .badge.ok{color:var(--verified); border-color:rgba(31,168,140,0.35); background:rgba(31,168,140,0.07);}
+  .badge.warn{color:#8A6417; border-color:rgba(224,169,75,0.5); background:rgba(224,169,75,0.10);}
+
+  main{max-width:1060px; margin:0 auto; padding:48px 24px 80px;}
+  section.block{margin-bottom:44px;}
+  section.block h2{font-size:24px; line-height:1.2; margin-bottom:14px;}
+  section.block h2 .num{color:var(--cerulean); font-weight:800; margin-right:8px;}
+  section.block p{font-size:16.5px; color:#2C4E66; margin-bottom:0.9em; max-width:78ch;}
+  .lead{font-size:18.5px; color:var(--steel);}
+
+  .glance{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;}
+  .fact{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:16px 18px;}
+  .fact .k{font-size:10.5px; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; color:var(--cerulean); margin-bottom:5px;}
+  .fact .v{font-size:14.5px; font-weight:600; color:var(--navy); line-height:1.45; word-break:break-word;}
+  .fact .v small{display:block; font-weight:400; color:var(--steel); font-size:12.5px; margin-top:3px;}
+
+  .route{background:var(--navy); color:var(--white); border-radius:14px; padding:28px 30px;}
+  .route h2{color:var(--white);} .route p{color:var(--cyan);} .route p strong{color:var(--white);} .route .why{color:var(--slate); font-size:15px;}
+  .route .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+  .route .pill{font-size:12px; font-weight:800; padding:6px 12px; border-radius:999px;
+    background:rgba(169,207,217,0.14); color:var(--cyan); border:1px solid rgba(169,207,217,0.3);}
+  .route .pill.yes{background:rgba(31,168,140,0.18); color:#8FE3D2; border-color:rgba(31,168,140,0.4);}
+  .route .pill.no{background:rgba(199,86,47,0.18); color:#F2B39B; border-color:rgba(199,86,47,0.4);}
+
+  .drug{background:var(--white); border:1px solid var(--slate); border-radius:12px; padding:20px 22px; margin-bottom:12px;}
+  .drug-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px;}
+  .drug-head h3{font-size:18px;}
+  .drug .meta{font-size:12.5px; color:var(--cerulean); font-weight:700; margin-bottom:8px;}
+  .drug p{font-size:14.5px; color:var(--steel); margin:0;}
+  .pill-date{font-size:11.5px; font-weight:800; color:var(--verified); background:rgba(31,168,140,0.08);
+    border:1px solid rgba(31,168,140,0.25); padding:4px 9px; border-radius:999px; white-space:nowrap;}
+
+  ul.plain{margin:0 0 0 1.15em; color:#2C4E66; font-size:15.5px;}
+  ul.plain li{margin-bottom:0.4em;}
+  ul.verif{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  ul.verif li{background:var(--white); border:1px solid var(--slate); border-left:4px solid var(--verified);
+    border-radius:8px; padding:11px 14px; font-size:14px; color:#2C4E66;}
+  ul.verif li.warn{border-left-color:var(--warning); background:#FDF8EF; color:#7A5B1E;}
+
+  table.src{width:100%; border-collapse:collapse; font-size:13.5px;}
+  table.src th, table.src td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--slate); vertical-align:top;}
+  table.src th{font-size:10.5px; text-transform:uppercase; letter-spacing:1px; color:var(--steel);}
+  table.src a{word-break:break-all;}
+
+  .note{background:#EDF3F6; border-left:4px solid var(--steel); border-radius:8px; padding:16px 20px;
+    font-size:14.5px; color:#2F5B76;}
+  .warnbox{background:#FDF8EF; border-left:4px solid var(--warning); border-radius:8px; padding:16px 20px;
+    font-size:14px; color:#7A5B1E; margin-top:12px;}
+
+  details.corr{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:14px 18px;}
+  details.corr summary{cursor:pointer; font-weight:700; font-size:14px; color:var(--steel);}
+  details.corr ul{margin:10px 0 0 1.15em; font-size:14px; color:var(--steel);}
+
+  .pager{display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--slate); padding-top:24px; margin-top:48px;}
+  .pager a{font-size:14px; font-weight:700; color:var(--navy); border:1px solid var(--slate);
+    border-radius:8px; padding:11px 16px; background:var(--white);}
+  .pager a:hover{border-color:var(--navy); text-decoration:none;}
+  .pager .spacer{flex:1;}
+
+  footer{background:var(--navy-deep); color:var(--slate); padding:44px 40px 30px;}
+  footer .fwrap{max-width:1060px; margin:0 auto; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  footer p{font-size:13px; margin-bottom:6px;} footer a{color:var(--cyan);}
+  footer .legal{border-top:1px solid rgba(169,207,217,0.2); margin-top:28px; padding-top:18px;
+    max-width:1060px; margin-left:auto; margin-right:auto; font-size:12px; text-align:center;}
+
+  @media(max-width:820px){
+    nav{padding:14px 20px;} nav .links{display:none;}
+    header.dhero{padding:108px 18px 40px;}
+    main{padding:32px 18px 64px;}
+    .route{padding:22px;}
+  }
+</style>
+</head>
+
+<nav>
+  <a class="brand" href="/" style="text-decoration:none;">
+    <img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE">
+    <span><b>NEXUS</b> <i>NIGHTINGALE</i></span>
+  </a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/#pipeline">Pipeline</a>
+    <a href="/course/">Course</a>
+    <a href="/#diseases">Diseases</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+
+<header class="dhero">
+  <div class="wrap">
+    <div class="kicker">Public release · NSCLC-001 v4.0</div>
+    <h1>NSCLC / EGFR-mutant</h1>
+    <p class="sub">EGFR · Non-small cell lung cancer · oncogene-driven</p>
+    <div class="badges">
+      <span class="badge ok">Source-linked research release</span>
+      <span class="badge">49 pages</span>
+      <span class="badge">30 sections</span>
+      <span class="badge">30 sources</span>
+      <span class="badge">25 claims</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="note"><strong>Public release · 10 November 2026:</strong> NSCLC-001 v4.0, benchmark-grade. This is the public summary. The full 49-page dossier, claim ledger and evidence room are access-controlled and are not published on this site. The next scheduled review is 10 February 2027.</p>
+
+  <section class="block">
+    <h2><span class="num">01</span>At a glance</h2>
+    <div class="glance">
+      <div class="fact"><div class="k">Gene</div><div class="v">EGFR</div></div>
+      <div class="fact"><div class="k">Protein</div><div class="v">EGFR / ERBB1 receptor tyrosine kinase<small>UniProt P00533 · 1,210 aa · receptor tyrosine kinase</small></div></div>
+      <div class="fact"><div class="k">Disease subset</div><div class="v">Metastatic NSCLC with a classic sensitising EGFR mutation<small>Exon 19 deletion or exon 21 L858R; other variants are not interchangeable</small></div></div>
+      <div class="fact"><div class="k">Inheritance</div><div class="v">Somatic — acquired activating mutation in the tumour</div></div>
+      <div class="fact"><div class="k">Category</div><div class="v">Thoracic oncology / oncogene-driven</div></div>
+      <div class="fact"><div class="k">Mechanism class</div><div class="v">oncogenic gain of function</div></div>
+      <div class="fact"><div class="k">Clinical trials</div><div class="v">225 EGFR-mutant NSCLC studies<small>ClinicalTrials.gov search, 10 November 2026; a landscape count, not a count of positive trials</small></div></div>
+      <div class="fact"><div class="k">Release</div><div class="v">NSCLC-001 v4.0<small>49 pages · 30 sections · 30 sources · 25 claims · 10 tables · 6 figures</small></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">02</span>What it is</h2>
+    <p class="lead">Non-small cell lung cancer is a heterogeneous group of thoracic cancers. EGFR-mutant NSCLC is a molecular subset, not a single clinical entity: it is defined by an activating mutation in the EGFR receptor tyrosine kinase, most commonly an exon 19 deletion or the exon 21 L858R substitution.</p>
+    <p>EGFR mutation prevalence is geography-dependent. A 2021 meta-analysis of advanced NSCLC reported approximately 12.8% in Europe and 49.1% in Asia, with histology and testing practice also affecting the observed proportion. The practical consequence is that testing policy changes the population a programme can reach. A jurisdiction with broad reflex testing will identify more eligible patients than one with selective testing, even where the underlying biology is the same.</p>
+    <p>This page describes the evidence and the research route. It is not a diagnosis, a treatment recommendation or an eligibility decision. Treatment decisions belong to a qualified clinical team.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">03</span>What goes wrong</h2>
+    <p>Activating mutations in EGFR exons 18–21 drive constitutive kinase activity and downstream survival signalling. L858R and exon 19 deletion are both sensitising, but they are different alleles with different biology and subgroup behaviour; pooling them can hide the difference a programme is trying to exploit.</p>
+    <p>Acquired resistance to osimertinib is heterogeneous. EGFR-dependent mechanisms include C797S and T790M loss; EGFR-independent mechanisms include MET amplification, HER2 amplification, PI3K pathway activation and histological transformation. C797S in cis with T790M is not the same problem as C797S in trans. There is no single post-osimertinib standard. A research programme must name the resistance cohort before it names the molecule.</p>
+    <p class="note"><strong>Structural note:</strong> the PDB entries used by the dossier are kinase-domain constructs, not the full receptor in a cell: 1M17 (wild-type kinase + erlotinib, 2.6 Å), 1XKK (wild-type + lapatinib, 2.4 Å), 5UG9 (L858R/T790M/V948R + covalent inhibitor, 1.33 Å) and 4ZAU (wild-type + AZD9291, 2.8 Å). None establishes in vivo selectivity or a clinical effect.</p>
+  </section>
+
+  <section class="block">
+    <div class="route">
+      <h2><span class="num">04</span>How NIGHTINGALE routes it</h2>
+      <div class="pillrow">
+        <span class="pill">mechanism: oncogenic_gof</span>
+        <span class="pill yes">approved: EGFR TKI</span>
+        <span class="pill">research: degrader / ADC</span>
+        <span class="pill no">not a clinical recommendation</span>
+      </div>
+      <p style="color:#DCEBF2;"><strong style="color:#FFFFFF;">Approved route:</strong> a small-molecule EGFR tyrosine-kinase inhibitor — osimertinib is the first-line benchmark for classic sensitising mutations.</p>
+      <p class="why">This is an oncogenic gain-of-function target, but the approved route is inhibition, not degradation. Mutant-selective degradation, antibody–drug conjugates and combination strategies are research routes. The current EGFR degrader record is research-grade and is not a production candidate. NIGHTINGALE does not convert a research route into a treatment recommendation.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">05</span>Treatment today</h2>
+    <div class="drug">
+      <div class="drug-head"><h3>Osimertinib (Tagrisso)</h3><span class="pill-date">FDA first-line approval 18 April 2018</span></div>
+      <div class="meta">Third-generation EGFR tyrosine-kinase inhibitor · first-line metastatic EGFR exon 19 deletion or exon 21 L858R</div>
+      <p>Osimertinib is the first-line benchmark for classic sensitising EGFR-mutant advanced NSCLC. The FLAURA trial enrolled 556 patients: median progression-free survival was 18.9 months versus 10.2 months with gefitinib or erlotinib (HR 0.46), and final median overall survival was 38.6 versus 31.8 months (HR 0.80; p = 0.046).</p>
+    </div>
+    <p>FLAURA2 enrolled 557 patients and combined osimertinib with platinum-pemetrexed: median progression-free survival was 25.5 versus 16.7 months (HR 0.62). Overall survival was immature at the primary analysis, and the combination adds chemotherapy toxicity. AURA3 addressed T790M-positive disease after prior EGFR TKI: median progression-free survival was 10.1 versus 4.4 months (HR 0.30); final overall survival was 26.8 versus 22.5 months (HR 0.87; not statistically significant), with substantial crossover.</p>
+    <p>Osimertinib is generally better tolerated than cytotoxic chemotherapy, but it causes diarrhoea, rash, paronychia, QT prolongation, cardiomyopathy and interstitial lung disease/pneumonitis. The label carries these warnings. A survival or progression-free survival gain must be weighed against that burden. FDA approval is not a NICE recommendation or a guarantee of access in every health system; access is jurisdiction-specific.</p>
+    <p class="note"><strong>What this page does not do:</strong> it does not provide dose management, eligibility criteria or an individual treatment plan. Those require a qualified clinical team and the current local label.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">06</span>In the pipeline</h2>
+    <ul class="plain">
+      <li><strong>Resistance-directed therapy.</strong> C797S, MET amplification, T790M loss and bypass pathways require re-biopsy and a matched agent; there is no single post-osimertinib sequence.</li>
+      <li><strong>CNS disease.</strong> Brain metastases are a distinct efficacy domain. CNS penetration is necessary but not sufficient; the endpoint must be intracranial disease control.</li>
+      <li><strong>Antibody–drug conjugates.</strong> Investigational in EGFR-mutant NSCLC; early response signals do not establish a front-line or combination role.</li>
+      <li><strong>Immunotherapy boundary.</strong> Single-agent checkpoint inhibition is not established for EGFR-mutant disease; KEYNOTE-024 excluded sensitising EGFR mutations and ALK translocations.</li>
+      <li><strong>Early-stage disease.</strong> Adjuvant and neoadjuvant EGFR TKI strategies need event-free or disease-free survival evidence; metastatic response does not establish adjuvant benefit.</li>
+      <li><strong>Degraders.</strong> A mutant-selective EGFR degrader is a research hypothesis, not a clinical candidate. It must show productive target–E3 ligase engagement, mutant selectivity, brain exposure where relevant, and a therapeutic index.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">07</span>Source checks</h2>
+    <p class="lead">The public release is a summary of the checked dossier. These are the load-bearing checks; the full claim ledger carries the status, confidence and last-checked date for all 25 claims.</p>
+    <ul class="verif">
+      <li><strong>UniProt identity:</strong> P00533 = EGFR, 1,210 aa receptor tyrosine kinase — checked against UniProt.</li>
+      <li><strong>Regulatory label:</strong> osimertinib first-line approval for EGFR exon 19 deletion or L858R — checked against the FDA label.</li>
+      <li><strong>FLAURA:</strong> 556 patients; PFS 18.9 vs 10.2 months (HR 0.46); final OS 38.6 vs 31.8 months (HR 0.80; p = 0.046).</li>
+      <li><strong>FLAURA2:</strong> 557 patients; PFS 25.5 vs 16.7 months (HR 0.62); OS immature; added chemotherapy toxicity.</li>
+      <li><strong>AURA3:</strong> T790M-positive after prior EGFR TKI; PFS 10.1 vs 4.4 months (HR 0.30); final OS 26.8 vs 22.5 months (HR 0.87; not significant) with crossover.</li>
+      <li><strong>KEYNOTE-024 boundary:</strong> the trial excluded sensitising EGFR mutations and ALK translocations; its single-agent result does not transfer to EGFR-mutant disease.</li>
+      <li><strong>Structural provenance:</strong> 1M17, 1XKK, 5UG9 and 4ZAU are kinase-domain constructs, not the full receptor.</li>
+      <li><strong>Trial landscape:</strong> 225 EGFR-mutant NSCLC studies on ClinicalTrials.gov, 10 November 2026; a count, not an efficacy result.</li>
+      <li class="warn"><strong>Open review:</strong> independent thoracic-oncology review has not been completed. The next review is due 10 February 2027.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">08</span>Selected sources</h2>
+    <table class="src">
+      <tr><th>Fact</th><th>Source</th><th>Accession</th><th>Retrieved</th></tr>
+      <tr><td>Gene/protein identity</td><td>UniProt</td><td><a href="https://rest.uniprot.org/uniprotkb/P00533" rel="noopener">P00533 (EGFR, 1,210 aa)</a></td><td>2026-11-10</td></tr>
+      <tr><td>First-line regulatory label</td><td>FDA</td><td><a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/208065s011lbl.pdf" rel="noopener">Tagrisso (osimertinib) label, 2018</a></td><td>2026-11-10</td></tr>
+      <tr><td>FLAURA — PFS</td><td>NEJM / PubMed</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/29151359/" rel="noopener">PMID 29151359</a></td><td>2026-11-10</td></tr>
+      <tr><td>FLAURA — final OS</td><td>NEJM / PubMed</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/31751012/" rel="noopener">PMID 31751012</a></td><td>2026-11-10</td></tr>
+      <tr><td>FLAURA2 — osimertinib ± chemotherapy</td><td>NEJM</td><td><a href="https://www.nejm.org/doi/10.1056/NEJMoa2306434" rel="noopener">NEJMoa2306434</a></td><td>2026-11-10</td></tr>
+      <tr><td>AURA3 — PFS</td><td>NEJM</td><td><a href="https://www.nejm.org/doi/10.1056/NEJMoa1612674" rel="noopener">NEJMoa1612674</a></td><td>2026-11-10</td></tr>
+      <tr><td>AURA3 — final OS</td><td>Annals of Oncology</td><td><a href="https://www.annalsofoncology.org/article/S0923-7534(20)42155-6/fulltext" rel="noopener">S0923-7534(20)42155-6</a></td><td>2026-11-10</td></tr>
+      <tr><td>KEYNOTE-024 boundary</td><td>NEJM</td><td><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1606774" rel="noopener">NEJMoa1606774</a></td><td>2026-11-10</td></tr>
+      <tr><td>Acquired resistance mechanisms</td><td>British Journal of Cancer</td><td><a href="https://www.nature.com/articles/s41416-019-0573-8" rel="noopener">s41416-019-0573-8</a></td><td>2026-11-10</td></tr>
+      <tr><td>EGFR mutation prevalence</td><td>PMC</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8766385/" rel="noopener">PMC8766385</a></td><td>2026-11-10</td></tr>
+      <tr><td>Structural constructs</td><td>RCSB PDB</td><td><a href="https://www.rcsb.org/structure/1M17" rel="noopener">1M17</a> · <a href="https://www.rcsb.org/structure/1XKK" rel="noopener">1XKK</a> · <a href="https://www.rcsb.org/structure/5UG9" rel="noopener">5UG9</a> · <a href="https://www.rcsb.org/structure/4ZAU" rel="noopener">4ZAU</a></td><td>2026-11-10</td></tr>
+      <tr><td>Trial landscape</td><td>ClinicalTrials.gov</td><td><a href="https://clinicaltrials.gov/search?cond=EGFR%20mutant%20non-small%20cell%20lung%20cancer" rel="noopener">225 EGFR-mutant NSCLC studies</a></td><td>2026-11-10</td></tr>
+      <tr><td>FLAURA / FLAURA2 / AURA3 records</td><td>ClinicalTrials.gov</td><td><a href="https://clinicaltrials.gov/study/NCT02296125" rel="noopener">NCT02296125</a> · <a href="https://clinicaltrials.gov/study/NCT04035486" rel="noopener">NCT04035486</a> · <a href="https://clinicaltrials.gov/study/NCT02151981" rel="noopener">NCT02151981</a></td><td>2026-11-10</td></tr>
+    </table>
+    <div class="note" style="margin-top:16px;">This table is a selected public source set, not the full 30-source register. The complete register and the 25-claim ledger are held in the access-controlled dossier. Source record: <strong>NSCLC-001 v4.0</strong>, checked 10 November 2026.</div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">09</span>Scope and limits</h2>
+    <div class="note">
+      This page is a research summary for teaching and scientific communication. It is not medical advice, a diagnosis, a treatment recommendation, an eligibility decision or a regulatory submission. No patient data were used. The dossier is a curated evidence map, not a systematic review; independent thoracic-oncology review is outstanding. No computational model is claimed to treat NSCLC.
+    </div>
+    <div class="warnbox">
+      <strong>Public release boundary.</strong> The full dossier PDFs, buyer versions, claim ledger and evidence room are access-controlled. This page publishes only the summary, the selected sources and the stated limits.
+    </div>
+  </section>
+
+  <div class="pager"><a href="/work/dossier-2-0-2026-11-08/">← Dossier 2.0</a><span class="spacer"></span><a href="/diseases/">All diseases</a> <a href="mailto:lee.oulton@sabretek.co.uk?subject=NSCLC%20public%20release%20enquiry">Request the full dossier →</a></div>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited program.</p>
+      <p>Public release NSCLC-001 v4.0 · 10 November 2026 · 30 sources · 25 claims.</p></div>
+    <div><p><a href="/diseases/">All diseases</a></p><p><a href="/work/dossier-2-0-2026-11-08/">Dossier 2.0</a></p><p><a href="/#contact">Contact</a></p></div>
+  </div>
+  <div class="legal">© 2026 Sabre-Tek Limited. · Research and teaching use only — not clinical advice.</div>
+</footer>
+</body>
+</html>

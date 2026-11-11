@@ -1,0 +1,95 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-014",
+    "disease_name": "Permanent Neonatal Diabetes Mellitus (KCNJ11)",
+    "short_name": "PNDM (Kir6.2)",
+    "gene": "KCNJ11",
+    "uniprot": "Q14654",
+    "protein_name": "ATP-sensitive inward rectifier potassium channel 11 (Kir6.2)",
+    "protein_length_aa": 390,
+    "omim_id": 618856,
+    "orpha_code": 224,
+    "category": "Channelopathy / Gain-of-Function Channel",
+    "inheritance": "Autosomal dominant (activating KCNJ11 mutations); can be de novo",
+    "mechanism": "Gain-of-function ion channel. Activating KCNJ11 mutations prevent the ATP-sensitive potassium (KATP) channel from closing, keeping the pancreatic beta-cell hyperpolarized and suppressing insulin secretion. This causes neonatal diabetes. The toxic species is a hyperactive channel, NOT an accumulating protein.",
+    "mechanism_class": "channel_gof",
+    "recommended_modality": "channel_blocker (sulfonylurea — closes the KATP channel, restoring insulin secretion)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. The disease is a gain-of-function ION CHANNEL, not a toxic aggregate. The correct modality is a channel BLOCKER (sulfonylurea) that closes the hyperactive KATP channel and restores insulin secretion — not protein degradation.",
+    "prevalence": "~1 in 100,000-260,000 live births — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "First 6 months of life (hyperglycemia, failure to thrive)",
+    "approved_treatments": [
+      {
+        "drug": "Glibenclamide (glyburide) — sulfonylurea",
+        "mw_da": 494,
+        "pubchem_cid": 3488,
+        "class": "Sulfonylurea (KATP channel blocker)",
+        "mechanism_correct": "Sulfonylureas bind and close the KATP channel, depolarizing the beta-cell and restoring insulin secretion. Most patients with KCNJ11 neonatal diabetes can be switched from insulin to oral sulfonylureas, often with better glycemic control.",
+        "fda_approval": "Long-established (off-label for neonatal diabetes; NEJM 2006 demonstrated the switch)",
+        "fda_nda": "",
+        "note": "MW 494.0 Da, CID 3488 (glibenclamide) — commonly cited. This is a channel-blocker strategy, fundamentally different from degrader/replacement."
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "No degrader or gene therapy indicated — the channel blocker is the definitive approach"
+    ],
+    "clinical_trials_count": 5,
+    "key_pmid": 32027066,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "Q14654 (KCNJ11, 390 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/Q14654",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 224 (Neonatal diabetes mellitus)",
+        "url": "https://www.orpha.net/en/disease/detail/224",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "618856 (Diabetes Mellitus, Permanent Neonatal, 2; PNDM2 / KCNJ11)",
+        "url": "https://omim.org/entry/618856",
+        "retrieved": "2026-11-07"
+      },
+      {
+        "fact": "Sulfonylurea switch (mechanism evidence)",
+        "source": "NEJM 2006",
+        "accession": "Switching from Insulin to Oral Sulfonylureas (Pearson et al., NEJM 355:467)",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa061759",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "Hum Mutat 2020",
+        "accession": "32027066",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32027066/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "Q14654 = KCNJ11 (Kir6.2), 390 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "Activating KCNJ11 mutations (gain-of-function) — SOURCE CHECKED (OMIM 618856; NEJM 2006)",
+      "inheritance": "Autosomal dominant — SOURCE CHECKED (OMIM 618856)",
+      "orpha_code": "224 = Neonatal diabetes mellitus (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "Glibenclamide 494.0 Da, CID 3488 — commonly cited (not re-verified this session)",
+      "fda_date": "Sulfonylureas long-established; off-label for neonatal diabetes — N/A"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 224 confirmed live via Orphanet API.",
+      "CLARIFIED: KCNJ11 neonatal diabetes is a GAIN-OF-FUNCTION CHANNEL — the correct modality is a channel BLOCKER (sulfonylurea), NOT a degrader, NOT enzyme replacement, NOT gene therapy."
+    ],
+    "human_summary": "Permanent neonatal diabetes due to KCNJ11 mutations is a gain-of-function channelopathy: an overactive ATP-sensitive potassium channel suppresses insulin secretion. The striking clinical result is that most patients can be switched from insulin injections to oral sulfonylurea tablets, which close the channel and restore insulin — a channel-blocker cure, not a degrader or replacement.",
+    "clinical_trials_total": 5,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "5 curated interventional trials; 5 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

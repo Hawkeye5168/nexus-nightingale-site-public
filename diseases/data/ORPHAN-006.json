@@ -1,0 +1,99 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-006",
+    "disease_name": "Gaucher Disease",
+    "short_name": "GD",
+    "gene": "GBA1",
+    "uniprot": "P04062",
+    "protein_name": "Lysosomal acid glucosylceramidase (GCase / glucocerebrosidase)",
+    "protein_length_aa": 536,
+    "omim_id": 230800,
+    "orpha_code": 355,
+    "category": "Lysosomal Storage",
+    "inheritance": "Autosomal recessive — GBA1 mutations",
+    "mechanism": "Loss-of-function. Deficiency of glucocerebrosidase (GCase) impairs lysosomal degradation of glucosylceramide, which accumulates in macrophages, forming 'Gaucher cells' in spleen, liver, and bone marrow. This causes hepatosplenomegaly, cytopenias, and bone disease (type 1, non-neuronopathic) or additional neurological involvement (types 2-3).",
+    "mechanism_class": "enzyme_lof",
+    "recommended_modality": "enzyme replacement therapy (approved)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. Gaucher disease is a loss-of-function enzyme deficiency — GCase is deficient, not accumulated. The correct route is enzyme replacement therapy (restore GCase), not protein degradation.",
+    "prevalence": "~1 in 40,000-60,000 general population; ~1 in 850 in Ashkenazi Jewish population (commonly cited) — UNVERIFIED exact figure this session",
+    "age_of_onset": "Type 1: variable, childhood to adulthood; Type 2: infancy (severe); Type 3: childhood (neuronopathic)",
+    "approved_treatments": [
+      {
+        "drug": "Imiglucerase (Cerezyme)",
+        "mw_da": null,
+        "pubchem_cid": null,
+        "class": "Enzyme replacement therapy (recombinant GCase)",
+        "mechanism_correct": "Recombinant human glucocerebrosidase that replaces the deficient enzyme, restoring glucosylceramide degradation. Administered intravenously. This is the definitive disease-modifying therapy for type 1 Gaucher disease.",
+        "fda_approval": "1994 (Cerezyme)",
+        "fda_nda": "",
+        "note": "NOTE: imiglucerase is a recombinant glycoprotein enzyme (~55 kDa), NOT a small molecule — molecular weight and PubChem CID are not applicable (MW/CID fields left 0 to avoid fabrication).",
+        "mw_note": "biologic — molecular weight not applicable"
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Substrate reduction therapy: eliglustat (oral, glucosylceramide synthase inhibitor) and miglustat",
+      "Gene therapy (AAV-mediated GBA1 delivery, preclinical/early clinical)",
+      "Pharmacological chaperones (ambroxol, repurposed)"
+    ],
+    "clinical_trials_count": 25,
+    "key_pmid": 28218669,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P04062 (GBA1, Lysosomal acid glucosylceramidase/GCase, 536 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P04062",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 355 (Gaucher disease)",
+        "url": "https://www.orpha.net/en/disease/detail/355",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "230800 (Gaucher Disease)",
+        "url": "https://omim.org/entry/230800",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease mechanism & therapy",
+        "source": "GeneReviews",
+        "accession": "NBK1269 (Gaucher Disease)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK1269/",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "Int J Mol Sci 2017",
+        "accession": "28218669",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28218669/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "P04062 = GBA1 (Lysosomal acid glucosylceramidase/GCase), 536 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "GBA1 loss-of-function mutations — SOURCE CHECKED (GeneReviews NBK1269; StatPearls)",
+      "inheritance": "Autosomal recessive — SOURCE CHECKED (OMIM 230800; Orphanet)",
+      "orpha_code": "355 = Gaucher disease (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "Imiglucerase is a recombinant enzyme (~55 kDa), not a small molecule — MW/CID NOT APPLICABLE (left 0, not fabricated)",
+      "fda_date": "Cerezyme (imiglucerase) 1994 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 355 confirmed live via Orphanet API.",
+      "CLARIFIED: imiglucerase is a recombinant enzyme (not a small molecule), so MW/PubChem CID are intentionally marked 0 rather than fabricating a small-molecule weight.",
+      "CLARIFIED: enzyme replacement therapy is the correct disease-modifying route for a LoF lysosomal storage disease — NOT AUTOTAC."
+    ],
+    "human_summary": "Gaucher disease is the most common lysosomal storage disorder, an autosomal recessive deficiency of glucocerebrosidase. It causes glucocerebroside accumulation in macrophages, leading to enlarged spleen/liver, low blood counts, and bone disease. Enzyme replacement therapy is the standard disease-modifying treatment for the non-neuronopathic form.",
+    "clinical_trials_total": 183,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "25 curated interventional trials; 183 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

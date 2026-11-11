@@ -1,0 +1,91 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-003",
+    "disease_name": "Lesch-Nyhan Syndrome",
+    "short_name": "LNS",
+    "gene": "HPRT1",
+    "uniprot": "P00492",
+    "protein_name": "Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)",
+    "protein_length_aa": 218,
+    "omim_id": 300322,
+    "orpha_code": 510,
+    "category": "Metabolic / Inborn Error of Purine Metabolism",
+    "inheritance": "X-linked recessive — HPRT1 mutations (complete deficiency)",
+    "mechanism": "Loss-of-function. Deficiency of HPRT1 (hypoxanthine-guanine phosphoribosyltransferase) blocks the purine salvage pathway, causing massive de novo purine synthesis and uric acid overproduction. This leads to hyperuricemia (kidney stones, gout, tophi) plus a poorly-understood neurological syndrome: severe motor dysfunction, intellectual disability, and characteristic self-injurious behaviour (SIB).",
+    "mechanism_class": "enzyme_lof",
+    "recommended_modality": "urate-lowering (xanthine oxidase inhibitor) + enzyme replacement (investigational)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. LNS is a loss-of-function enzyme deficiency — HPRT is missing, not accumulated. Degrading any residual HPRT would worsen the disease. Correct routes are enzyme replacement / gene therapy / urate-lowering (allopurinol), not protein degradation.",
+    "prevalence": "~1 in 380,000 (commonly cited; X-linked, almost exclusively males) — UNVERIFIED exact figure this session",
+    "age_of_onset": "Infancy (developmental delay); self-injury typically from age 2-3",
+    "approved_treatments": [
+      {
+        "drug": "Allopurinol",
+        "mw_da": 136.11,
+        "pubchem_cid": 135401907,
+        "class": "Xanthine oxidase inhibitor",
+        "mechanism_correct": "Lowers uric acid production by inhibiting xanthine oxidase. It treats the hyperuricemia (kidney stones, gout, tophi) but does NOT improve the neurological or behavioural symptoms.",
+        "fda_approval": "1966 (long-established; allopurinol)",
+        "fda_nda": "",
+        "note": "Standard urate-lowering therapy for LNS. Addresses the metabolic consequence, not the neurological phenotype."
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "HPRT enzyme replacement / gene therapy (preclinical)",
+      "Dopamine-pathway modulators for self-injury (investigational)",
+      "S-adenosylmethionine (SAMe) / folinic acid (reported, limited evidence)"
+    ],
+    "clinical_trials_count": 3,
+    "key_pmid": "10338013",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P00492 (HPRT1, Hypoxanthine-guanine phosphoribosyltransferase, 218 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P00492",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 510 (Lesch-Nyhan syndrome)",
+        "url": "https://www.orpha.net/en/disease/detail/510",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "300322 (Lesch-Nyhan Syndrome)",
+        "url": "https://omim.org/entry/300322",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Drug molecular weight",
+        "source": "PubChem",
+        "accession": "CID 135401907 (allopurinol, 136.11 Da, C5H4N4O)",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/allopurinol/property/MolecularWeight/JSON",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P00492 = HPRT1 (Hypoxanthine-guanine phosphoribosyltransferase), 218 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "HPRT1 deficiency (multiple mutations; complete deficiency = Lesch-Nyhan) — SOURCE CHECKED (Orphanet ORPHAcode 510 definition)",
+      "inheritance": "X-linked recessive — SOURCE CHECKED (OMIM 300322; Orphanet)",
+      "orpha_code": "510 = Lesch-Nyhan syndrome (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "136.11 Da, CID 135401907, C5H4N4O — SOURCE CHECKED via PubChem REST API (live)",
+      "fda_date": "Allopurinol approved 1966 (long-established) — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 510 confirmed live via Orphanet API.",
+      "NOTE: prior v1 data conflated Lesch-Nyhan (HPRT1) with progeria (LMNA) inheritance in one record — the fresh entry is gene-correct (HPRT1, not LMNA).",
+      "CLARIFIED: allopurinol treats hyperuricemia only, NOT the neurological/behavioural phenotype — this distinction was absent in prior data."
+    ],
+    "human_summary": "Lesch-Nyhan syndrome is an X-linked disorder of purine metabolism caused by complete HPRT1 deficiency. Affected boys develop uric acid overproduction (kidney stones, gout) alongside severe neurological disability and a striking, near-universal self-injurious biting behaviour. Allopurinol controls the uric acid but not the neurology.",
+    "clinical_trials_total": 7,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "3 curated interventional trials; 7 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

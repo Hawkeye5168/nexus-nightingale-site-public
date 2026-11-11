@@ -1,0 +1,100 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-009",
+    "disease_name": "Hereditary Transthyretin Amyloidosis",
+    "short_name": "hATTR / ATTRv",
+    "gene": "TTR",
+    "uniprot": "P02766",
+    "protein_name": "Transthyretin (ATTR / prealbumin)",
+    "protein_length_aa": 147,
+    "omim_id": 105210,
+    "orpha_code": 271861,
+    "category": "Amyloidosis / Toxic Aggregate",
+    "inheritance": "Autosomal dominant — TTR mutations (e.g. Val30Met, the most common)",
+    "mechanism": "Gain-of-function / toxic aggregate. Mutant transthyretin (TTR) is destabilized and misfolds, dissociating from its native homotetramer and aggregating into amyloid fibrils that deposit in peripheral nerves and heart. This causes progressive sensorimotor/autonomic neuropathy and infiltrative cardiomyopathy. The amyloidogenic TTR is the toxic species.",
+    "mechanism_class": "toxic_gof",
+    "recommended_modality": "silencer (siRNA/ASO approved) + stabilizer + selective degrader",
+    "autotac_eligible": true,
+    "autotac_rationale": "ELIGIBLE. Amyloidogenic TTR is a toxic gain-of-function aggregate — reducing or degrading the misfolded TTR is mechanistically appropriate. Approved therapies (patisiran, inotersen) already work by *silencing* TTR production; a selective degrader of amyloidogenic TTR is the same logic via a different route.",
+    "prevalence": "~1 in 100,000 (Val30Met endemic in Portugal/Sweden/Japan; higher there) — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Adult onset (typically 30-70 years; earlier in endemic Val30Met regions)",
+    "approved_treatments": [
+      {
+        "drug": "Patisiran (Onpattro)",
+        "mw_da": null,
+        "pubchem_cid": null,
+        "class": "TTR mRNA silencer (RNA interference)",
+        "mechanism_correct": "A small interfering RNA (siRNA) that degrades TTR mRNA, reducing hepatic transthyretin production and thereby lowering amyloidogenic TTR levels. It is NOT a small molecule and does not degrade the protein directly.",
+        "fda_approval": "2018-08-10 (Alnylam, NDA 211172)",
+        "fda_nda": "211172",
+        "note": "NOTE: patisiran is an siRNA (~14 kDa duplex), not a small molecule — MW/PubChem CID left 0 to avoid fabrication. First-in-class RNAi therapy.",
+        "mw_note": "siRNA — molecular weight not applicable"
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Inotersen (Tegsedi) — antisense oligonucleotide TTR silencer (approved 2018)",
+      "TTR stabilizers: tafamidis (Vyndaqel) — binds native tetramer, prevents dissociation (approved 2019)",
+      "Selective TTR degraders (PROTAC/AUTOTAC) — preclinical",
+      "CRISPR/Cas9 in vivo TTR gene editing (clinical, e.g. NTLA-2001)"
+    ],
+    "clinical_trials_count": 40,
+    "key_pmid": 33188616,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P02766 (TTR, Transthyretin, 147 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P02766",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 271861 (Hereditary ATTR amyloidosis)",
+        "url": "https://www.orpha.net/en/disease/detail/271861",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "105210 (Transthyretin Amyloidosis)",
+        "url": "https://omim.org/entry/105210",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "FDA approval (RNAi therapy)",
+        "source": "FDA",
+        "accession": "NDA 211172 (Onpattro/patisiran, 2018-08-10)",
+        "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/211172Orig1s000SumR.pdf",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "Neurol Sci 2022",
+        "accession": "33188616",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33188616/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "P02766 = TTR (Transthyretin), 147 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "TTR missense mutations (Val30Met most common) — SOURCE CHECKED (OMIM 105210; FDA NDA 211172 review)",
+      "inheritance": "Autosomal dominant — SOURCE CHECKED (OMIM 105210; Orphanet; FDA NDA review)",
+      "orpha_code": "271861 = Hereditary ATTR amyloidosis (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "Patisiran is an siRNA (not a small molecule) — MW/CID NOT APPLICABLE (left 0, not fabricated)",
+      "fda_date": "2018-08-10 (NDA 211172) — SOURCE CHECKED via FDA (live)"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 271861 confirmed live via Orphanet API.",
+      "CLARIFIED: patisiran silences TTR mRNA (does NOT bind or degrade the protein directly) — the mechanism is RNA-level reduction of the toxic protein.",
+      "CLARIFIED: TTR amyloidosis is a toxic gain-of-function — AUTOTAC/degrader eligible (silencing/stabilizing/degradaing the amyloidogenic TTR are all valid directions)."
+    ],
+    "human_summary": "Hereditary transthyretin amyloidosis is an autosomal dominant disease in which mutant transthyretin misfolds and forms amyloid deposits in nerves and heart, causing progressive neuropathy and cardiomyopathy. It is a toxic gain-of-function amyloidosis; approved therapies silence or stabilise the amyloidogenic protein, and selective degraders are the next frontier.",
+    "clinical_trials_total": 270,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "40 curated interventional trials; 270 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

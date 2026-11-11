@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS NIGHTINGALE — Sovereign Therapeutic Pipeline</title>
+<meta name="description" content="NEXUS NIGHTINGALE is a complete computational drug-discovery pipeline: live target intake, supervised protein folding, mechanism-based routing, degrader design, patient and trial matching, and a multi-database evidence chain — producing source-linked therapeutic dossiers on a single desktop computer.">
+<link rel="canonical" href="https://sabretek.ltd/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NEXUS NIGHTINGALE">
+<meta property="og:title" content="NEXUS NIGHTINGALE — a sovereign therapeutic pipeline">
+<meta property="og:description" content="From protein target to citation-referenced therapeutic dossier, on a single desktop computer.">
+<meta property="og:url" content="https://sabretek.ltd/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NEXUS NIGHTINGALE — a sovereign therapeutic pipeline">
+<meta name="twitter:description" content="From protein target to citation-referenced therapeutic dossier, on a single desktop computer.">
+<meta name="twitter:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{
+    --navy:#173F5F; --navy-deep:#0E2A40; --steel:#41789B;
+    --cerulean:#76B5C5; --cyan:#A9CFD9; --slate:#D1D9E0;
+    --offwhite:#F3F7F9; --white:#FFFFFF; --warning:#E0A94B;
+    --verified:#1FA88C; --flag:#C7562F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    color:var(--navy); background:var(--offwhite); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--cerulean); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 40px; background:rgba(243,247,249,0.94);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--slate);
+  }
+  nav .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:1px;}
+  nav .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  nav .brand span b{color:var(--navy);}
+  nav .brand span i{font-style:normal; color:var(--steel);}
+  nav .links{display:flex; gap:24px; font-size:14px; letter-spacing:0.4px;}
+  nav .links a{color:var(--navy); font-weight:600;}
+
+  header.hero{
+    min-height:100vh; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center; padding:130px 24px 80px;
+    background:linear-gradient(180deg, var(--offwhite) 0%, #E7EEF2 100%);
+    position:relative; overflow:hidden;
+  }
+  header.hero > .hero-art{position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+  .motif{position:absolute; background-repeat:no-repeat; background-size:contain;
+    opacity:.72; filter:blur(.3px); pointer-events:none;}
+  .hero-art .tl{left:-190px; top:-170px; width:min(740px,74vw); height:min(740px,74vw);
+    background-image:url('/assets/art/net-1crn.svg');
+    -webkit-mask-image:radial-gradient(circle at 0% 0%,#000 12%,transparent 82%);
+    mask-image:radial-gradient(circle at 0% 0%,#000 12%,transparent 82%);}
+  .hero-art .tr{right:-210px; top:-190px; width:min(800px,80vw); height:min(800px,80vw);
+    background-image:url('/assets/art/net-1m17.svg');
+    -webkit-mask-image:radial-gradient(circle at 100% 0%,#000 12%,transparent 82%);
+    mask-image:radial-gradient(circle at 100% 0%,#000 12%,transparent 82%);}
+  .hero-art .bl{left:-210px; bottom:-190px; width:min(760px,76vw); height:min(760px,76vw);
+    background-image:url('/assets/art/net-2hhb.svg');
+    -webkit-mask-image:radial-gradient(circle at 0% 100%,#000 12%,transparent 80%);
+    mask-image:radial-gradient(circle at 0% 100%,#000 12%,transparent 80%);}
+  .hero-art .br{right:-170px; bottom:-160px; width:min(680px,68vw); height:min(680px,68vw);
+    background-image:url('/assets/art/net-1m17.svg'); transform:scaleX(-1);
+    -webkit-mask-image:radial-gradient(circle at 100% 100%,#000 12%,transparent 80%);
+    mask-image:radial-gradient(circle at 100% 100%,#000 12%,transparent 80%);}
+  header.hero > *:not(.hero-art){position:relative; z-index:1;}
+  #diseases{position:relative; overflow:hidden;}
+  #diseases .diseases-art{position:absolute; right:-150px; top:-130px; width:540px; height:540px;
+    z-index:0; pointer-events:none; opacity:.55;
+    background:url('/assets/art/net-2hhb.svg') no-repeat right top; background-size:contain;
+    -webkit-mask-image:radial-gradient(circle at 100% 0%,#000 12%,transparent 80%);
+    mask-image:radial-gradient(circle at 100% 0%,#000 12%,transparent 80%);}
+  #diseases .wrap{position:relative; z-index:1;}
+  #technology{position:relative; overflow:hidden;}
+  #technology .tech-art{position:absolute; right:-130px; top:-110px; width:480px; height:480px;
+    z-index:0; pointer-events:none; opacity:.55;
+    background:url('/assets/art/net-1crn.svg') no-repeat right top; background-size:contain;
+    -webkit-mask-image:radial-gradient(circle at 100% 0%,#000 12%,transparent 80%);
+    mask-image:radial-gradient(circle at 100% 0%,#000 12%,transparent 80%);}
+  #technology .wrap{position:relative; z-index:1;}
+  .hero .logo{height:150px; width:150px; border-radius:50%; object-fit:cover;
+    box-shadow:0 12px 40px rgba(23,63,95,0.25); margin-bottom:32px;}
+  .hero .kicker{text-transform:uppercase; letter-spacing:6px; font-size:13px; color:var(--steel); margin-bottom:18px; font-weight:600;}
+  .hero h1{font-size:clamp(32px,5.5vw,58px); line-height:1.1; font-weight:800; color:var(--navy); max-width:20ch; margin-bottom:24px;}
+  .hero h1 em{font-style:normal; color:var(--cerulean);}
+  .hero .sub{font-size:clamp(17px,2.4vw,21px); color:var(--steel); max-width:62ch; margin-bottom:40px;}
+  .hero .buttons{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
+  .btn{display:inline-block; padding:16px 32px; border-radius:8px; font-weight:700; font-size:16px; letter-spacing:0.4px; cursor:pointer; transition:transform 0.15s ease, box-shadow 0.15s ease;}
+  .btn:hover{transform:translateY(-2px); text-decoration:none;}
+  .btn.primary{background:var(--navy); color:var(--white); box-shadow:0 8px 24px rgba(23,63,95,0.25);}
+  .btn.ghost{background:transparent; color:var(--navy); border:2px solid var(--navy);}
+  .music-toggle{position:fixed; right:20px; bottom:20px; z-index:90; width:44px; height:44px;
+    border-radius:50%; border:1px solid rgba(23,63,95,0.18); background:rgba(255,255,255,0.72);
+    color:var(--steel); font-family:inherit; font-size:17px; line-height:1; cursor:pointer;
+    opacity:0.45; backdrop-filter:blur(6px); transition:opacity .2s, color .2s, border-color .2s;}
+  .music-toggle:hover{opacity:1; color:var(--navy); border-color:var(--cerulean);}
+  .music-toggle[aria-pressed="true"]{opacity:0.8; color:var(--navy); border-color:var(--cerulean);}
+
+  section{padding:96px 40px;}
+  .wrap{max-width:1080px; margin:0 auto;}
+  section h2{font-size:clamp(26px,4vw,40px); line-height:1.15; font-weight:800; color:var(--navy); margin-bottom:20px; max-width:24ch;}
+  section h2 em{font-style:normal; color:var(--cerulean);}
+  section .lead{font-size:19px; color:var(--steel); max-width:70ch; margin-bottom:32px;}
+  .section-kicker{text-transform:uppercase; letter-spacing:4px; font-size:12px; font-weight:700; color:var(--cerulean); margin-bottom:14px;}
+
+  .dark{background:var(--navy); color:var(--offwhite);}
+  .dark h2{color:var(--white);}
+  .dark h2 em{color:var(--cyan);}
+  .dark .lead{color:var(--cyan);}
+  .dark p{color:var(--slate);}
+  .dark .section-kicker{color:var(--cyan);}
+
+  /* pipeline flow */
+  .pipeline{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:40px;}
+  .step{background:var(--white); border:1px solid var(--slate); border-radius:12px; padding:26px 22px;}
+  .step .n{display:inline-block; background:var(--cerulean); color:var(--navy-deep); font-weight:800; width:34px; height:34px; line-height:34px; text-align:center; border-radius:8px; margin-bottom:14px; font-size:15px;}
+  .step h3{font-size:17px; color:var(--navy); margin-bottom:8px;}
+  .step p{font-size:14px; color:var(--steel);}
+  .step .cmd{display:block; margin-top:12px; font-family:Consolas,"Courier New",monospace; font-size:12px; color:var(--steel); background:var(--offwhite); border:1px solid var(--slate); border-radius:6px; padding:6px 8px;}
+  .phases{display:grid; gap:34px; margin-top:40px;}
+  .phase-block{border-top:1px solid var(--slate); padding-top:22px;}
+  .phase-block:first-child{border-top:0; padding-top:0;}
+  .phase-head{display:flex; align-items:baseline; gap:14px; margin-bottom:16px; flex-wrap:wrap;}
+  .phase-tag{font-family:Consolas,"Courier New",monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--cerulean); font-weight:700;}
+  .phase-head h3{font-size:20px; color:var(--navy); font-weight:800;}
+  .stagegrid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  .stagegrid .step{padding:22px 20px;}
+  .archlink{margin-top:28px; font-size:15px; font-weight:700;}
+
+  /* detail blocks */
+  .detail{margin-top:48px; border-top:1px solid var(--slate); padding-top:40px;}
+  .detail h3{font-size:24px; color:var(--navy); margin-bottom:10px;}
+  .detail .why{font-size:16px; color:var(--steel); max-width:74ch; margin-bottom:20px;}
+  .detail .why b{color:var(--navy);}
+  .io{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px;}
+  .io .card{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:20px 22px;}
+  .io .card .t{font-size:12px; text-transform:uppercase; letter-spacing:2px; font-weight:700; color:var(--cerulean); margin-bottom:10px;}
+  .io .card code{display:block; font-family:Consolas,"Courier New",monospace; font-size:13px; color:var(--navy); margin-bottom:4px;}
+
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; margin-top:48px;}
+  .stat{background:var(--white); border-radius:12px; padding:32px 28px; border:1px solid var(--slate); box-shadow:0 2px 10px rgba(23,63,95,0.06);}
+  .stat .num{font-size:50px; font-weight:800; color:var(--cerulean); line-height:1;}
+  .stat .label{font-size:14px; color:var(--steel); margin-top:10px; font-weight:600;}
+
+  /* worked example */
+  .example{background:var(--white); border-radius:16px; border:1px solid var(--slate);
+    box-shadow:0 12px 40px rgba(23,63,95,0.10); overflow:hidden; margin-top:40px;}
+  .example .head{background:var(--navy-deep); color:var(--white); padding:24px 32px;}
+  .example .head .target{font-size:22px; font-weight:800; color:var(--white);}
+  .example .head .sub{font-size:14px; color:var(--cyan); margin-top:4px;}
+  .example .body{padding:32px;}
+  table{width:100%; border-collapse:collapse;}
+  table th, table td{text-align:left; padding:14px 16px; border-bottom:1px solid var(--slate); font-size:15px; vertical-align:top;}
+  table th{color:var(--steel); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; font-size:12px;}
+  table td .k{color:var(--steel); font-weight:600;}
+  table td .v{color:var(--navy); font-weight:600;}
+  .ok{color:var(--verified); font-weight:700;}
+
+  .pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-top:32px;}
+  .diseases{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; margin-top:32px;}
+  .disease{background:var(--white); border-radius:10px; padding:22px; border:1px solid var(--slate); transition:transform .15s ease;}
+  a.disease{display:block; color:inherit; text-decoration:none;}
+  .disease .more{margin-top:9px; font-size:12.5px; font-weight:700; color:var(--steel);}
+  .disease:hover .more{color:var(--cerulean);}
+  .disease:hover{transform:translateY(-3px); box-shadow:0 8px 24px rgba(23,63,95,0.12);}
+  .disease .name{font-weight:700; color:var(--navy); font-size:16px;}
+  .disease .tag{font-size:13px; color:var(--cerulean); margin-top:4px; font-weight:600;}
+  .pillar{background:rgba(255,255,255,0.05); border:1px solid rgba(169,207,217,0.2); border-radius:12px; padding:30px;}
+  .pillar h3{color:var(--white); font-size:19px; margin-bottom:10px;}
+  .pillar p{color:var(--slate); font-size:15px;}
+
+  .verifynote{background:#FDF8EF; border-left:4px solid var(--warning); border-radius:8px; padding:20px 24px; margin-top:32px;}
+  .verifynote p{color:#7A5B1E; font-size:15px;}
+
+  footer{background:var(--navy-deep); color:var(--slate); padding:64px 40px 40px;}
+  footer .wrap{display:grid; grid-template-columns:2fr 1fr; gap:40px;}
+  footer h4{color:var(--white); margin-bottom:16px; font-size:16px;}
+  footer p{font-size:14px; margin-bottom:12px;}
+  footer a{color:var(--cyan);}
+  footer .legal{border-top:1px solid rgba(169,207,217,0.2); margin-top:48px; padding-top:24px; text-align:center; font-size:13px;}
+
+  @media(max-width:1100px) and (min-width:821px){
+    nav .links{gap:15px; font-size:13px;}
+  }
+  @media(max-width:820px){
+    nav{padding:14px 20px;}
+    nav .links{display:none;}
+    section{padding:64px 20px;}
+    footer .wrap{grid-template-columns:1fr;}
+    .io{grid-template-columns:1fr;}
+    .hero .logo{height:110px;width:110px;}
+    .stagegrid{grid-template-columns:1fr;}
+    .hero-art .tl, .hero-art .bl{display:none;}
+    .hero-art .tr{width:430px; height:430px; right:-150px; top:-130px; opacity:.5;}
+    .hero-art .br{width:360px; height:360px; right:-120px; bottom:-110px; opacity:.45;}
+    #diseases .diseases-art, #technology .tech-art{display:none;}
+    .music-toggle{right:14px; bottom:14px; width:40px; height:40px;}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">
+    <img src="assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE">
+    <span><b>NEXUS</b> <i>NIGHTINGALE</i></span>
+  </div>
+  <div class="links">
+    <a href="#pipeline">Pipeline</a>
+    <a href="#how">How it works</a>
+    <a href="/pipeline/">Architecture</a>
+    <a href="/folding/">Fold Explorer</a>
+    <a href="#example">Example</a>
+    <a href="#diseases">Diseases</a>
+    <a href="#verification">Source checks</a>
+    <a href="#technology">Technology</a>
+    <a href="/work/dossier-2-0-2026-11-08/">Dossier 2.0</a>
+    <a href="/research-exchange/">Exchange</a>
+    <a href="/course/">Course</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<button class="music-toggle" id="musicBtn" type="button" aria-pressed="false" aria-label="Play background music" title="Play background music">
+  <span id="musicIcon" aria-hidden="true">♪</span>
+</button>
+
+<header class="hero">
+  <div class="hero-art" aria-hidden="true">
+    <span class="motif tl"></span>
+    <span class="motif tr"></span>
+    <span class="motif bl"></span>
+    <span class="motif br"></span>
+  </div>
+  <img class="logo" src="assets/logo-512.jpg" width="150" height="150" alt="NEXUS NIGHTINGALE logo">
+  <div class="kicker">Sabre-Tek Limited · Therapeutic Discovery</div>
+  <h1>A complete computational drug-discovery pipeline, <em>sovereign</em> and source-linked.</h1>
+  <p class="sub">NEXUS NIGHTINGALE takes a protein target from sequence to therapeutic dossier — supervised protein folding, mechanism-based routing, molecule design, and a multi-database evidence chain — running on a single desktop computer. No cloud. Claims carry sources and limits.</p>
+  <div class="buttons">
+    <a class="btn primary" href="#pipeline">See the pipeline</a>
+    <a class="btn ghost" href="#how">How it works</a>
+    <a class="btn ghost" href="/course/">The course</a>
+  </div>
+  <audio id="bgm" src="assets/music/mozart-eine-kleine-nachtmusik-allegro.mp3" loop preload="none"></audio>
+</header>
+
+<!-- ======================= PIPELINE ======================= -->
+<section id="pipeline">
+  <div class="wrap">
+    <div class="section-kicker">The pipeline</div>
+    <h2>From target to <em>cited dossier</em>.</h2>
+    <p class="lead">A complete computational pipeline: resolve the target, assemble the evidence, assess the structure, choose a mechanism and modality, design a candidate, run the safety gates, and return a citation-referenced dossier. The scientist sets the question; NEXUS organises the evidence.</p>
+    <div class="phases">
+
+      <div class="phase-block">
+        <div class="phase-head"><span class="phase-tag">Phase I · Resolve</span><h3>Target and evidence</h3></div>
+        <div class="stagegrid">
+          <div class="step"><span class="n">01</span><h3>Intake &amp; identity</h3><p>Resolve a protein target, sequence, gene or disease against public reference data. Unknown identifiers fail loudly rather than being guessed.</p></div>
+          <div class="step"><span class="n">02</span><h3>Evidence assembly</h3><p>Gather disease, gene, structure and trial evidence, with a source and an evidence tier attached to each claim.</p></div>
+          <div class="step"><span class="n">03</span><h3>Research record</h3><p>Turn the question into a structured record: what is known, what is uncertain, what is missing, and what would count as an answer.</p></div>
+        </div>
+      </div>
+
+      <div class="phase-block">
+        <div class="phase-head"><span class="phase-tag">Phase II · Structure</span><h3>Fold, assess, locate</h3></div>
+        <div class="stagegrid">
+          <div class="step"><span class="n">04</span><h3>Supervised structural recovery</h3><p>Predict a structure and score it against an experimental reference. Guided results are labelled as reconstruction, not blind prediction.</p></div>
+          <div class="step"><span class="n">05</span><h3>Research folding path</h3><p>A research path that attempts a fold without a template. It is reported separately and never presented as a production prediction.</p></div>
+          <div class="step"><span class="n">06</span><h3>Domains &amp; pockets</h3><p>Locate domains and binding cavities before any design begins, using experimental and predicted structural evidence.</p></div>
+        </div>
+      </div>
+
+      <div class="phase-block">
+        <div class="phase-head"><span class="phase-tag">Phase III · Decide</span><h3>Gate, route, design</h3></div>
+        <div class="stagegrid">
+          <div class="step"><span class="n">07</span><h3>Mechanism gate</h3><p>Gain of function may be degraded; loss of function is protected. The refusal is explicit: no degrader is issued where the mechanism would make the patient worse.</p></div>
+          <div class="step"><span class="n">08</span><h3>Modality routing</h3><p>Choose among therapeutic routes — small molecule, biologic, gene therapy, editing, RNA-directed approach, protein replacement, cell therapy or symptomatic care.</p></div>
+          <div class="step"><span class="n">09</span><h3>Candidate design</h3><p>Record the target-engagement hypothesis, the proposed readout, the safety questions and the falsifier. Designs are research hypotheses, not medicines.</p></div>
+          <div class="step"><span class="n">10</span><h3>Safety &amp; developability</h3><p>Citation, evidence, safety and scope gates run before release. Unsupported claims and clinical overreach are rejected by design.</p></div>
+        </div>
+      </div>
+
+      <div class="phase-block">
+        <div class="phase-head"><span class="phase-tag">Phase IV · Evidence</span><h3>Assemble, match, verify</h3></div>
+        <div class="stagegrid">
+          <div class="step"><span class="n">11</span><h3>Knowledge assembly</h3><p>Bring biomedical databases and registries into one evidence chain, with provenance and retrieval dates.</p></div>
+          <div class="step"><span class="n">12</span><h3>Patient &amp; trial context</h3><p>Where appropriate, rank recruiting trials against variant, therapy line, biomarkers and safety profile — as research context, not clinical advice.</p></div>
+          <div class="step"><span class="n">13</span><h3>Verify &amp; report</h3><p>Run the citation, evidence and compassion gates; then return a cited dossier with its limitations and scope note attached.</p></div>
+          <div class="step"><span class="n">14</span><h3>Dossier &amp; review</h3><p>The output is a cited dossier: disease, gene, evidence, hypotheses, candidate routes, trials, gaps and the next experiment. The scientist reviews and challenges it.</p></div>
+        </div>
+      </div>
+
+    </div>
+    <p class="archlink"><a href="/pipeline/">See the pipeline, described by what it does →</a></p>
+  </div>
+</section>
+
+<!-- ======================= HOW IT WORKS ======================= -->
+<section id="how" class="dark">
+  <div class="wrap">
+    <div class="section-kicker">How it works</div>
+    <h2>Four phases, <em>fourteen stages.</em></h2>
+    <p class="lead">Each phase has a defined input, a defined method and a defined output. The full stage map — every stage, the evidence layer and the measured output of the current dossiers — is on the pipeline page.</p>
+
+    <!-- PHASE I -->
+    <div class="detail" style="border-top:1px solid rgba(169,207,217,0.25);">
+      <h3 style="color:#fff;">Phase I · Resolve the target</h3>
+      <p class="why">Identity first. The sequence, organism, length and mass are fetched from UniProt at run time; a deep ortholog alignment supplies the co-evolutionary signal; DCA and ContactNet produce two independent contact maps. Unknown accessions fail loudly rather than being guessed at.</p>
+      <div class="io">
+        <div class="card"><div class="t">Input</div></div>
+        <div class="card"><div class="t">Output</div></div>
+      </div>
+      <p class="why" style="margin-top:18px; font-size:14px; color:var(--cyan);">Stages 01–03:  ·  ·  / </p>
+    </div>
+
+    <!-- PHASE II -->
+    <div class="detail" style="border-top:1px solid rgba(169,207,217,0.25);">
+      <h3 style="color:#fff;">Phase II · Solve the structure</h3>
+      <p class="why">Structure is solved by the supervised <b>NIGHTINGALE</b> path and, for research, by the ab initio research engine. Both report a <b>TM-score</b> (1.0 perfect, above 0.5 the same fold) and an <b>RMSD</b> in ångströms against the experimental reference. Guided numbers are labelled as reconstruction, not blind prediction; the unguided run is reported separately. Domains and binding pockets are located before any design begins.</p>
+      <div class="io">
+        <div class="card"><div class="t">Input</div></div>
+        <div class="card"><div class="t">Output</div></div>
+      </div>
+      <p class="why" style="margin-top:18px; font-size:14px; color:var(--cyan);">Stages 04–06:  ·  ·  / </p>
+    </div>
+
+    <!-- PHASE III -->
+    <div class="detail" style="border-top:1px solid rgba(169,207,217,0.25);">
+      <h3 style="color:#fff;">Phase III · Decide and design</h3>
+      <p class="why">The gate reads mechanism before molecule. A <b>gain-of-function</b> target may be degraded; a <b>loss-of-function</b> target is protected, because removing a protein the patient already lacks would make them worse. The refusal is code — UBE3A in Angelman syndrome returns BLOCKED. Thirteen modality routes are available, and the designer computes target-binding ligand, linker and autophagy-recruiting ligand mass, logP and permeability. Two further validation stages run over the the canonical designs: a docking estimate from warhead IC50 (not a simulation) and a rule-based toxicity screen (structural alerts, not measured).</p>
+      <div class="io">
+        <div class="card"><div class="t">Input</div></div>
+        <div class="card"><div class="t">Output</div></div>
+      </div>
+      <p class="why" style="margin-top:18px; font-size:14px; color:var(--cyan);">Stages 07–11:  ·  ·  /  ·  · </p>
+    </div>
+
+    <!-- PHASE IV -->
+    <div class="detail" style="border-top:1px solid rgba(169,207,217,0.25);">
+      <h3 style="color:#fff;">Phase IV · Evidence, patients, source checks</h3>
+      <p class="why">Twenty-four biomedical databases are surfaced through the knowledge layer, with live connectors to UniProt, PubChem, PDB, ClinicalTrials.gov, ChEMBL, NCBI Gene, Reactome and OpenTargets. The multi-dimensional matcher ranks recruiting trials against the patient's variant, therapy line, biomarkers and safety. The TJ Compassion audit and L.O.V.E. gate run before release, and the dossier is rendered to PDF natively — with its limitations declared.</p>
+      <div class="io">
+        <div class="card"><div class="t">Input</div></div>
+        <div class="card"><div class="t">Output</div></div>
+      </div>
+      <p class="why" style="margin-top:18px; font-size:14px; color:var(--cyan);">Stages 12–14:  ·  /  /  ·  / </p>
+    </div>
+
+    <p style="margin-top:32px; font-weight:700;"><a href="/pipeline/" style="color:var(--cyan);">Read the full pipeline architecture →</a></p>
+  </div>
+</section>
+
+<!-- ======================= WORKED EXAMPLE ======================= -->
+<section id="example">
+  <div class="wrap">
+    <div class="section-kicker">Worked example</div>
+    <h2>A real target, <em>end to end.</em></h2>
+    <p class="lead">EGFR (UniProt P00533) — the epidermal growth factor receptor, the most-studied oncology kinase — run through the complete pipeline as a demonstration.</p>
+
+    <div class="example">
+      <div class="head">
+        <div class="target">EGFR · P00533 · epidermal growth factor receptor</div>
+        <div class="sub">1,210 amino acids · 134,277 Da · receptor tyrosine kinase</div>
+      </div>
+      <div class="body">
+        <table>
+          <tr><th>Stage</th><th>Result</th></tr>
+          <tr>
+            <td><span class="k">Fold</span></td>
+            <td><span class="v">TM 0.9706 · RMSD 1.64 Å</span> <span class="ok">✓</span><br>
+            <span style="font-size:13px;color:#41789B;">Supervised fold of P00533 against PDB 1XKK on the corrected 2 Nov 2026 build, reporting the peak TM at 1,000 iterations. The earlier 0.6502 was lowered by a numerically unstable 3×3 superposition in the scorer, not by the folder; it is fixed with a quaternion alignment. The 0.7393 figure came from a stale-checkpoint bug (a 46-residue 1CRN contact map loaded for unrelated targets) and remains retired. Reference-guided reconstruction, not a blind prediction.</span></td>
+          </tr>
+          <tr>
+            <td><span class="k">Eligibility</span></td>
+            <td><span class="v">PASSED</span> <span class="ok">✓</span> — gain-of-function target, routed degradable.</td>
+          </tr>
+          <tr>
+            <td><span class="k">Design</span></td>
+            <td><span class="v">897 Da chimera</span> — Gefitinib warhead (446 Da) + YTK-105 p62 recruitment ligand (257 Da) + PEG4 linker (194 Da).</td>
+          </tr>
+          <tr>
+            <td><span class="k">Report</span></td>
+            <td><span class="v">Citation-referenced dossier</span> — protein biology, structures, drug landscape, resistance map and recommendation.</td>
+          </tr>
+        </table>
+        <p style="margin-top:20px; font-size:13px; color:#41789B;">Demonstration result. The full dossier for EGFR carries the complete evidence chain — biomarkers, resistance variants, trials and interactions — each citation-referenced.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">0.9706</div><div class="label">TM-score — peak supervised fold of EGFR against PDB 1XKK (1,000 iterations, corrected 2 Nov 2026 build)</div></div>
+      <div class="stat"><div class="num">24</div><div class="label">biomedical databases cross-referenced per target</div></div>
+      <div class="stat"><div class="num">9</div><div class="label">disease mechanisms, each routed to its correct intervention</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">benchmark dossiers, each with 30+ sections and 30+ sources</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DISEASES ======================= -->
+<section id="diseases">
+  <div class="diseases-art" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-kicker">Disease registry</div>
+    <h2>A <em>mechanistic</em> registry, not one-size-fits-all.</h2>
+    <p class="lead">Each target is routed by its mechanism — a channel disease needs a blocker, a trafficking defect needs a corrector, a toxic gain-of-function may need a degrader. The pipeline applies the right intervention to the right mechanism, and refuses the wrong one. NEXUS is disease-agnostic; this initial registry focuses on rare disease because the data is structured, not because the platform is limited to it.</p>
+    <p style="margin-top:14px;"><a href="/diseases/" style="font-weight:700;">Browse the initial disease dossier set →</a> &nbsp;·&nbsp; <a href="/work/revalidation-2026-11-07/" style="font-weight:700;">See the revalidation example →</a></p>
+    <p style="margin-top:8px;"><a href="/work/dossier-2-0-2026-11-08/" style="font-weight:700;">See Dossier 2.0 — the decision, countercase and claim ledger →</a></p>
+    <div class="diseases">
+      <a class="disease" href="/diseases/hutchinson-gilford-progeria/"><div class="name">Hutchinson-Gilford Progeria</div><div class="tag">LMNA · toxic GoF · degrader</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/friedreich-ataxia/"><div class="name">Friedreich Ataxia</div><div class="tag">FXN · enzyme LoF · gene therapy</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/lesch-nyhan-syndrome/"><div class="name">Lesch-Nyhan Syndrome</div><div class="tag">HPRT1 · enzyme LoF · enzyme replacement</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/huntington-disease/"><div class="name">Huntington Disease</div><div class="tag">HTT · toxic GoF · degrader + antisense</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/duchenne-muscular-dystrophy/"><div class="name">Duchenne Muscular Dystrophy</div><div class="tag">DMD · structural LoF · gene therapy</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/gaucher-disease/"><div class="name">Gaucher Disease</div><div class="tag">GBA1 · enzyme LoF · enzyme replacement</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/fabry-disease/"><div class="name">Fabry Disease</div><div class="tag">GLA · enzyme LoF · replacement + chaperone</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/pompe-disease/"><div class="name">Pompe Disease</div><div class="tag">GAA · enzyme LoF · enzyme replacement</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/ttr-amyloidosis/"><div class="name">TTR Amyloidosis</div><div class="tag">TTR · toxic GoF · silencer + degrader</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/alpha-1-antitrypsin-deficiency/"><div class="name">Alpha-1 Antitrypsin Deficiency</div><div class="tag">SERPINA1 · dual GoF+LoF · split treatment</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/cystic-fibrosis/"><div class="name">Cystic Fibrosis (F508del)</div><div class="tag">CFTR · trafficking · corrector</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/angelman-syndrome/"><div class="name">Angelman Syndrome</div><div class="tag">UBE3A · haploinsufficiency · unsilence</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/myotonic-dystrophy-1/"><div class="name">Myotonic Dystrophy 1</div><div class="tag">DMPK · RNA toxicity · antisense</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/neonatal-diabetes/"><div class="name">Neonatal Diabetes</div><div class="tag">KCNJ11 · channel GoF · blocker</div><div class="more">Read the dossier →</div></a>
+      <a class="disease" href="/diseases/wilson-disease/"><div class="name">Wilson Disease</div><div class="tag">ATP7B · metal overload · chelation</div><div class="more">Read the dossier →</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= VERIFICATION ======================= -->
+<section id="verification" class="dark">
+  <div class="wrap">
+    <div class="section-kicker">Source checks</div>
+    <h2>Source-checked and dated, or it <em>doesn't ship.</em></h2>
+    <p class="lead">Every factual claim — molecular weight, protein identifier, trial status, drug interaction — is checked against a live authoritative source before it is published. This is a design rule of the system, not a marketing promise.</p>
+    <div class="pillars">
+      <div class="pillar"><h3>Live cross-checking</h3><p>UniProt, RCSB PDB, PubChem and ClinicalTrials.gov are queried live. Every record is checked against a named source, not assumed.</p></div>
+      <div class="pillar"><h3>Citation audit</h3><p>A built-in cite-audit flags any citation that does not belong to its claim — rather than letting it ship silently.</p></div>
+      <div class="pillar"><h3>Honest labelling</h3><p>When a fact cannot be checked, it is labelled <em>unverified</em> — never presented as certain. Unknown identifiers are rejected, not guessed.</p></div>
+    </div>
+    <div class="verifynote">
+      <p><strong>The principle:</strong> a recommendation either ships with its source checks, or it does not ship at all. This is the difference between a system that claims accuracy and one that shows its work.</p>
+    </div>
+    <div class="verifynote" style="border-left-color:#41789B; background:#EDF3F6;">
+      <p style="color:#2F5B76;"><strong>Scope:</strong> NEXUS NIGHTINGALE produces computational predictions and evidence dossiers for research use. It is not a clinical service, nothing here is medical advice, and no output has regulatory approval. The guided fold figure is a reconstruction baseline — the engine is directed toward the known structure — and the unguided figure is reported alongside it. Every benchmark on this page is reproducible with the shipped build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TECHNOLOGY ======================= -->
+<section id="technology">
+  <div class="tech-art" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-kicker">Technology</div>
+    <h2>The <em>technology.</em></h2>
+    <p class="lead">A sovereign, self-contained stack — no cloud dependency, no per-query cost, designed to run on commodity hardware.</p>
+    <div class="pillars" style="grid-template-columns:repeat(auto-fit,minmax(420px,1fr));">
+      <div class="pillar" style="background:var(--white); border:1px solid var(--slate);"><h3 style="color:var(--navy);">Protein folding</h3><p style="color:var(--steel);">A supervised folding engine that recovers near-native structure, and reports its own confidence against the reference — sub-ångström agreement on the benchmark target (1M17: TM 0.9801 / RMSD 0.94 Å on the clean build).</p></div>
+      <div class="pillar" style="background:var(--white); border:1px solid var(--slate);"><h3 style="color:var(--navy);">Molecule design</h3><p style="color:var(--steel);">Computes designed candidates with explicit molecular weight, linker geometry and property checks — permeability, logP, blood-brain-barrier.</p></div>
+      <div class="pillar" style="background:var(--white); border:1px solid var(--slate);"><h3 style="color:var(--navy);">Knowledge engine</h3><p style="color:var(--steel);">Twenty-four therapeutic databases surfaced into a single evidence chain, with every record carrying its citation.</p></div>
+      <div class="pillar" style="background:var(--white); border:1px solid var(--slate);"><h3 style="color:var(--navy);">Sovereign by design</h3><p style="color:var(--steel);">Runs entirely on local hardware. No data leaves the machine, no external query costs, nothing dependent on a third-party service remaining available.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section id="contact" class="dark">
+  <div class="wrap">
+    <div class="section-kicker">Contact</div>
+    <h2>Send a target. <em>Get a dossier.</em></h2>
+    <p class="lead">NEXUS NIGHTINGALE is offered as an in-house analysis service: send a protein target, a UniProt accession or a sequence, and we return a citation-referenced therapeutic dossier. Research use only.</p>
+    <p style="font-size:19px; margin-top:8px;"><a href="mailto:lee.oulton@sabretek.co.uk" style="color:#A9CFD9; font-weight:700; letter-spacing:0.3px;">lee.oulton@sabretek.co.uk</a></p>
+    <p style="font-size:14px; color:#A9CFD9; margin-top:10px;">We reply with scope, timeline and data-handling terms before any work begins.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>NEXUS NIGHTINGALE</h4>
+      <p>A sovereign therapeutic pipeline — protein folding, molecule design and a multi-database evidence chain, producing source-linked therapeutic dossiers on a single desktop computer.</p>
+      <p style="margin-top:16px;">A Sabre-Tek Limited program.</p>
+      <p style="margin-top:12px; font-size:12.5px; opacity:0.85;">Front-page music: Eine kleine Nachtmusik, K. 525, I. Allegro — W. A. Mozart (public domain, via Wikimedia Commons).</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="#pipeline">Pipeline</a> · <a href="/pipeline/">Architecture</a> · <a href="/course/road-to-nexus-nightingale/">Road to NEXUS</a> · <a href="/course/">Course</a></p>
+      <p><a href="#how">How it works</a></p>
+      <p><a href="#example">Worked example</a></p>
+      <p><a href="#diseases">Diseases</a></p>
+      <p><a href="/work/dossier-2-0-2026-11-08/">Dossier 2.0</a></p>
+      <p><a href="/research-exchange/">Research Exchange</a></p>
+      <p><a href="#verification">Source checks</a></p>
+      <p><a href="#technology">Technology</a></p>
+      <p><a href="/course/">Course</a></p>
+      <p><a href="#contact">Contact</a></p>
+    </div>
+  </div>
+  <div class="legal">
+    © 2026 Sabre-Tek Limited. All rights reserved. · NEXUS NIGHTINGALE is a Sabre-Tek Limited therapeutic-discovery program. · Computational research platform — not clinically validated; no regulatory approval.
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('musicBtn');
+  var icon = document.getElementById('musicIcon');
+  var audio = document.getElementById('bgm');
+  if (!btn || !audio) return;
+
+  audio.volume = 0.28;
+
+  var offPref = false;
+  try { offPref = localStorage.getItem('nn-music-off') === '1'; } catch (e) {}
+
+  function setState(playing) {
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    icon.textContent = playing ? '❚❚' : '♪';
+    var label = playing ? 'Stop background music' : 'Play background music';
+    btn.setAttribute('aria-label', label);
+    btn.title = label;
+  }
+
+  function fromToggle(e) {
+    return !!(e && e.target && btn.contains(e.target));
+  }
+
+  function attemptStart() {
+    try { audio.currentTime = 0; } catch (e) {}
+    audio.play().then(function () { disarm(); setState(true); }).catch(function () {});
+  }
+
+  function onGesture(e) {
+    if (fromToggle(e)) return;
+    attemptStart();
+  }
+
+  function arm() {
+    window.addEventListener('pointerdown', onGesture, true);
+    window.addEventListener('keydown', onGesture, true);
+    window.addEventListener('touchstart', onGesture, true);
+  }
+
+  function disarm() {
+    window.removeEventListener('pointerdown', onGesture, true);
+    window.removeEventListener('keydown', onGesture, true);
+    window.removeEventListener('touchstart', onGesture, true);
+  }
+
+  if (!offPref) {
+    // Try immediately; if the browser blocks audible autoplay, start on the first interaction.
+    audio.play().then(function () { setState(true); }).catch(function () { arm(); });
+  }
+
+  btn.addEventListener('click', function () {
+    if (audio.paused) {
+      try { localStorage.removeItem('nn-music-off'); } catch (e) {}
+      attemptStart();
+    } else {
+      try { localStorage.setItem('nn-music-off', '1'); } catch (e) {}
+      audio.pause();
+      try { audio.currentTime = 0; } catch (e) {}
+      setState(false);
+    }
+  });
+
+  audio.addEventListener('play', function () { setState(true); });
+  audio.addEventListener('pause', function () { setState(false); });
+})();
+</script>
+</body>
+</html>

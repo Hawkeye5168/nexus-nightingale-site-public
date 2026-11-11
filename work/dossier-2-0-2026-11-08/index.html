@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossier 2.0 — decision dossiers with the countercase attached</title>
+<meta name="description" content="The Dossier 2.0 example: decision page, evidence map, claim ledger, red team, living dossier and an access-controlled client evidence room. Research use only; not clinical advice.">
+<link rel="canonical" href="https://sabretek.ltd/work/dossier-2-0-2026-11-08/">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<style>
+:root{--navy:#173F5F;--deep:#0E2A40;--steel:#41789B;--cerulean:#76B5C5;--cyan:#A9CFD9;--slate:#D1D9E0;--offwhite:#F3F7F9;--white:#fff;--amber:#B07A1E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI",system-ui,Arial,sans-serif;background:var(--offwhite);color:var(--navy);line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid var(--slate);background:var(--white)}
+nav .brand{display:flex;gap:12px;align-items:center;font-weight:700;letter-spacing:1px}
+nav .brand img{width:40px;height:40px;border-radius:50%}
+nav .brand i{font-style:normal;color:var(--steel)}
+nav .links{display:flex;gap:22px;font-size:14px;font-weight:600}
+header{padding:72px 24px 48px;text-align:center;background:linear-gradient(180deg,var(--offwhite),#E7EEF2)}
+.kicker{text-transform:uppercase;letter-spacing:5px;font-size:12px;font-weight:800;color:var(--cerulean);margin-bottom:14px}
+h1{font-size:clamp(32px,5vw,56px);line-height:1.06;letter-spacing:-.02em;margin-bottom:16px;max-width:20ch;margin-left:auto;margin-right:auto}
+header p{color:var(--steel);max-width:72ch;margin:0 auto;font-size:17px}
+main{max-width:1160px;margin:0 auto;padding:40px 24px 80px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:26px}
+.card{background:var(--white);border:1px solid var(--slate);border-radius:12px;padding:22px}
+.card .k{font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--cerulean);margin-bottom:8px}
+.card h3{font-size:18px;line-height:1.25;margin-bottom:7px}
+.card p{font-size:13.5px;color:var(--steel)}
+.example{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.example .card{padding:26px}
+.example h2{font-size:24px;line-height:1.15;margin-bottom:8px}
+.example p{font-size:14px;color:var(--steel);margin-bottom:14px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.btn{display:inline-block;padding:9px 13px;border-radius:8px;font-size:12.5px;font-weight:700;background:var(--navy);color:var(--white)}
+.btn.ghost{background:var(--white);color:var(--navy);border:1px solid var(--slate)}
+.btn:hover{opacity:.9}
+.map{width:100%;height:auto;border:1px solid var(--slate);border-radius:10px;margin-top:14px;background:#fff}
+.note{background:var(--white);border-left:3px solid var(--steel);border-radius:0 8px 8px 0;padding:16px 18px;margin-top:28px;font-size:13.5px;color:#2F5B76}
+.warn{background:#FDF8EF;border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:16px 18px;margin-top:18px;font-size:12.5px;color:#7A5B1E}
+.contact{background:var(--navy);color:#fff;border-radius:12px;padding:30px;margin-top:34px}
+.contact h2{font-size:24px;margin-bottom:8px;color:#fff}
+.contact p{color:#DCEBF2;font-size:14px}
+.contact a{color:var(--cyan);font-weight:700}
+footer{background:var(--deep);color:var(--slate);text-align:center;padding:28px;font-size:12.5px}
+@media(max-width:820px){nav{padding:14px 20px}nav .links{display:none}.example{grid-template-columns:1fr}header{padding:48px 20px 34px}main{padding:24px 16px 60px}}
+</style></head><body>
+<nav><a class="brand" href="/"><img src="/assets/logo-512.jpg" alt=""><span><b>NEXUS</b> <i>NIGHTINGALE</i></span></a>
+<div class="links"><a href="/">Home</a><a href="/diseases/">Diseases</a><a href="/work/revalidation-2026-11-07/">Source checks</a><a href="/course/">Course</a><a href="/#contact">Contact</a></div></nav>
+<header><div class="kicker">Dossier 2.0 · example of work</div>
+<h1>The dossier is the <em>decision.</em></h1>
+<p>Not a data dump. A decision page, a source trail, a claim ledger, a red team and a stated limit — with the countercase attached.</p></header>
+<main>
+  <div class="grid">
+    <div class="card"><div class="k">01 · Decision page</div><h3>What should happen next?</h3><p>A recommendation, a confidence statement, the falsifiers and the next actions — before the evidence.</p></div>
+    <div class="card"><div class="k">02 · Evidence map</div><h3>One factual picture</h3><p>Disease, gene, mechanism, modality, trial and regulatory status on a single page. Arrows describe document structure, not proven therapy.</p></div>
+    <div class="card"><div class="k">03 · Claim ledger</div><h3>Every claim carries its state</h3><p>CURRENT, STALE, CONFLICT, UNVERIFIED or BLOCKED — with source IDs, confidence and the last checked date.</p></div>
+    <div class="card"><div class="k">04 · Red team</div><h3>The case against the answer</h3><p>The strongest counterarguments, the negative evidence and the experiment that would change the decision.</p></div>
+    <div class="card"><div class="k">05 · Living dossier</div><h3>Versioned, not frozen</h3><p>A changelog, a watchlist and a monthly digest. The dossier ages in public rather than going stale in silence.</p></div>
+    <div class="card"><div class="k">06 · Evidence room</div><h3>Ask the dossier</h3><p>A client-only room that answers only from the checked content, cites its sources and says “not in this dossier” when it cannot. Access is arranged directly, not through the public site.</p></div>
+    <div class="card"><div class="k">07 · Buyer versions</div><h3>One evidence base, four outputs</h3><p>A partner brief, a grant annex, a plain-language summary and a board page — all cut from the same claims and sources.</p></div>
+  </div>
+
+  <div class="note"><strong>Print specification.</strong> Body 11.5 pt, lists 11.2 pt, tables 9.2 pt, captions 9 pt; margins 28 mm top, 22 mm sides, 18 mm bottom. Each part starts on a new page, table rows stay intact, header rows repeat and there are no blank padding pages. The 10-page brief and the full dossier are always paired; the brief is a subset, not the full evidence product.</div>
+
+  <div class="example">
+    <div class="card">
+      <div class="k">FXN · Friedreich ataxia</div>
+      <h2>19 sources. 10 claims. One unverified prevalence.</h2>
+      <p>A full decision dossier with construct provenance and an access timeline that separates approval from routine availability.</p>
+      <img class="map" src="fxn_evidence.svg" alt="FXN evidence summary" onerror="this.style.display='none'">
+      <div class="btns"><a class="btn ghost" href="mailto:lee.oulton@sabretek.co.uk?subject=FXN%20dossier%20access%20request">Request access</a><a class="btn ghost" href="/diseases/friedreich-ataxia/">Public disease page →</a></div>
+    </div>
+    <div class="card">
+      <div class="k">NSCLC · EGFR-mutant · public release</div>
+      <h2>49 pages. 30 sources. 25 claims.</h2>
+      <p>Target biology, mutation landscape, FLAURA / FLAURA2 / AURA3 evidence, resistance taxonomy, structural provenance and a 25-claim ledger. The public release carries the summary and selected sources; the full dossier is access-controlled.</p>
+      <img class="map" src="nsclc_evidence_map.png" alt="NSCLC evidence map">
+      <div class="btns"><a class="btn" href="/diseases/nsclc/">Open public release →</a><a class="btn ghost" href="mailto:lee.oulton@sabretek.co.uk?subject=NSCLC%20dossier%20access%20request">Request the full dossier</a></div>
+    </div>
+  </div>
+
+  <div class="warn"><strong>Access-controlled.</strong> The full dossier PDFs, buyer versions, claim ledger and evidence room are not public. They are held privately. Access is arranged directly with authorised clients; new readers can request access. The public page keeps only the summary and counts.</div>
+
+  <div class="note"><strong>New: the Research Exchange.</strong> A consent-based way for thoracic oncologists, pathologists, structural biologists and ctDNA labs to find each other. No scraped emails, no patient data, introductions by relay. <a href="/research-exchange/" style="font-weight:700;color:var(--navy)">Open the Research Exchange →</a></div>
+
+  <div class="note"><strong>The rule:</strong> a claim is not published because it sounds confident. It is published because the source is named, the date is recorded and the limit is visible. The public revalidation example shows the same method across fifteen rare-disease dossiers.</div>
+  <div class="warn"><strong>Research use only.</strong> Not clinical advice, diagnosis, treatment or regulatory submission. No patient data. NSCLC has had a document-level source check; independent oncology review is outstanding. FXN prevalence remains unverified. No claim is made that any computational model can treat either disease.</div>
+  <div class="contact"><h2>Commission a dossier</h2><p>Send a target, a disease question or a decision you need to defend. We reply with scope, price, timeline and data-handling terms before any work begins.</p><p style="margin-top:10px"><a href="mailto:lee.oulton@sabretek.co.uk">lee.oulton@sabretek.co.uk</a></p></div>
+</main>
+<footer>© 2026 Sabre-Tek Limited · Research and teaching use only — not clinical advice.</footer>
+</body></html>

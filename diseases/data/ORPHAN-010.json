@@ -1,0 +1,100 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-010",
+    "disease_name": "Alpha-1 Antitrypsin Deficiency",
+    "short_name": "A1AT Deficiency / AATD",
+    "gene": "SERPINA1",
+    "uniprot": "P01009",
+    "protein_name": "Alpha-1-antitrypsin (Serpin A1)",
+    "protein_length_aa": 418,
+    "omim_id": 613490,
+    "orpha_code": 60,
+    "category": "Metabolic / Serpinopathy",
+    "inheritance": "Autosomal co-dominant — SERPINA1 Z allele (Glu342Lys, the PI*Z variant) homozygosity is the most common severe form",
+    "mechanism": "Dual mechanism. (1) Gain-of-function in the liver: the Z-variant alpha-1-antitrypsin misfolds and polymerizes, accumulating in hepatocyte endoplasmic reticulum, causing liver injury, fibrosis, and cirrhosis. (2) Loss-of-function in the lung: reduced circulating A1AT (a serine protease inhibitor) leaves the lung unprotected from neutrophil elastase, causing early-onset emphysema. The liver toxicity is the toxic-gain-of-function component.",
+    "mechanism_class": "dual_gof_lof",
+    "recommended_modality": "augmentation (LoF) + polymer blocker/degrader (GoF, investigational)",
+    "autotac_eligible": false,
+    "autotac_rationale": "COMPLEX — NOT a blanket 'eligible'. The liver disease is a toxic gain-of-function (Z-AAT polymerization), so a selective degrader of polymerized Z-AAT is mechanistically plausible for the HEPATIC component. However the lung disease is loss-of-function (deficient antiprotease), where degradation would worsen it. AUTOTAC is NOT appropriate for the disease as a whole — only a targeted hepatic strategy would qualify. The approved therapy is augmentation (restore the missing antiprotease), which addresses the LoF component.",
+    "prevalence": "~1 in 2,500-5,000 (PI*ZZ, European descent) — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Lung: early adulthood (emphysema, worse with smoking); Liver: infancy (cholestatic jaundice) to adulthood (cirrhosis)",
+    "approved_treatments": [
+      {
+        "drug": "Alpha-1 Proteinase Inhibitor (human, e.g. Prolastin-C / Zemaira / Aralast)",
+        "mw_da": null,
+        "pubchem_cid": null,
+        "class": "Augmentation therapy (purified human A1AT)",
+        "mechanism_correct": "Intravenous infusion of purified human alpha-1-antitrypsin to restore circulating antiprotease levels, protecting the lung from elastase-mediated damage. Addresses the loss-of-function component only; does not clear hepatic Z-AAT polymers.",
+        "fda_approval": "1987 (first A1AT augmentation products)",
+        "fda_nda": "",
+        "note": "NOTE: A1AT augmentation is a pooled human plasma-derived protein (~52 kDa), NOT a small molecule — MW/PubChem CID left 0 to avoid fabrication.",
+        "mw_note": "biologic — molecular weight not applicable"
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Small-molecule polymerisation blockers (e.g. targeting the Z-AAT polymer interface — JCI Insight 2025)",
+      "Selective degraders of polymerized Z-AAT (autophagy enhancers / PROTAC) — preclinical, for the hepatic component",
+      "siRNA silencing of SERPINA1 (e.g. fazirsiran/ARO-AAT — clinical)",
+      "Gene therapy / CRISPR correction (preclinical)"
+    ],
+    "clinical_trials_count": 25,
+    "key_pmid": 32268028,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P01009 (SERPINA1, Alpha-1-antitrypsin, 418 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P01009",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 60 (Alpha-1-antitrypsin deficiency)",
+        "url": "https://www.orpha.net/en/disease/detail/60",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "613490 (Alpha-1-antitrypsin deficiency)",
+        "url": "https://omim.org/entry/613490",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Z-AAT polymerisation (gain-of-function) mechanism",
+        "source": "JCI Insight 2025",
+        "accession": "Ronzoni et al., polymer-blocking therapy (10.1172/jci.insight.194354)",
+        "url": "https://doi.org/10.1172/jci.insight.194354",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "N Engl J Med 2020",
+        "accession": "32268028",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32268028/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "P01009 = SERPINA1 (Alpha-1-antitrypsin), 418 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "SERPINA1 Z allele (Glu342Lys / PI*Z) — SOURCE CHECKED (OMIM 613490; literature)",
+      "inheritance": "Autosomal co-dominant — SOURCE CHECKED (OMIM 613490; Orphanet)",
+      "orpha_code": "60 = Alpha-1-antitrypsin deficiency (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "A1AT augmentation is a plasma-derived protein (~52 kDa), not a small molecule — MW/CID NOT APPLICABLE (left 0, not fabricated)",
+      "fda_date": "A1AT augmentation products 1987 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 60 confirmed live via Orphanet API.",
+      "CLARIFIED: A1AT deficiency is a DUAL-mechanism disease — liver (toxic GoF polymerisation) + lung (LoF antiprotease deficiency). AUTOTAC is NOT a blanket 'eligible' — only the hepatic component is a plausible degrader target.",
+      "CLARIFIED: augmentation therapy addresses the LoF (lung) component only; it does not clear hepatic Z-AAT polymers."
+    ],
+    "human_summary": "Alpha-1 antitrypsin deficiency is an autosomal co-dominant disorder caused by the SERPINA1 Z allele, whose protein product polymerizes and accumulates in the liver (causing cirrhosis) while deficient circulating antiprotease leaves the lungs vulnerable to emphysema. It is a dual gain-of-function (liver) and loss-of-function (lung) disease; augmentation therapy treats the lung component.",
+    "clinical_trials_total": 147,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "25 curated interventional trials; 147 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

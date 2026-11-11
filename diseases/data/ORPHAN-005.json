@@ -1,0 +1,99 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-005",
+    "disease_name": "Duchenne Muscular Dystrophy",
+    "short_name": "DMD",
+    "gene": "DMD",
+    "uniprot": "P11532",
+    "protein_name": "Dystrophin",
+    "protein_length_aa": 3685,
+    "omim_id": 310200,
+    "orpha_code": 98896,
+    "category": "Muscular Dystrophy",
+    "inheritance": "X-linked recessive — DMD gene mutations (mostly out-of-frame deletions/duplications/nonsense)",
+    "mechanism": "Loss-of-function. Mutations in DMD abolish dystrophin, a large cytoskeletal protein that links the muscle fibre cytoskeleton to the extracellular matrix. Without dystrophin, muscle membranes are fragile and progressively degenerate, replaced by fibrosis and fat. This is a pure loss-of-function disease.",
+    "mechanism_class": "structural_lof",
+    "recommended_modality": "gene therapy (micro-dystrophin) + exon skipping",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. DMD is a loss-of-function disease — dystrophin is absent, not accumulated. Degrading any residual/truncated dystrophin would worsen the disease. Correct routes are dystrophin restoration: gene therapy (micro-dystrophin), exon skipping (to restore reading frame), and stop-codon readthrough.",
+    "prevalence": "~1 in 3,500-5,000 live male births (commonly cited) — UNVERIFIED exact figure this session",
+    "age_of_onset": "Early childhood (2-5 years, motor delay and calf hypertrophy); wheelchair dependence ~age 12",
+    "approved_treatments": [
+      {
+        "drug": "Deflazacort (Emflaza)",
+        "mw_da": 441.5,
+        "pubchem_cid": 189821,
+        "class": "Corticosteroid (anti-inflammatory, symptomatic)",
+        "mechanism_correct": "Corticosteroid that slows muscle degeneration by reducing inflammation; prolongs ambulation by several years. Does NOT restore dystrophin.",
+        "fda_approval": "2017-02-09",
+        "fda_nda": "",
+        "note": "Standard of care corticosteroid. Slows decline; does not correct the underlying dystrophin deficiency."
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Gene therapy: delandistrogene moxeparvovec (Elevidys) — AAV micro-dystrophin (FDA accelerated approval 2023)",
+      "Exon-skipping ASOs: eteplirsen (exon 51), golodirsen (53), casimersen (45), viltolarsen (53)",
+      "Stop-codon readthrough: ataluren (translarna) — conditional approval in EU",
+      "Utrophin upregulation (compensatory dystrophin homologue)"
+    ],
+    "clinical_trials_count": 40,
+    "key_pmid": "3282674",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P11532 (DMD, Dystrophin, 3685 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P11532",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 98896 (Duchenne muscular dystrophy)",
+        "url": "https://www.orpha.net/en/disease/detail/98896",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "310200 (Duchenne Muscular Dystrophy)",
+        "url": "https://omim.org/entry/310200",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Drug molecular weight",
+        "source": "PubChem",
+        "accession": "CID 189821 (deflazacort, 441.5 Da, C25H31NO6)",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/deflazacort/property/MolecularWeight/JSON",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease mechanism",
+        "source": "Nature Reviews Disease Primers 2021",
+        "accession": "Duchenne muscular dystrophy (s41572-021-00248-3)",
+        "url": "https://www.nature.com/articles/s41572-021-00248-3",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P11532 = DMD (Dystrophin), 3685 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "DMD gene loss-of-function mutations (out-of-frame deletions/duplications/nonsense) — SOURCE CHECKED (Nature Reviews Disease Primers 2021)",
+      "inheritance": "X-linked recessive — SOURCE CHECKED (OMIM 310200; Orphanet)",
+      "orpha_code": "98896 = Duchenne muscular dystrophy (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "441.5 Da, CID 189821, C25H31NO6 — SOURCE CHECKED via PubChem REST API (live)",
+      "fda_date": "Deflazacort 2017-02-09; Elevidys (gene therapy) 2023 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 98896 confirmed live via Orphanet API.",
+      "CLARIFIED: deflazacort is SYMPTOMATIC (anti-inflammatory), not disease-modifying — the disease-modifying route is gene therapy / exon skipping, now correctly listed as investigational.",
+      "CLARIFIED: DMD is pure loss-of-function — NOT AUTOTAC eligible. Prior data marked DMD 'CLIN-RDY' without explaining the mechanism-gate decision."
+    ],
+    "human_summary": "Duchenne muscular dystrophy is the most common childhood muscular dystrophy, an X-linked disorder caused by dystrophin deficiency. Boys develop progressive muscle weakness from early childhood, losing ambulation in their teens and dying from respiratory or cardiac failure in young adulthood. Gene therapy and exon-skipping are the leading disease-modifying approaches.",
+    "clinical_trials_total": 503,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "40 curated interventional trials; 503 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

@@ -1,0 +1,58 @@
+<div class="chapter-body">
+<p>Welcome to chapter seven. We have come a long way. We learned how to fold a protein, how to decide whether to destroy it or protect it, how to choose the right tool, and how to check every claim against twenty-three databases.</p>
+<p>Now we arrive at the moment where all of it comes together. The output. The thing we hand to a person. The document that is the whole point of everything we have built.</p>
+<p>It is called the dossier. And in this chapter, I am going to walk you through it, part by part, so that when you hold one in your hands, you know exactly what you are looking at, and exactly where to find what you need.</p>
+<p>The dossier always has the same ten parts, in the same order. That consistency matters. It means that no matter which protein, which disease, which drug — you always know the structure. Let me walk you through all ten, slowly.</p>
+<p>Part one is the executive summary.</p>
+<p>This is the one page that matters most, because it is the one page most people will read. The executive summary gives the answer, up front, without making you dig for it. It tells you three things. What is the target — the protein, its name, its identifier. What is the mechanism — gain-of-function or loss-of-function, the gate&rsquo;s decision from chapter three. And what is the recommendation — which modality, which drug design, what the system proposes to do.</p>
+<p>It also carries the confidence number — how sure the system is of its recommendation. And it carries the structural evidence — the fold score, the TM-score, the proof that we actually folded this protein correctly before we designed anything against it.</p>
+<p>One page. The answer, up front. That is part one.</p>
+<p>Part two is the target biology.</p>
+<p>This is where we go deep into the protein itself. What is it? What does it do in the body? What is its full sequence — the entire string of beads, letter by letter? What are its domains — the different functional regions of the protein, like the rooms of a house? What are its key structural features — the binding sites, the catalytic residues, the parts that matter?</p>
+<p>This section also covers the protein&rsquo;s post-translational modifications — the chemical tags that are added to the protein after it is built, which can change how it works. And it covers the protein&rsquo;s function, its role in disease, and the pathways it participates in.</p>
+<p>This is the deep biology. If the executive summary is the answer, part two is the explanation.</p>
+<p>Part three is the structural biology.</p>
+<p>This is where our folding engine&rsquo;s work appears. It records the fold — the TM-score, the RMSD, the reference structure we compared against. It lists every known experimental structure of this protein, from the PDB database, with their resolution and what they tell us. It analyses the binding site — where a drug would attach. And it records the structural composition — how much of the protein is ordered, how much is disordered, the architecture of the folded shape.</p>
+<p>This section is the proof that we understood the protein&rsquo;s shape before we tried to change it. Shape equals function, from chapter one. This is where we demonstrate that we have the shape.</p>
+<p>Part four is the drug landscape.</p>
+<p>This is where we look outward, at the world. What drugs already exist for this target? What clinical trials are running, and what are their results? What are the competitors doing? What is the current standard of care?</p>
+<p>This section also records the critical corrections — the honest-evolution ledger. Because sometimes we have made mistakes in earlier drafts, and when we fix them, we record the fix. This is the TJ Compassion Protocol in action — we do not hide our corrections, we document them.</p>
+<p>And it records the modality comparison — all nine tools from chapter four, compared, with their molecular weights, their mechanisms, and their clinical stage, so you can see why we chose the one we chose.</p>
+<p>Part five is the therapeutic design.</p>
+<p>This is the actual drug. The molecule we designed, in full. For an AUTOTAC, this is the warhead, the linker, and the tag — the three parts from chapter five, with their exact weights. It records the recommendation, the structural evidence, the confidence, and the complete architecture of the proposed drug.</p>
+<p>This is the payoff. Everything before this — the fold, the gate, the modality choice — was leading to this. Here is the molecule.</p>
+<p>Part six is the risks and mitigation.</p>
+<p>This is where we are honest about what could go wrong. Every drug has risks. On-target toxicity — the drug hurting the thing it is aimed at. Off-target effects — the drug hurting things it is not aimed at. ADME problems — absorption, distribution, metabolism, excretion — the drug not behaving properly in the body. Resistance — the target mutating and escaping.</p>
+<p>For each risk, we record the mitigation — what we would do about it. This section is the honesty machine in action. We do not pretend the drug is safe. We say, clearly, what could go wrong, and how we would respond.</p>
+<p>Part seven is the verification.</p>
+<p>This is a checklist. A proof that every fact was checked against a live source. It records, point by point, what was verified and how — that the protein identifier resolves to a real entry, that the fold metrics were actually computed, that the mechanism was actually routed, that the molecular weight was actually checked against PubChem.</p>
+<p>This section is the receipts. It is the answer to the question: how do you know?</p>
+<p>Part eight is the commercial and intellectual property landscape.</p>
+<p>This is where the science meets the world of patents and business. It records the patent status of the drugs involved — who owns what, and when the patents expire. It records the freedom-to-operate analysis — can we actually use this molecule, or does someone else own it? And it records the regulatory pathway — the steps a drug must pass through before it can treat a patient: lead optimisation, in vitro testing, in vivo testing, clinical trials.</p>
+<p>This section is the sober reminder that a drug is not just a molecule. It is a product, subject to law and regulation.</p>
+<p>Part nine is the recommendation.</p>
+<p>This is the final verdict. The primary recommendation, stated plainly, with the next steps laid out. Reproduce the fold and the design independently. Validate in cells. Test in animals. Move toward the clinic.</p>
+<p>Part ten is the references.</p>
+<p>This is the provenance. Every source, every identifier, every number, traceable back to where it came from. The UniProt entry for the protein. The PDB entry for the structure. The PubChem entry for the molecule. The clinical trial number. Every claim in the entire dossier, backed by a pointer you can follow.</p>
+<p>And then, at the very end, there is the disclaimer. The honest boundary. This report is computational. It is not clinical advice. Nothing here treats a patient. It is for research and due diligence only.</p>
+<p>Ten parts. Executive summary. Target biology. Structural biology. Drug landscape. Therapeutic design. Risks. Verification. Commercial landscape. Recommendation. References.</p>
+<p>Let me now walk you through a real one, end to end, so it stops being abstract and becomes something you can actually picture.</p>
+<p>The real example is EGFR — the cancer protein we have met again and again. Let me read you its story through the lens of the ten-part dossier.</p>
+<p>The executive summary tells us: EGFR, gain-of-function, recommend AUTOTAC-mediated degradation. A molecule with a gefitinib-derived warhead, a linker, and an autophagy tag, weighing eight hundred and ninety-seven daltons. Confidence, ninety percent. Structural evidence, a TM-score of point seven four.</p>
+<p>The target biology tells us the story of EGFR — a receptor on the surface of cells, twelve hundred and ten amino acids long, a kinase — a protein that adds phosphate tags to other proteins, like flipping switches. It is the switch that tells cells to divide, and in cancer, it is stuck on.</p>
+<p>The structural biology records our fold, and lists the known structures — the crystal structures of EGFR bound to various drugs, each revealing a piece of how it works and how to attack it.</p>
+<p>The drug landscape records the existing drugs — gefitinib, erlotinib, osimertinib — and the trials that proved they work, with their real survival numbers. And it records the resistance mechanisms — T790M, C797S — the ways the cancer dodges those drugs, which is why we need something better.</p>
+<p>The therapeutic design presents our molecule — the AUTOTAC, built to destroy EGFR rather than just block it, because blocking has been defeated by resistance.</p>
+<p>The risks record what could go wrong — including, and this is important, a toxicity prediction that flagged our own design as carrying a risk, because it contains a chemical group similar to thalidomide, a famous drug that caused birth defects. We flagged it, honestly, in red.</p>
+<p>The verification confirms every fact was checked against live sources. The commercial landscape records the patent status of osimertinib, owned by AstraZeneca until 2042. The recommendation lays out the next steps. The references point to every source.</p>
+<p>And the disclaimer reminds us: this is computational. Not clinical advice. Not a treatment.</p>
+<p>That is the dossier. And here is what I want you to take from it, the single most important idea in this chapter.</p>
+<p>The dossier is not a sales document. It is an honesty document. It does not try to make the drug look good. It tries to tell the truth about the drug — what it is, what it does, what could go wrong, what we know and what we do not know.</p>
+<p>The toxicity prediction is the perfect example. We designed a molecule to destroy a cancer protein. And then our own system looked at that molecule and said — wait, this contains something dangerous. It might harm a developing baby. And we did not hide that. We wrote it into the report, in red, for everyone to see.</p>
+<p>A lesser system would have buried that. We put it front and centre, because honesty is the whole point. A doctor who reads our dossier knows everything we know — including our own doubts, including our own risks, including the places where we might be wrong.</p>
+<p>And that is why the dossier matters. It is not just a report. It is a promise. The promise that we will tell you the truth, even when the truth is uncomfortable.</p>
+<p>Let me bring chapter seven together. The dossier has ten parts, always in the same order — summary, biology, structure, landscape, design, risks, verification, commercial, recommendation, references. It is built to tell the truth, not to impress. And it ends, always, with the honest boundary: this is computational, not clinical advice.</p>
+<p>In the next chapter, we go deep into the hardest problem in cancer medicine — resistance. The arms race between drugs and the diseases that learn to dodge them.</p>
+<p>But before we move on, let me make sure this landed. Ten parts, same order, every time. And the whole thing is an honesty document — it names its own risks, flags its own dangers, and tells the truth. Hold on to that. It is the soul of the system.</p>
+<p>Next, resistance.</p>
+</div>

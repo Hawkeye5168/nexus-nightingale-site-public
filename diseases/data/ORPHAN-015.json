@@ -1,0 +1,88 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-015",
+    "disease_name": "Wilson Disease",
+    "short_name": "WD",
+    "gene": "ATP7B",
+    "uniprot": "P35670",
+    "protein_name": "Copper-transporting ATPase 2",
+    "protein_length_aa": 1465,
+    "omim_id": 277900,
+    "orpha_code": 905,
+    "category": "Metabolic / Metal Overload",
+    "inheritance": "Autosomal recessive — ATP7B mutations",
+    "mechanism": "Loss-of-function copper transporter leading to copper overload. ATP7B normally exports copper into bile; its deficiency causes copper to accumulate in the liver, brain, and cornea. The pathology is driven by the toxic copper overload (a downstream metal accumulation), not by a toxic protein aggregate and not by a simple enzyme-replaceable deficiency.",
+    "mechanism_class": "chelatable_metal",
+    "recommended_modality": "chelator (remove excess copper — penicillamine, trientine) + zinc (block absorption)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible (protein-level). The disease is copper overload due to a loss-of-function transporter; the correct intervention is copper CHELATION (remove the toxic metal) or zinc therapy (block absorption), not protein degradation or enzyme replacement.",
+    "prevalence": "~1 in 30,000 — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Variable — hepatic (childhood/adolescence) or neuropsychiatric (adolescence/adulthood)",
+    "approved_treatments": [
+      {
+        "drug": "D-Penicillamine and Trientine (chelators); Zinc acetate (absorption blocker)",
+        "mw_da": null,
+        "pubchem_cid": null,
+        "class": "Copper chelator + zinc",
+        "mechanism_correct": "Chelators bind and promote urinary excretion of excess copper; zinc induces metallothionein to block intestinal copper absorption. Both lower body copper burden.",
+        "fda_approval": "Penicillamine/trientine/zinc long-established for Wilson disease",
+        "fda_nda": "",
+        "note": "MW/CID left 0 — multiple drugs (penicillamine 149.2 Da, trientine 146.2 Da, zinc); individual MWs not re-verified this session.",
+        "pubchem_cids": [
+          5852,
+          5565,
+          11192
+        ],
+        "mw_note": "combination small molecules — penicillamine CID 5852, trientine CID 5565, zinc acetate CID 11192"
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Tetrathiomolybdate (investigational chelator)",
+      "Gene therapy / hepatocyte transplantation (preclinical)"
+    ],
+    "clinical_trials_count": 10,
+    "key_pmid": "10441329",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P35670 (ATP7B, 1465 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P35670",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 905 (Wilson disease)",
+        "url": "https://www.orpha.net/en/disease/detail/905",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "277900 (Wilson Disease)",
+        "url": "https://omim.org/entry/277900",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P35670 = ATP7B (Copper-transporting ATPase 2), 1465 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "ATP7B loss-of-function — SOURCE CHECKED (OMIM 277900)",
+      "inheritance": "Autosomal recessive — SOURCE CHECKED (OMIM 277900; Orphanet)",
+      "orpha_code": "905 = Wilson disease (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "Chelators (penicillamine/trientine) + zinc — MWs not individually re-verified this session",
+      "fda_date": "Copper chelation long-established — commonly cited"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 905 confirmed live via Orphanet API.",
+      "CLARIFIED: Wilson is a CHELATABLE METAL overload disease — the correct modality is copper CHELATION (remove the toxic metal), not protein degradation, not enzyme replacement, not a channel drug."
+    ],
+    "human_summary": "Wilson disease is an autosomal recessive disorder of copper transport caused by ATP7B deficiency, leading to toxic copper accumulation in the liver, brain, and cornea. It presents with liver disease, neuropsychiatric symptoms, and Kayser-Fleischer rings. Treatment is copper chelation and zinc — removing the toxic metal, a strategy distinct from degradation or replacement.",
+    "clinical_trials_total": 84,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "10 curated interventional trials; 84 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

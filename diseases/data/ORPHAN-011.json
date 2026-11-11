@@ -1,0 +1,90 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-011",
+    "disease_name": "Cystic Fibrosis (F508del)",
+    "short_name": "CF",
+    "gene": "CFTR",
+    "uniprot": "P13569",
+    "protein_name": "Cystic fibrosis transmembrane conductance regulator",
+    "protein_length_aa": 1480,
+    "omim_id": 219700,
+    "orpha_code": 586,
+    "category": "Channelopathy / Trafficking Defect",
+    "inheritance": "Autosomal recessive — CFTR mutations (F508del is the most common, ~70% of alleles)",
+    "mechanism": "Trafficking defect + channel gating defect. The F508del mutation causes CFTR to misfold and be retained in the endoplasmic reticulum (a trafficking/folding defect), so insufficient chloride channels reach the cell surface. This is NOT a simple loss-of-function (some protein is made) nor a gain-of-function — it is a protein-folding/trafficking defect that also impairs channel gating.",
+    "mechanism_class": "trafficking_defect",
+    "recommended_modality": "corrector (lumacaftor/elexacaftor — rescue folding) + potentiator (ivacaftor — restore gating)",
+    "autotac_eligible": false,
+    "autotac_rationale": "NOT eligible. CF is a trafficking/folding defect, not a toxic aggregate or a simple enzyme deficiency. Degrading CFTR would worsen the already-insufficient channel function. The correct route is small-molecule correctors (rescue folding to surface) + potentiators (restore gating) — the CFTR modulator class.",
+    "prevalence": "~1 in 2,500-3,500 live births (Caucasian); carrier ~1 in 25 — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Congenital; progressive lung disease from infancy",
+    "approved_treatments": [
+      {
+        "drug": "Ivacaftor (Kalydeco) + elexacaftor/tezacaftor (Trikafta)",
+        "mw_da": 392.5,
+        "pubchem_cid": 16220172,
+        "class": "CFTR potentiator (ivacaftor) + corrector (elexacaftor/tezacaftor)",
+        "mechanism_correct": "Ivacaftor potentiates channel gating of surface CFTR; elexacaftor/tezacaftor correct F508del folding/trafficking to the surface. Together they restore CFTR function. This is a protein-rescue strategy, not degradation or replacement.",
+        "fda_approval": "2012 (ivacaftor); 2019 (Trikafta triple combination)",
+        "fda_nda": "",
+        "note": "Ivacaftor MW 392.5 Da, CID 16220172 (PubChem verified). Trikafta is the landmark CFTR-modulator triple therapy."
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "CFTR gene therapy (AAV/lentiviral, clinical)",
+      "mRNA-based CFTR delivery (investigational)",
+      "Readthrough agents (ataluren) for nonsense CFTR mutations"
+    ],
+    "clinical_trials_count": 80,
+    "key_pmid": "23891399",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P13569 (CFTR, 1480 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P13569",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 586 (Cystic fibrosis)",
+        "url": "https://www.orpha.net/en/disease/detail/586",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "219700 (Cystic Fibrosis)",
+        "url": "https://omim.org/entry/219700",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Drug molecular weight (ivacaftor)",
+        "source": "PubChem",
+        "accession": "CID 16220172 (ivacaftor, 392.5 Da)",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/ivacaftor/property/MolecularWeight/JSON",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P13569 = CFTR, 1480 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "F508del (most common CFTR mutation) — SOURCE CHECKED (OMIM 219700)",
+      "inheritance": "Autosomal recessive — SOURCE CHECKED (OMIM 219700; Orphanet)",
+      "orpha_code": "586 = Cystic fibrosis (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "392.5 Da, CID 16220172 (ivacaftor) — SOURCE CHECKED via PubChem REST API (live)",
+      "fda_date": "Ivacaftor 2012; Trikafta 2019 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 586 confirmed live via Orphanet API.",
+      "CLARIFIED: CF is a TRAFFICKING/FOLDING defect, not a simple LoF — the correct modality is corrector+potentiator (protein rescue), not degrader or enzyme replacement."
+    ],
+    "human_summary": "Cystic fibrosis is an autosomal recessive disorder caused by CFTR mutations, most commonly F508del, which misfolds the chloride channel and prevents it reaching the cell surface. It causes progressive lung disease, pancreatic insufficiency, and male infertility. CFTR modulator drugs (correctors + potentiators) rescue the protein's folding and gating — a fundamentally different strategy from degradation or enzyme replacement.",
+    "clinical_trials_total": 1784,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "80 curated interventional trials; 1784 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

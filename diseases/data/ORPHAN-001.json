@@ -1,0 +1,106 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA",
+  "disease": {
+    "id": "ORPHAN-001",
+    "disease_name": "Hutchinson-Gilford Progeria Syndrome",
+    "short_name": "HGPS (Progeria)",
+    "gene": "LMNA",
+    "uniprot": "P02545",
+    "protein_name": "Prelamin-A/C (processed to Lamin-A/C)",
+    "protein_length_aa": 664,
+    "omim_id": 176670,
+    "orpha_code": 740,
+    "category": "RASopathy / Laminopathy",
+    "inheritance": "Autosomal dominant, de novo (sporadic) — heterozygous LMNA c.1824C>T (p.Gly608Gly) cryptic splice-site variant",
+    "mechanism": "Gain-of-function / toxic protein. The c.1824C>T (p.Gly608Gly) variant activates a cryptic splice donor in LMNA exon 11, causing an in-frame deletion of 50 codons of prelamin A. The resulting isoform 'progerin' retains its C-terminal CAAX box and is farnesylated, but lacks the ZMPSTE24 cleavage site (which lies within the deleted region), so it remains permanently farnesylated and anchors at the nuclear lamina, disrupting nuclear architecture.",
+    "mechanism_class": "toxic_gof",
+    "recommended_modality": "degrader (selective progerin) + farnesyltransferase inhibitor (approved)",
+    "autotac_eligible": true,
+    "autotac_rationale": "Progerin is a toxic gain-of-function protein; selective degradation is mechanistically appropriate (in principle). NOTE: the approved drug lonafarnib is NOT an AUTOTAC — see treatment.",
+    "prevalence": "~1 in 4 million (commonly cited; some sources state 1 in 8 million) — UNVERIFIED exact figure this session, requires confirmation against GeneReviews/Orphanet",
+    "age_of_onset": "6“18 months (growth failure, alopecia, sclerodermatous skin)",
+    "approved_treatments": [
+      {
+        "drug": "Lonafarnib (Zokinvy)",
+        "mw_da": 638.8,
+        "pubchem_cid": 148195,
+        "class": "Farnesyltransferase inhibitor",
+        "mechanism_correct": "Inhibits farnesyltransferase, blocking the farnesylation step required for progerin to anchor at the nuclear envelope — thereby reducing toxic progerin accumulation. It does NOT bind LMNA/progerin directly.",
+        "fda_approval": "2020-11-20 (Eiger BioPharmaceuticals)",
+        "fda_nda": "213969",
+        "note": "First and only FDA-approved therapy for HGPS. Slows disease progression; not curative."
+      }
+    ],
+    "combination_therapy": "Lonafarnib + pravastatin + zoledronic acid (farnesylation inhibitor triple, Circulation 2016, PMID 27400896)",
+    "investigational": [
+      "CRISPR base editing to correct the c.1824C>T splice variant (preclinical)",
+      "Progerin-targeting PROTAC/AUTOTAC degraders (investigational, not yet clinical)"
+    ],
+    "clinical_trials_count": 5,
+    "key_pmid": "27400896",
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P02545 (LMNA, Prelamin-A/C, 664 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P02545",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 740 (Hutchinson-Gilford progeria syndrome)",
+        "url": "https://www.orpha.net/en/disease/detail/740",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Causative mutation",
+        "source": "ClinVar",
+        "accession": "RCV000015593 (NM_170707.4(LMNA):c.1824C>T p.Gly608=)",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/RCV000015593/",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Drug molecular weight",
+        "source": "PubChem",
+        "accession": "CID 148195 (lonafarnib, 638.8 Da, C27H31Br2ClN4O2)",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/148195/property/MolecularWeight/JSON",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "FDA approval",
+        "source": "FDA",
+        "accession": "NDA 213969 (Zokinvy/lonafarnib, 2020-11-20)",
+        "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2020/213969Orig1s000Approv.pdf",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Triple farnesylation-inhibitor therapy",
+        "source": "Circulation (Gordon et al. 2016)",
+        "accession": "PMID 27400896",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27400896/",
+        "retrieved": "2026-10-04"
+      }
+    ],
+    "verification": {
+      "uniprot": "P02545 = LMNA (Prelamin-A/C), 664 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "c.1824C>T (p.Gly608=) — SOURCE CHECKED via ClinVar RCV000015593 (live)",
+      "inheritance": "Autosomal dominant de novo — SOURCE CHECKED via ClinVar + Orphanet API (live)",
+      "orpha_code": "740 = Hutchinson-Gilford progeria syndrome (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "638.8 Da, CID 148195, C27H31Br2ClN4O2 — SOURCE CHECKED via PubChem REST API (live)",
+      "fda_date": "2020-11-20 (NDA 213969, Eiger BioPharmaceuticals) — SOURCE CHECKED via FDA accessdata (live)"
+    },
+    "corrections_from_prior": [
+      "FIXED: inheritance was wrongly listed 'autosomal recessive / X-linked HPRT1' — correct is autosomal dominant de novo c.1824C>T (now double-confirmed via ClinVar + Orphanet).",
+      "FIXED: lonafarnib was described as 'binding LMNA' — correct mechanism is farnesyltransferase inhibition (blocks progerin farnesylation).",
+      "FIXED: 'Lonafarnib-AUTOTAC' conflated the approved farnesyltransferase inhibitor with a hypothetical autophagy degrader — the two are now separated.",
+      "FIXED (double-check 2026-10-04): protein name corrected to 'Prelamin-A/C'; mechanism made precise (50-codon deletion, retained farnesylation, missing ZMPSTE24 site).",
+      "SOURCE CHECKED (2026-10-04): ORPHAcode 740 confirmed live via Orphanet API. Prevalence/median-age still UNVERIFIED (Orphanet nomenclature API does not carry epidemiology figures)."
+    ],
+    "human_summary": "Children with HGPS age ~8x faster than normal. Growth failure, hair loss, skin changes, and premature atherosclerosis lead to death from heart attack or stroke at a median age of ~14.5 years.",
+    "clinical_trials_total": 11,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "5 curated interventional trials; 11 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}

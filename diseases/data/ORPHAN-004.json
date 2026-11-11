@@ -1,0 +1,106 @@
+{
+  "registry_version": "v2.0-fresh-2026-10-04",
+  "protocol": "TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet",
+  "disease": {
+    "id": "ORPHAN-004",
+    "disease_name": "Huntington Disease",
+    "short_name": "HD",
+    "gene": "HTT",
+    "uniprot": "P42858",
+    "protein_name": "Huntingtin (HD protein)",
+    "protein_length_aa": 3142,
+    "omim_id": 143100,
+    "orpha_code": 399,
+    "category": "Neurodegenerative / Trinucleotide Repeat",
+    "inheritance": "Autosomal dominant — CAG trinucleotide repeat expansion in HTT exon 1 (≥40 repeats fully penetrant; 36-39 reduced penetrance)",
+    "mechanism": "Gain-of-function / toxic aggregate. The expanded CAG repeat encodes an abnormally long polyglutamine (polyQ) tract in the huntingtin N-terminus. Mutant huntingtin aggregates, disrupts proteostasis, and is toxic to striatal medium spiny neurons. Note: mutant huntingtin is also thought to lose some normal function (loss-of-function component), but the dominant disease driver is the toxic gain-of-function.",
+    "mechanism_class": "toxic_gof",
+    "recommended_modality": "allele-selective degrader + ASO silencing (investigational)",
+    "autotac_eligible": true,
+    "autotac_rationale": "ELIGIBLE. Mutant huntingtin is a toxic gain-of-function aggregate — a canonical target for selective degradation. Degrading mutant huntingtin (ideally allele-selectively, sparing wild-type huntingtin) is mechanistically appropriate. No degrader is yet approved; this is an active research frontier.",
+    "prevalence": "~1 in 10,000 (Caucasian); ~30,000 symptomatic in US — commonly cited; UNVERIFIED exact figure this session",
+    "age_of_onset": "Typically 35-44 years (adult onset); juvenile form before age 20",
+    "approved_treatments": [
+      {
+        "drug": "Deutetrabenazine (Austedo)",
+        "mw_da": 323.5,
+        "pubchem_cid": 73442840,
+        "class": "VMAT2 inhibitor (symptomatic)",
+        "mechanism_correct": "Inhibits vesicular monoamine transporter 2, reducing chorea (involuntary movements). It is SYMPTOMATIC ONLY — it does not modify disease progression or reduce mutant huntingtin.",
+        "fda_approval": "2017-04-03 (Teva)",
+        "fda_nda": "",
+        "note": "Symptomatic treatment for chorea. No disease-modifying therapy is yet approved for HD."
+      }
+    ],
+    "combination_therapy": "",
+    "investigational": [
+      "Antisense oligonucleotides (ASO) targeting HTT mRNA (tominersen/RG6042 — Phase 3 halted; others ongoing)",
+      "Allele-selective mutant huntingtin degraders (PROTAC/AUTOTAC, preclinical)",
+      "CRISPR/Cas9 HTT gene silencing (preclinical)",
+      "Small-molecule splicing modulators of HTT"
+    ],
+    "clinical_trials_count": 60,
+    "key_pmid": 34413240,
+    "references": [
+      {
+        "fact": "Gene/protein identity",
+        "source": "UniProt",
+        "accession": "P42858 (HTT, Huntingtin, 3142 aa)",
+        "url": "https://rest.uniprot.org/uniprotkb/P42858",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease classification & definition",
+        "source": "Orphanet",
+        "accession": "ORPHAcode 399 (Huntington disease)",
+        "url": "https://www.orpha.net/en/disease/detail/399",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Inheritance & genetics",
+        "source": "OMIM",
+        "accession": "143100 (Huntington Disease)",
+        "url": "https://omim.org/entry/143100",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Drug molecular weight",
+        "source": "PubChem",
+        "accession": "CID 73442840 (deutetrabenazine, 323.5 Da, C19H27NO3)",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/deutetrabenazine/property/MolecularWeight/JSON",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "PolyQ aggregation mechanism",
+        "source": "Nature Cell Biology 2024",
+        "accession": "Polyglutamine-mediated ribotoxicity (Aviner et al. 2024)",
+        "url": "https://www.nature.com/articles/s41556-024-01414-x",
+        "retrieved": "2026-10-04"
+      },
+      {
+        "fact": "Disease review",
+        "source": "Pract Neurol 2022",
+        "accession": "34413240",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34413240/",
+        "retrieved": "2026-11-02"
+      }
+    ],
+    "verification": {
+      "uniprot": "P42858 = HTT (Huntingtin), 3142 aa — SOURCE CHECKED via UniProt REST API (live)",
+      "gene_mutation": "CAG repeat expansion in HTT exon 1 (polyglutamine expansion) — SOURCE CHECKED (Nature Cell Biology 2024; Nature Rev Neurol 2020)",
+      "inheritance": "Autosomal dominant — SOURCE CHECKED (OMIM 143100; Orphanet)",
+      "orpha_code": "399 = Huntington disease (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)",
+      "drug_mw": "323.5 Da, CID 73442840, C19H27NO3 — SOURCE CHECKED via PubChem REST API (live)",
+      "fda_date": "Deutetrabenazine 2017-04-03 — commonly cited; exact NDA not re-verified this session"
+    },
+    "corrections_from_prior": [
+      "SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 399 confirmed live via Orphanet API.",
+      "CLARIFIED: deutetrabenazine is SYMPTOMATIC (chorea) only, not disease-modifying — this distinction is essential and was often omitted in prior data.",
+      "CLARIFIED: HD has BOTH a toxic gain-of-function (aggregation) AND a loss-of-function component; the primary driver is gain-of-function, which is why AUTOTAC is eligible."
+    ],
+    "human_summary": "Huntington disease is an autosomal dominant neurodegenerative disorder caused by a CAG repeat expansion in HTT. It causes progressive motor dysfunction (chorea), cognitive decline, and psychiatric symptoms, typically beginning in mid-adulthood. Mutant huntingtin forms toxic aggregates in striatal neurons. Current treatment is symptomatic only; allele-selective degradation and ASO silencing are the leading disease-modifying frontiers.",
+    "clinical_trials_total": 302,
+    "clinical_trials_total_retrieved": "2026-11-07",
+    "clinical_trials_note": "60 curated interventional trials; 302 ClinicalTrials.gov studies in total (2026-11-07)"
+  }
+}
