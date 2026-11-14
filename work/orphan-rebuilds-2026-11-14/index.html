@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orphan rebuild series — NEXUS NIGHTINGALE public release</title>
+<meta name="description" content="Ten orphan rebuild dossiers, with L.O.V.E. and TJ Compassion status stated plainly. Source-linked research summaries; research use only.">
+<link rel="canonical" href="https://sabretek.ltd/work/orphan-rebuilds-2026-11-14/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Orphan rebuild series — NEXUS NIGHTINGALE">
+<meta property="og:description" content="Ten orphan rebuild dossiers, with L.O.V.E. and TJ Compassion status stated plainly.">
+<meta property="og:url" content="https://sabretek.ltd/work/orphan-rebuilds-2026-11-14/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{
+    --navy:#173F5F; --navy-deep:#0E2A40; --steel:#41789B;
+    --cerulean:#76B5C5; --cyan:#A9CFD9; --slate:#D1D9E0;
+    --offwhite:#F3F7F9; --white:#FFFFFF; --verified:#1FA88C; --warning:#E0A94B; --flag:#C7562F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+       color:var(--navy); background:var(--offwhite); line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--cerulean); text-decoration:none;} a:hover{text-decoration:underline;}
+  nav{position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center;
+      justify-content:space-between; padding:14px 40px; background:rgba(243,247,249,0.94);
+      backdrop-filter:blur(10px); border-bottom:1px solid var(--slate);}
+  nav .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:1px; color:var(--navy);}
+  nav .brand img{height:40px; width:40px; border-radius:50%; object-fit:cover;}
+  nav .brand span i{font-style:normal; color:var(--steel);}
+  nav .links{display:flex; gap:22px; font-size:14px;}
+  nav .links a{color:var(--navy); font-weight:600;}
+
+  header.dhero{padding:128px 24px 52px; background:linear-gradient(180deg,var(--offwhite) 0%,#E7EEF2 100%);
+    border-bottom:1px solid var(--slate);}
+  .dhero .wrap{max-width:1060px; margin:0 auto;}
+  .kicker{text-transform:uppercase; letter-spacing:4px; font-size:11.5px; font-weight:800; color:var(--cerulean); margin-bottom:14px;}
+  header.dhero h1{font-size:clamp(30px,4.6vw,50px); line-height:1.08; font-weight:800; margin-bottom:14px; max-width:20ch;}
+  header.dhero .sub{font-size:18px; color:var(--steel); margin-bottom:20px;}
+  .badges{display:flex; gap:8px; flex-wrap:wrap;}
+  .badge{display:inline-block; font-size:12px; font-weight:700; padding:6px 11px; border-radius:999px;
+    background:var(--white); border:1px solid var(--slate); color:var(--steel);}
+  .badge.ok{color:var(--verified); border-color:rgba(31,168,140,0.35); background:rgba(31,168,140,0.07);}
+  .badge.warn{color:#8A6417; border-color:rgba(224,169,75,0.5); background:rgba(224,169,75,0.10);}
+
+  main{max-width:1060px; margin:0 auto; padding:48px 24px 80px;}
+  section.block{margin-bottom:44px;}
+  section.block h2{font-size:24px; line-height:1.2; margin-bottom:14px;}
+  section.block h2 .num{color:var(--cerulean); font-weight:800; margin-right:8px;}
+  section.block p{font-size:16.5px; color:#2C4E66; margin-bottom:0.9em; max-width:78ch;}
+  .lead{font-size:18.5px; color:var(--steel);}
+
+  .glance{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px;}
+  .fact{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:16px 18px;}
+  .fact .k{font-size:10.5px; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; color:var(--cerulean); margin-bottom:5px;}
+  .fact .v{font-size:14.5px; font-weight:600; color:var(--navy); line-height:1.45; word-break:break-word;}
+  .fact .v small{display:block; font-weight:400; color:var(--steel); font-size:12.5px; margin-top:3px;}
+
+  .route{background:var(--navy); color:var(--white); border-radius:14px; padding:28px 30px;}
+  .route h2{color:var(--white);} .route p{color:var(--cyan);} .route p strong{color:var(--white);} .route .why{color:var(--slate); font-size:15px;}
+  .route .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+  .route .pill{font-size:12px; font-weight:800; padding:6px 12px; border-radius:999px;
+    background:rgba(169,207,217,0.14); color:var(--cyan); border:1px solid rgba(169,207,217,0.3);}
+  .route .pill.yes{background:rgba(31,168,140,0.18); color:#8FE3D2; border-color:rgba(31,168,140,0.4);}
+  .route .pill.no{background:rgba(199,86,47,0.18); color:#F2B39B; border-color:rgba(199,86,47,0.4);}
+
+  .drug{background:var(--white); border:1px solid var(--slate); border-radius:12px; padding:20px 22px; margin-bottom:12px;}
+  .drug-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px;}
+  .drug-head h3{font-size:18px;}
+  .drug .meta{font-size:12.5px; color:var(--cerulean); font-weight:700; margin-bottom:8px;}
+  .drug p{font-size:14.5px; color:var(--steel); margin:0;}
+  .pill-date{font-size:11.5px; font-weight:800; color:var(--verified); background:rgba(31,168,140,0.08);
+    border:1px solid rgba(31,168,140,0.25); padding:4px 9px; border-radius:999px; white-space:nowrap;}
+
+  ul.plain{margin:0 0 0 1.15em; color:#2C4E66; font-size:15.5px;}
+  ul.plain li{margin-bottom:0.4em;}
+  ul.verif{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  ul.verif li{background:var(--white); border:1px solid var(--slate); border-left:4px solid var(--verified);
+    border-radius:8px; padding:11px 14px; font-size:14px; color:#2C4E66;}
+  ul.verif li.warn{border-left-color:var(--warning); background:#FDF8EF; color:#7A5B1E;}
+
+  table.src{width:100%; border-collapse:collapse; font-size:13.5px;}
+  table.src th, table.src td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--slate); vertical-align:top;}
+  table.src th{font-size:10.5px; text-transform:uppercase; letter-spacing:1px; color:var(--steel);}
+  table.src a{word-break:break-all;}
+  .table-wrap{overflow-x:auto;}
+
+  .note{background:#EDF3F6; border-left:4px solid var(--steel); border-radius:8px; padding:16px 20px;
+    font-size:14.5px; color:#2F5B76;}
+  .warnbox{background:#FDF8EF; border-left:4px solid var(--warning); border-radius:8px; padding:16px 20px;
+    font-size:14px; color:#7A5B1E; margin-top:12px;}
+
+  details.corr{background:var(--white); border:1px solid var(--slate); border-radius:10px; padding:14px 18px;}
+  details.corr summary{cursor:pointer; font-weight:700; font-size:14px; color:var(--steel);}
+  details.corr ul{margin:10px 0 0 1.15em; font-size:14px; color:var(--steel);}
+
+  .pager{display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--slate); padding-top:24px; margin-top:48px; flex-wrap:wrap;}
+  .pager a{font-size:14px; font-weight:700; color:var(--navy); border:1px solid var(--slate);
+    border-radius:8px; padding:11px 16px; background:var(--white);}
+  .pager a:hover{border-color:var(--navy); text-decoration:none;}
+  .pager .spacer{flex:1;}
+
+  footer{background:var(--navy-deep); color:var(--slate); padding:44px 40px 30px;}
+  footer .fwrap{max-width:1060px; margin:0 auto; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  footer p{font-size:13px; margin-bottom:6px;} footer a{color:var(--cyan);}
+  footer .legal{border-top:1px solid rgba(169,207,217,0.2); margin-top:28px; padding-top:18px;
+    max-width:1060px; margin-left:auto; margin-right:auto; font-size:12px; text-align:center;}
+
+  @media(max-width:820px){
+    nav{padding:14px 20px;} nav .links{display:none;}
+    header.dhero{padding:108px 18px 40px;}
+    main{padding:32px 18px 64px;}
+    .route{padding:22px;}
+  }
+</style>
+<style>
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;}
+a.disease{display:block;background:#fff;border:1px solid var(--slate);border-radius:12px;padding:18px 20px;color:var(--navy);}
+a.disease:hover{border-color:var(--cerulean);text-decoration:none;}
+a.disease .name{font-weight:800;font-size:17px;line-height:1.25;margin-bottom:5px;}
+a.disease .tag{font-size:12px;color:var(--steel);font-weight:700;margin-bottom:9px;}
+a.disease .more{font-size:13px;font-weight:800;color:var(--cerulean);}
+.love{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.love .item{background:#fff;border:1px solid var(--slate);border-left:4px solid var(--cerulean);border-radius:9px;padding:14px 16px;}
+.love .item b{display:block;font-size:14px;margin-bottom:4px;}
+.love .item p{font-size:14px;margin:0;color:var(--steel);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="/" style="text-decoration:none;">
+    <img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE">
+    <span><b>NEXUS</b> <i>NIGHTINGALE</i></span>
+  </a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/pipeline/">Pipeline</a>
+    <a href="/diseases/">Diseases</a>
+    <a href="/method/">Method</a>
+    <a href="/course/">Course</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+<header class="dhero">
+  <div class="wrap">
+    <div class="kicker">Public release · Orphan rebuild series · 14 November 2026</div>
+    <h1>Orphan rebuild series</h1>
+    <p class="sub">Ten source-linked rebuild dossiers · AGXT to SYNGAP1</p>
+    <div class="badges">
+      <span class="badge ok">Source-linked research releases</span>
+      <span class="badge">10 dossiers</span>
+      <span class="badge">209 pages</span>
+      <span class="badge">300 sections</span>
+      <span class="badge">300 sources</span>
+      <span class="badge">250 claims</span>
+    </div>
+  </div>
+</header>
+<main>
+  <p class="note"><strong>Public series release · 14 November 2026:</strong> ten rebuild dossiers were produced from the October 2026 report set. Each public page is a summary; the full PDFs, claim ledgers and evidence rooms are access-controlled. This series is research-use only and has not been clinically validated.</p>
+
+  <section class="block">
+    <h2><span class="num">01</span>What this series is</h2>
+    <p class="lead">Ten ultra-rare or rare disease targets were rebuilt as compact benchmark dossiers: 30 sections, 30 source records, 25 claims, 8 tables and 6 figures each. They span metabolic, neurodevelopmental, neurodegenerative, lysosomal, neuromuscular and haematological disease.</p>
+    <p>They are not ten versions of one disease. Each page states the gene, the mechanism, the current treatment baseline, the research route and the specific structural construct limit. A public page is not the full dossier and is not a clinical recommendation.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">02</span>L.O.V.E. and TJ Compassion</h2>
+    <p class="lead">We did not call this batch “verified”. It passed a structural benchmark audit, and only part of the L.O.V.E. practice was completed before publication.</p>
+    <div class="love">
+      <div class="item"><b>Learn</b><p>We read the October 2026 rebuild reports and extracted the disease, gene, mechanism, treatment and source claims before writing.</p></div>
+      <div class="item"><b>Observe</b><p>We ran the pipeline for every target: identity, supervised structural recovery, mechanism gate, DCA contacts and the folding attempt. We recorded blocked and partial layers.</p></div>
+      <div class="item"><b>Verify</b><p>We checked every UniProt identity and every deposited PDB construct against the live UniProt and RCSB APIs. We corrected one protein mass and added construct-specific limits where the PDB was a peptide, fragment or complex, not the full protein.</p></div>
+      <div class="item"><b>Explain</b><p>We state what remains open: Orphanet returned a connection challenge; OMIM and treatment labels were not independently rechecked; independent clinical review is outstanding. No ORPHA or OMIM badge is shown on these pages.</p></div>
+    </div>
+    <p style="margin-top:14px;"><strong>TJ Compassion:</strong> do only good; no lies, no fake; always be honest. No invented numbers; no patient data; no claim that a registry record is efficacy evidence; no degrader route for a loss-of-function target; negatives published, including the target with no deposited PDB and the blinded folding layer that did not run. Everything we do must help humanity and the earth, or we do not do it.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">03</span>The ten dossiers</h2>
+    <div class="cards"><a class="disease" href="/diseases/primary-hyperoxaluria-type-1/"><div class="name">Primary hyperoxaluria type 1</div><div class="tag">AGXT · PH1-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/angelman-syndrome/"><div class="name">Angelman syndrome</div><div class="tag">UBE3A · ANG-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/fields-disease/"><div class="name">Fields disease (FNIP1 deficiency)</div><div class="tag">FNIP1 · FIELDS-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/lesch-nyhan-syndrome/"><div class="name">Lesch-Nyhan syndrome</div><div class="tag">HPRT1 · LNS-001 · 20 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/mapt-related-tauopathy/"><div class="name">MAPT-related tauopathy</div><div class="tag">MAPT · MAPT-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/miller-dieker-syndrome/"><div class="name">Miller-Dieker syndrome</div><div class="tag">PAFAH1B1 · MDS-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/action-myoclonus-renal-failure-syndrome/"><div class="name">Action myoclonus-renal failure syndrome</div><div class="tag">SCARB2 · AMRF-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/myhre-syndrome/"><div class="name">Myhre syndrome</div><div class="tag">SMAD4 · MYHRE-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/sod1-als/"><div class="name">SOD1-linked amyotrophic lateral sclerosis</div><div class="tag">SOD1 · SOD1-001 · 21 pp</div><div class="more">Open public release →</div></a>
+<a class="disease" href="/diseases/syngap1-related-intellectual-disability/"><div class="name">SYNGAP1-related intellectual disability</div><div class="tag">SYNGAP1 · SYNGAP1-001 · 21 pp</div><div class="more">Open public release →</div></a></div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">04</span>What is still open</h2>
+    <ul class="verif">
+      <li class="warn"><strong>Registry identifiers:</strong> Orphanet and OMIM were not rechecked in this pass. The pages use the dossier ID, gene and UniProt identity only.</li>
+      <li class="warn"><strong>Treatment labels:</strong> the approved/standard wording is conditional. It must be checked against the current local label before external use.</li>
+      <li class="warn"><strong>Sources:</strong> the 30-source registers are reference and discovery records, not a systematic review. Every link has not been fetched line-by-line.</li>
+      <li class="warn"><strong>Independent review:</strong> outstanding for all ten. No clinical, regulatory or structural reviewer has signed them off.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">05</span>Scope and limits</h2>
+    <div class="note">This page is a public research summary for scientific communication. It is not medical advice, a diagnosis, an eligibility decision or a treatment recommendation. NEXUS NIGHTINGALE is a computational research programme; it is not clinically validated and no output has regulatory approval. The dossiers are source-linked syntheses, not systematic reviews or clinical trials. No patient data are used.</div>
+  </section>
+
+  <div class="pager">
+    <a href="/work/dossier-2-0-2026-11-08/">← Dossier 2.0</a>
+    <a href="/diseases/">All diseases</a>
+    <a href="mailto:lee.oulton@sabretek.co.uk?subject=Orphan%20rebuild%20series%20access%20request">Request the full dossiers</a>
+  </div>
+</main>
+<footer>
+  <div class="fwrap">
+    <div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited programme.</p>
+      <p>Orphan rebuild series · 14 November 2026 · research use only.</p></div>
+    <div><p><a href="/diseases/">All diseases</a></p><p><a href="/method/">Method and limits</a></p><p><a href="/#contact">Contact</a></p></div>
+  </div>
+  <div class="legal">© 2026 Sabre-Tek Limited. · Research and teaching use only — not clinical advice.</div>
+</footer>
+</body>
+</html>

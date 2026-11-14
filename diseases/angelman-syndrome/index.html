@@ -5,15 +5,15 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angelman Syndrome — NEXUS NIGHTINGALE disease dossier</title>
-<meta name="description" content="Angelman Syndrome (UBE3A): mechanism, inheritance, approved treatment and the NIGHTINGALE route. Source-linked research registry entry ORPHAN-012.">
+<title>Angelman syndrome — NEXUS NIGHTINGALE public release</title>
+<meta name="description" content="Angelman syndrome: UBE3A, neuronal loss of function. Public rebuild release of ANG-001 v1.0; source-linked research summary, research use only.">
 <link rel="canonical" href="https://sabretek.ltd/diseases/angelman-syndrome/">
 <meta name="theme-color" content="#173F5F">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angelman Syndrome — NEXUS NIGHTINGALE">
-<meta property="og:description" content="Angelman Syndrome (UBE3A): mechanism, inheritance, approved treatment and the NIGHTINGALE route. Source-linked research registry entry ORPHAN-012.">
+<meta property="og:title" content="Angelman syndrome — NEXUS NIGHTINGALE public release">
+<meta property="og:description" content="Angelman syndrome: UBE3A, neuronal loss of function. Public rebuild release of ANG-001 v1.0; source-linked research summary, research use only.">
 <meta property="og:url" content="https://sabretek.ltd/diseases/angelman-syndrome/">
 <meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
 <style>
@@ -88,6 +88,7 @@
   table.src th, table.src td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--slate); vertical-align:top;}
   table.src th{font-size:10.5px; text-transform:uppercase; letter-spacing:1px; color:var(--steel);}
   table.src a{word-break:break-all;}
+  .table-wrap{overflow-x:auto;}
 
   .note{background:#EDF3F6; border-left:4px solid var(--steel); border-radius:8px; padding:16px 20px;
     font-size:14.5px; color:#2F5B76;}
@@ -98,7 +99,7 @@
   details.corr summary{cursor:pointer; font-weight:700; font-size:14px; color:var(--steel);}
   details.corr ul{margin:10px 0 0 1.15em; font-size:14px; color:var(--steel);}
 
-  .pager{display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--slate); padding-top:24px; margin-top:48px;}
+  .pager{display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--slate); padding-top:24px; margin-top:48px; flex-wrap:wrap;}
   .pager a{font-size:14px; font-weight:700; color:var(--navy); border:1px solid var(--slate);
     border-radius:8px; padding:11px 16px; background:var(--white);}
   .pager a:hover{border-color:var(--navy); text-decoration:none;}
@@ -116,7 +117,7 @@
     main{padding:32px 18px 64px;}
     .route{padding:22px;}
   }
-</style>
+.route p,.route .why{color:#A9CFD9!important}.route p strong{color:#fff!important}.route h2{color:#fff!important}</style>
 </head>
 <body>
 <nav>
@@ -126,108 +127,140 @@
   </a>
   <div class="links">
     <a href="/">Home</a>
-    <a href="/#pipeline">Pipeline</a>
+    <a href="/pipeline/">Pipeline</a>
+    <a href="/diseases/">Diseases</a>
+    <a href="/method/">Method</a>
     <a href="/course/">Course</a>
-    <a href="/#diseases">Diseases</a>
     <a href="/#contact">Contact</a>
   </div>
 </nav>
-
 <header class="dhero">
   <div class="wrap">
-    <div class="kicker">Disease dossier · ORPHAN-012</div>
-    <h1>Angelman Syndrome</h1>
-    <p class="sub">UBE3A · Neurodevelopmental / Haploinsufficiency</p>
+    <div class="kicker">Public release · ANG-001 v1.0</div>
+    <h1>Angelman syndrome</h1>
+    <p class="sub">UBE3A · Imprinted maternal loss · neuronal loss of function</p>
     <div class="badges">
-      <span class="badge ok">Source-linked research registry</span>
-      <span class="badge">ORPHA 72</span>
-      <span class="badge">OMIM 105830</span>
+      <span class="badge ok">Source-linked research release</span>
+      <span class="badge">ANG-001</span>
+      <span class="badge">PDB 6SJV</span>
+      <span class="badge">21 pages</span>
+      <span class="badge">30 sections</span>
+      <span class="badge">30 sources</span>
+      <span class="badge">25 claims</span>
     </div>
   </div>
 </header>
-
 <main>
-    <p class="note"><strong>Source check 7 Nov 2026:</strong> UniProt identity, Orphanet code, ClinicalTrials.gov total and key citation rechecked. Exact prevalence and regulatory dates are not all revalidated.</p>
+  <p class="note"><strong>Public rebuild release · 14 November 2026:</strong> ANG-001 v1.0. This is the public summary. The full 21-page dossier, claim ledger and evidence room are access-controlled and are not published on this site. The next scheduled review is 14 February 2027. <strong>L.O.V.E. status:</strong> identity and structural construct checked; Orphanet/OMIM identifiers and treatment labels were not independently rechecked in this pass. <strong>TJ Compassion:</strong> do only good; no lies, no fake; always be honest. This page states what was checked and what remains open.</p>
+
   <section class="block">
     <h2><span class="num">01</span>At a glance</h2>
-    <div class="glance"><div class="fact"><div class="k">Gene</div><div class="v">UBE3A</div></div><div class="fact"><div class="k">Protein</div><div class="v">Ubiquitin-protein ligase E3A (E6AP)<small>UniProt Q05086 · 875 aa</small></div></div><div class="fact"><div class="k">Inheritance</div><div class="v">Maternal UBE3A allele loss — paternal allele is imprinted (silenced) in neurons; 15q11-q13 deletion or UBE3A mutation on the maternal chromosome</div></div><div class="fact"><div class="k">Age of onset</div><div class="v">6-12 months (developmental delay, ataxia, seizures, happy demeanor)</div></div><div class="fact"><div class="k">Prevalence</div><div class="v">~1 in 12,000-20,000 — commonly cited; UNVERIFIED exact figure this session<small>Marked unverified in the registry</small></div></div><div class="fact"><div class="k">Category</div><div class="v">Neurodevelopmental / Haploinsufficiency</div></div><div class="fact"><div class="k">Mechanism class</div><div class="v">haploinsufficiency</div></div><div class="fact"><div class="k">Clinical trials</div><div class="v">56 studies<small>ClinicalTrials.gov total, 7 Nov 2026</small></div></div></div>
+    <div class="glance">
+      <div class="fact"><div class="k">Gene</div><div class="v">UBE3A</div></div>
+      <div class="fact"><div class="k">Protein</div><div class="v">Ubiquitin-protein ligase E3A (E6AP)<small>UniProt Q05086 · 875 aa · 100,688 Da</small></div></div>
+      <div class="fact"><div class="k">Inheritance</div><div class="v">Imprinted maternal loss</div></div>
+      <div class="fact"><div class="k">Mechanism</div><div class="v">neuronal loss of function</div></div>
+      <div class="fact"><div class="k">Approved / standard</div><div class="v">No approved disease-modifying therapy; antiseizure and developmental support</div></div>
+      <div class="fact"><div class="k">Research route</div><div class="v">UBE3A-ATS antisense unsilencing and UBE3A gene restoration</div></div>
+      <div class="fact"><div class="k">Structural check</div><div class="v">PDB 6SJV<small>PDB 6SJV is an HPV18 E6/E6AP LxxLL peptide complex, not a full-length UBE3A structure.</small></div></div>
+      <div class="fact"><div class="k">Release</div><div class="v">ANG-001 v1.0<small>21 pages · 30 sections · 30 sources · 25 claims · 8 tables · 6 figures</small></div></div>
+    </div>
   </section>
 
   <section class="block">
     <h2><span class="num">02</span>What it is</h2>
-    <p class="lead">Angelman syndrome is a neurodevelopmental disorder caused by loss of the maternal UBE3A allele, leaving neurons without UBE3A because the paternal allele is normally silenced by imprinting. It causes severe developmental delay, ataxia, seizures, and a characteristic happy demeanor. The therapeutic frontier is antisense-mediated unsilencing of the intact paternal allele.</p>
-    
+    <p class="lead">Angelman syndrome is a neurodevelopmental disorder caused by loss of maternal <em>UBE3A</em> expression in neurons. The paternal allele is normally silenced by imprinting, so neurons have little or no working UBE3A.</p>
+    <p>It causes developmental delay, ataxia, seizures and a characteristic behavioural profile. The diagnosis is made by genetic and methylation testing, not by appearance alone.</p>
+    <p>This page is a research summary. It is not a diagnosis, an eligibility decision or a treatment recommendation.</p>
   </section>
 
   <section class="block">
     <h2><span class="num">03</span>What goes wrong</h2>
-    <p>Haploinsufficiency via imprinting. In neurons, the paternal UBE3A allele is normally silenced by genomic imprinting, so only the maternal allele is expressed. Loss of the maternal allele (deletion, mutation, or paternal uniparental disomy) leaves neurons with no functional UBE3A. This is a loss-of-function, but the fix is NOT to add enzyme — it is to UNSILENCE the intact paternal allele.</p>
+    <p>UBE3A encodes E6AP, an E3 ubiquitin ligase. Neuronal loss disrupts synaptic protein regulation; the mechanism is not a simple absence of a circulating enzyme. A degrader would be the wrong direction.</p>
+    <div class="warnbox"><strong>Construct limit:</strong> PDB 6SJV is an HPV18 E6/E6AP LxxLL peptide complex, not a full-length UBE3A structure. A near-perfect template-recovery score is not a blind prediction and not a full-length structural model.</div>
   </section>
 
   <section class="block">
+    <h2><span class="num">04</span>How NIGHTINGALE routes it</h2>
     <div class="route">
-      <h2><span class="num">04</span>How NIGHTINGALE routes it</h2>
       <div class="pillrow">
-        <span class="pill">mechanism: haploinsufficiency</span>
-        <span class="pill no">not a degradation target</span>
+        <span class="pill yes">approved / standard baseline</span>
+        <span class="pill">research route</span>
+        <span class="pill no">not a clinical recommendation</span>
       </div>
-      <p style="color:#DCEBF2;"><strong style="color:#FFFFFF;">Recommended modality:</strong> unsilence (reactivate paternal UBE3A — ASO, investigational)</p>
-      <p class="why">NOT eligible. Angelman is a loss-of-function/haploinsufficiency disease — UBE3A is absent, not accumulated. Degrading any residual UBE3A would worsen the disease. The correct route is to UNSILENCE the intact paternal UBE3A allele (the paternal copy is present but epigenetically off).</p>
+      <p><strong>Approved / standard:</strong> No approved disease-modifying therapy; antiseizure and developmental support</p>
+      <p><strong>Research:</strong> UBE3A-ATS antisense unsilencing and UBE3A gene restoration</p>
+      <p class="why">The route is a decision framework, not a prescription. The mechanism gate and the current label must be checked before any programme claim.</p>
     </div>
   </section>
 
   <section class="block">
     <h2><span class="num">05</span>Treatment today</h2>
-    <div class="note"><strong>No approved disease-modifying therapy</strong> in the registry. Management is symptomatic or investigational only; see below.</div>
+    <p>No approved disease-modifying therapy exists. Antiseizure medicines, sleep and behaviour support, communication and developmental therapies are symptomatic.</p>
+    <p>The page does not provide dosing, eligibility or an individual treatment plan. Those belong to a qualified clinical team and the current local label.</p>
   </section>
 
   <section class="block">
     <h2><span class="num">06</span>In the pipeline</h2>
-    <ul class="plain"><li>Antisense oligonucleotides to unsilence paternal UBE3A (e.g. targeting UBE3A-ATS antisense transcript — clinical)</li><li>AAV9-UBE3A gene therapy (preclinical)</li><li>Symptomatic: anti-seizure medication (levetiracetam, etc.)</li></ul>
-    
-    <p><strong>Key reference:</strong> PMID 37599585 · <a href="https://pubmed.ncbi.nlm.nih.gov/37599585/" rel="noopener">PubMed</a></p>
+    <p>The mechanism gate blocked degradation and pointed to restoration or unsilencing. The available PDB is a peptide complex, not a full-length UBE3A structure; the dossier says so.</p>
+    <ul class="plain">
+      <li><strong>Identity:</strong> Q05086 · UBE3A · 875 aa · 100,688 Da.</li>
+      <li><strong>Structural check:</strong> PDB 6SJV. PDB 6SJV is an HPV18 E6/E6AP LxxLL peptide complex, not a full-length UBE3A structure.</li>
+      <li><strong>Mechanism gate:</strong> degradation was not treated as appropriate for a loss-of-function or haploinsufficiency target; the dossier records that result.</li>
+      <li><strong>What was not done:</strong> no patient data, no clinical validation, no independent clinical review, no claim of blind full-length folding.</li>
+    </ul>
   </section>
 
   <section class="block">
     <h2><span class="num">07</span>Source checks</h2>
-    <p class="lead">Every line below is the registry's own verification record — what was checked, against which source, and what is still open.</p>
-    <ul class="verif"><li class=""><strong>uniprot:</strong> Q05086 = UBE3A (Ubiquitin-protein ligase E3A), 875 aa — SOURCE CHECKED via UniProt REST API (live)</li><li class=""><strong>gene mutation:</strong> Maternal UBE3A allele loss / imprinting — SOURCE CHECKED (OMIM 105830)</li><li class=""><strong>inheritance:</strong> Maternal UBE3A loss, paternal imprinted — SOURCE CHECKED (OMIM 105830; Orphanet)</li><li class=""><strong>orpha code:</strong> 72 = Angelman syndrome (Active) — SOURCE CHECKED via Orphanet API (live, 2026-07-02)</li><li class=""><strong>drug mw:</strong> No approved therapy — N/A (no small-molecule drug to cite)</li><li class=""><strong>fda date:</strong> No FDA-approved disease-modifying therapy — N/A</li></ul>
-    
+    <ul class="verif">
+      <li><strong>UniProt:</strong> Q05086 identity, gene name and sequence length checked 14 November 2026.</li>
+      <li><strong>RCSB:</strong> PDB 6SJV exists and its construct was read; PDB 6SJV is an HPV18 E6/E6AP LxxLL peptide complex, not a full-length UBE3A structure.</li>
+      <li class="warn"><strong>Orphanet:</strong> the public disease pages returned a connection challenge in this pass. No ORPHA badge is shown. The internal dossier records an ORPHA code but it was not rechecked.</li>
+      <li class="warn"><strong>OMIM:</strong> not rechecked in this pass. No OMIM badge is shown.</li>
+      <li class="warn"><strong>Treatment labels:</strong> not independently rechecked. Wording is conditional and must be checked against the current local label.</li>
+      <li class="warn"><strong>Independent review:</strong> outstanding. This is a source-linked research synthesis, not a systematic review or a clinical validation.</li>
+    </ul>
   </section>
 
   <section class="block">
-    <h2><span class="num">08</span>Sources</h2>
-    <table class="src">
-      <tr><th>Fact</th><th>Source</th><th>Accession</th><th>Retrieved</th></tr>
-      <tr><td>Gene/protein identity</td><td>UniProt</td><td><a href="https://rest.uniprot.org/uniprotkb/Q05086" rel="noopener">Q05086 (UBE3A, 875 aa)</a></td><td>2026-10-04</td></tr><tr><td>Disease classification &amp; definition</td><td>Orphanet</td><td><a href="https://www.orpha.net/en/disease/detail/72" rel="noopener">ORPHAcode 72 (Angelman syndrome)</a></td><td>2026-10-04</td></tr><tr><td>Inheritance &amp; genetics</td><td>OMIM</td><td><a href="https://omim.org/entry/105830" rel="noopener">105830 (Angelman Syndrome)</a></td><td>2026-10-04</td></tr>
-    </table>
-    <div class="note" style="margin-top:16px;">
-      Source record: <a href="/diseases/data/ORPHAN-012.json" download>ORPHAN-012.json</a> — orphan registry v2.0-fresh-2026-10-04.
-      Protocol: TJ Compassion + L.O.V.E. — sources recorded against UniProt / PubChem / ClinVar / OMIM / FDA / Orphanet
+    <h2><span class="num">08</span>Selected sources</h2>
+    <div class="table-wrap">
+      <table class="src">
+        <thead><tr><th>Source</th><th>Used for</th><th>Link</th></tr></thead>
+        <tbody><tr><td>UniProt Q05086</td><td>Ubiquitin-protein ligase E3A (E6AP); 875 aa; identity anchor</td><td><a href="https://rest.uniprot.org/uniprotkb/Q05086" rel="noopener">UniProt</a></td></tr>
+ <tr><td>RCSB PDB 6SJV</td><td>PDB 6SJV is an HPV18 E6/E6AP LxxLL peptide complex, not a full-length UBE3A structure.</td><td><a href="https://www.rcsb.org/structure/6SJV" rel="noopener">6SJV</a></td></tr>
+ <tr><td>NCBI Gene — UBE3A</td><td>Gene record and variant context</td><td><a href="https://www.ncbi.nlm.nih.gov/gene/?term=UBE3A" rel="noopener">NCBI Gene</a></td></tr>
+ <tr><td>PubMed — Angelman syndrome</td><td>Review and primary literature query</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Angelman%20syndrome%20review" rel="noopener">PubMed</a></td></tr>
+ <tr><td>ClinicalTrials.gov — Angelman syndrome</td><td>Trial landscape; a registry record is not a result</td><td><a href="https://clinicaltrials.gov/search?cond=Angelman%20syndrome" rel="noopener">Search</a></td></tr></tbody>
+      </table>
     </div>
-    <div class="note" style="margin-top:10px; font-size:13.5px;">Fresh orphan registry entry built 2026-10-04 under the orphan-disease-verification skill. Mechanism: haploinsufficiency (imprinting).</div>
+    <p style="font-size:13px;color:var(--steel);margin-top:10px;">Selected sources only. The full 30-source register and the 25-claim ledger are in the access-controlled dossier. Orphanet and OMIM are deliberately not shown as badges because they were not rechecked.</p>
   </section>
-
-  <section class="block"><details class="corr"><summary>Corrections carried into registry v2 (2)</summary><ul><li>SOURCE CHECKED (2026-10-04): built fresh. ORPHAcode 72 confirmed live via Orphanet API.</li><li>CLARIFIED: Angelman is HAPLOINSUFFICIENCY via imprinting — the fix is UNSILENCING the paternal allele (ASO), not degradation, not enzyme replacement, not a channel drug.</li></ul></details></section>
 
   <section class="block">
     <h2><span class="num">09</span>Scope and limits</h2>
     <div class="note">
-      This page is a research summary for teaching and scientific communication. It is not medical advice,
-      a diagnosis, or a treatment recommendation. NEXUS NIGHTINGALE is a computational research pipeline;
-      it is not clinically validated and none of its output has regulatory approval. Prevalence and approval
-      figures marked <em>unverified</em> must be confirmed against the cited source before external use.
+      This page is a public research summary for scientific communication. It is not medical advice, a diagnosis,
+      an eligibility decision or a treatment recommendation. NEXUS NIGHTINGALE is a computational research programme;
+      it is not clinically validated and no output has regulatory approval. The dossier is a source-linked synthesis,
+      not a systematic review or a clinical trial. Independent clinical review is outstanding. No patient data are used.
+      Registry identifiers, prevalence, access statements and treatment labels must be checked against the cited source
+      and the current local label before external use.
     </div>
   </section>
 
-  <div class="pager"><a href="/#diseases">← All diseases</a><span class="spacer"></span><a href="/diseases/cystic-fibrosis/">← CF</a> <a href="/diseases/myotonic-dystrophy-1/">DM1 / Steinert disease →</a></div>
+  <div class="pager">
+    <a href="/work/orphan-rebuilds-2026-11-14/">← Rebuild series</a>
+    <a href="/diseases/">All diseases</a>
+    <a href="mailto:lee.oulton@sabretek.co.uk?subject=ANG-001%20dossier%20access%20request">Request the full dossier</a>
+  </div>
 </main>
-
 <footer>
   <div class="fwrap">
-    <div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited program.</p>
-      <p>Source: orphan registry v2.0-fresh-2026-10-04 · TJ Compassion + L.O.V.E. verification.</p></div>
-    <div><p><a href="/#diseases">All diseases</a></p><p><a href="/course/">The course</a></p><p><a href="/#contact">Contact</a></p></div>
+    <div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited programme.</p>
+      <p>Public release ANG-001 v1.0 · 14 November 2026 · research use only.</p></div>
+    <div><p><a href="/diseases/">All diseases</a></p><p><a href="/method/">Method and limits</a></p><p><a href="/#contact">Contact</a></p></div>
   </div>
   <div class="legal">© 2026 Sabre-Tek Limited. · Research and teaching use only — not clinical advice.</div>
 </footer>
