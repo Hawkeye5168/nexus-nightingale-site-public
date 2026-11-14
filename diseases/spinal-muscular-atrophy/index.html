@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spinal Muscular Atrophy — NEXUS NIGHTINGALE public release</title>
+<meta name="description" content="Spinal muscular atrophy: SMN1 loss, SMN2 biology and the approved SMN-restoring routes. Public release of SMA-001 v1.0; 31 sources; research use only.">
+<link rel="canonical" href="https://sabretek.ltd/diseases/spinal-muscular-atrophy/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spinal Muscular Atrophy — NEXUS NIGHTINGALE public release">
+<meta property="og:description" content="SMN1 loss, SMN2 biology and the approved SMN-restoring routes. Public release of SMA-001 v1.0; 31 sources; research use only.">
+<meta property="og:url" content="https://sabretek.ltd/diseases/spinal-muscular-atrophy/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{--navy:#173F5F;--navy-deep:#0E2A40;--steel:#41789B;--cerulean:#76B5C5;--cyan:#A9CFD9;--slate:#D1D9E0;--offwhite:#F3F7F9;--white:#fff;--verified:#1FA88C;--warning:#E0A94B}
+  *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--offwhite);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--cerulean);text-decoration:none} a:hover{text-decoration:underline}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:rgba(243,247,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--slate)}
+  nav .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:1px;color:var(--navy)} nav .brand img{height:40px;width:40px;border-radius:50%;object-fit:cover} nav .brand span i{font-style:normal;color:var(--steel)} nav .links{display:flex;gap:22px;font-size:14px} nav .links a{color:var(--navy);font-weight:600}
+  header.dhero{padding:128px 24px 52px;background:linear-gradient(180deg,var(--offwhite) 0%,#E7EEF2 100%);border-bottom:1px solid var(--slate)} .dhero .wrap{max-width:1060px;margin:0 auto}
+  .kicker{text-transform:uppercase;letter-spacing:4px;font-size:11.5px;font-weight:800;color:var(--cerulean);margin-bottom:14px} header.dhero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.08;font-weight:800;margin-bottom:14px;max-width:20ch} header.dhero .sub{font-size:18px;color:var(--steel);margin-bottom:20px}
+  .badges{display:flex;gap:8px;flex-wrap:wrap}.badge{display:inline-block;font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;background:var(--white);border:1px solid var(--slate);color:var(--steel)}.badge.ok{color:var(--verified);border-color:rgba(31,168,140,.35);background:rgba(31,168,140,.07)}
+  main{max-width:1060px;margin:0 auto;padding:48px 24px 80px} section.block{margin-bottom:44px} section.block h2{font-size:24px;line-height:1.2;margin-bottom:14px} section.block h2 .num{color:var(--cerulean);font-weight:800;margin-right:8px} section.block p{font-size:16.5px;color:#2C4E66;margin-bottom:.9em;max-width:78ch}.lead{font-size:18.5px;color:var(--steel)}
+  .glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.fact{background:var(--white);border:1px solid var(--slate);border-radius:10px;padding:16px 18px}.fact .k{font-size:10.5px;text-transform:uppercase;letter-spacing:1.5px;font-weight:800;color:var(--cerulean);margin-bottom:5px}.fact .v{font-size:14.5px;font-weight:600;color:var(--navy);line-height:1.45;word-break:break-word}.fact .v small{display:block;font-weight:400;color:var(--steel);font-size:12.5px;margin-top:3px}
+  .route{background:var(--navy);color:var(--white);border-radius:14px;padding:28px 30px}.route h2{color:var(--white)}.route p{color:var(--cyan)}.route p strong{color:var(--white)}.route .why{color:var(--slate);font-size:15px}.route .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.route .pill{font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;background:rgba(169,207,217,.14);color:var(--cyan);border:1px solid rgba(169,207,217,.3)}.route .pill.yes{background:rgba(31,168,140,.18);color:#8FE3D2;border-color:rgba(31,168,140,.4)}.route .pill.no{background:rgba(199,86,47,.18);color:#F2B39B;border-color:rgba(199,86,47,.4)}
+  .drug{background:var(--white);border:1px solid var(--slate);border-radius:12px;padding:20px 22px;margin-bottom:12px}.drug-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}.drug-head h3{font-size:18px}.drug .meta{font-size:12.5px;color:var(--cerulean);font-weight:700;margin-bottom:8px}.drug p{font-size:14.5px;color:var(--steel);margin:0}.pill-date{font-size:11.5px;font-weight:800;color:var(--verified);background:rgba(31,168,140,.08);border:1px solid rgba(31,168,140,.25);padding:4px 9px;border-radius:999px;white-space:nowrap}
+  ul.plain{margin:0 0 0 1.15em;color:#2C4E66;font-size:15.5px}ul.plain li{margin-bottom:.4em}ul.verif{list-style:none;display:flex;flex-direction:column;gap:8px}ul.verif li{background:var(--white);border:1px solid var(--slate);border-left:4px solid var(--verified);border-radius:8px;padding:11px 14px;font-size:14px;color:#2C4E66}ul.verif li.warn{border-left-color:var(--warning);background:#FDF8EF;color:#7A5B1E}
+  table.src{width:100%;border-collapse:collapse;font-size:13.5px}table.src th,table.src td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--slate);vertical-align:top}table.src th{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--steel)}table.src a{word-break:break-all}.table-wrap{overflow-x:auto}
+  .note{background:#EDF3F6;border-left:4px solid var(--steel);border-radius:8px;padding:16px 20px;font-size:14.5px;color:#2F5B76}.warnbox{background:#FDF8EF;border-left:4px solid var(--warning);border-radius:8px;padding:16px 20px;font-size:14px;color:#7A5B1E;margin-top:12px}
+  .pager{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--slate);padding-top:24px;margin-top:48px;flex-wrap:wrap}.pager a{font-size:14px;font-weight:700;color:var(--navy);border:1px solid var(--slate);border-radius:8px;padding:11px 16px;background:var(--white)}.pager a:hover{border-color:var(--navy);text-decoration:none}
+  footer{background:var(--navy-deep);color:var(--slate);padding:44px 40px 30px}footer .fwrap{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}footer p{font-size:13px;margin-bottom:6px}footer a{color:var(--cyan)}footer .legal{border-top:1px solid rgba(169,207,217,.2);margin-top:28px;padding-top:18px;max-width:1060px;margin-left:auto;margin-right:auto;font-size:12px;text-align:center}
+  @media(max-width:820px){nav{padding:14px 20px}nav .links{display:none}header.dhero{padding:108px 18px 40px}main{padding:32px 18px 64px}.route{padding:22px}}
+</style>
+</head>
+<body>
+<nav><a class="brand" href="/" style="text-decoration:none;"><img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE"><span><b>NEXUS</b> <i>NIGHTINGALE</i></span></a><div class="links"><a href="/">Home</a><a href="/pipeline/">Pipeline</a><a href="/diseases/">Diseases</a><a href="/method/">Method</a><a href="/course/">Course</a><a href="/#contact">Contact</a></div></nav>
+
+<header class="dhero"><div class="wrap"><div class="kicker">Public release · SMA-001 v1.0</div><h1>Spinal Muscular Atrophy</h1><p class="sub">SMN1 · autosomal recessive · motor neuron</p><div class="badges"><span class="badge ok">Source-linked research release</span><span class="badge">ORPHA 70</span><span class="badge">49 pages</span><span class="badge">30 sections</span><span class="badge">31 sources</span><span class="badge">25 claims</span></div></div></header>
+
+<main>
+  <p class="note"><strong>Public release · 14 November 2026:</strong> SMA-001 v1.0, benchmark-grade. This is the public summary. The full 49-page dossier, claim ledger and evidence room are access-controlled and are not published on this site. The next scheduled review is 14 February 2027.</p>
+
+  <section class="block"><h2><span class="num">01</span>At a glance</h2><div class="glance">
+    <div class="fact"><div class="k">Gene</div><div class="v">SMN1</div></div>
+    <div class="fact"><div class="k">Protein</div><div class="v">Survival motor neuron protein<small>UniProt Q16637 · 294 aa · 31,849 Da · 5q13.2</small></div></div>
+    <div class="fact"><div class="k">Inheritance</div><div class="v">Autosomal recessive<small>Biallelic SMN1 loss; SMN2 copy number modifies the phenotype</small></div></div>
+    <div class="fact"><div class="k">Onset</div><div class="v">Infancy to adulthood<small>Historical types 0–4 describe different functional trajectories</small></div></div>
+    <div class="fact"><div class="k">Prevalence</div><div class="v">~1 in 10,000–11,000 live births<small>Population estimate; not a registry-confirmed count in this release</small></div></div>
+    <div class="fact"><div class="k">Category</div><div class="v">Neuromuscular / motor neuron</div></div>
+    <div class="fact"><div class="k">Mechanism class</div><div class="v">loss of function</div></div>
+    <div class="fact"><div class="k">Clinical trials</div><div class="v">470 studies<small>ClinicalTrials.gov search, 14 November 2026; a landscape count, not a count of positive trials</small></div></div>
+    <div class="fact"><div class="k">Release</div><div class="v">SMA-001 v1.0<small>49 pages · 30 sections · 31 sources · 25 claims · 7 tables · 6 figures</small></div></div>
+  </div></section>
+
+  <section class="block"><h2><span class="num">02</span>What it is</h2>
+    <p class="lead">Spinal muscular atrophy is an autosomal recessive motor-neuron disease caused by biallelic loss of <em>SMN1</em>. It is not one uniform disease: the exact genotype, SMN2 copy number and stage change the trajectory and the treatment discussion.</p>
+    <p>SMN1 encodes the survival motor neuron protein. SMN2 is a nearly identical paralogue that produces only a small amount of full-length SMN because of an exon 7 splicing difference. The SMN2 copy number is a modifier, not a deterministic prediction.</p>
+    <p>Diagnosis is confirmed by molecular genetic testing. Clinical appearance alone is not sufficient. This page is a research summary, not a diagnosis, eligibility decision or treatment recommendation.</p>
+  </section>
+
+  <section class="block"><h2><span class="num">03</span>What goes wrong</h2>
+    <p>SMN is required for snRNP assembly and motor-neuron maintenance. Reduced SMN produces cell-type-specific splicing defects, neuromuscular junction dysfunction and motor-neuron loss, with secondary muscle atrophy and weakness.</p>
+    <p>The disease is not confined to the motor-neuron cell body. Respiratory, bulbar, orthopaedic and nutritional complications determine much of the morbidity, and they are not captured by a single motor score.</p>
+    <p class="note"><strong>Structural note:</strong> there is no full-length experimental structure of SMN in this dossier. PDB 4GLI is a crystal structure of the human SMN YG-dimer at 1.90 Å. The supervised pipeline reconstructed that construct; it is not a full-length model or a blind prediction. A domain structure is useful context, not a drug pocket.</p>
+  </section>
+
+  <section class="block"><div class="route"><h2><span class="num">04</span>How NIGHTINGALE routes it</h2><div class="pillrow"><span class="pill">mechanism: loss of function</span><span class="pill yes">approved: restore SMN</span><span class="pill">research: next-generation restoration</span><span class="pill no">not a clinical recommendation</span></div>
+    <p style="color:#DCEBF2;"><strong style="color:#FFFFFF;">Approved route:</strong> restore SMN with nusinersen, risdiplam or AAV9 SMN1 gene therapy where the label, age and eligibility criteria fit; supportive care remains essential.</p>
+    <p class="why">SMA is a loss-of-function disease: SMN is absent or reduced, not accumulated. Degrading it would be the wrong direction. No degrader candidate is proposed. The three approved routes are not interchangeable, and none is a universal cure.</p></div>
+  </section>
+
+  <section class="block"><h2><span class="num">05</span>Treatment today</h2>
+    <div class="drug"><div class="drug-head"><h3>Nusinersen</h3><span class="pill-date">intrathecal ASO</span></div><div class="meta">SMN2 exon 7 inclusion · loading and maintenance dosing</div><p>An antisense oligonucleotide that increases full-length SMN from SMN2. ENDEAR and CHERISH provide randomized evidence in infantile- and later-onset SMA. The label requires platelet, coagulation and urine protein monitoring; repeated lumbar punctures are a real burden.</p></div>
+    <div class="drug"><div class="drug-head"><h3>Risdiplam</h3><span class="pill-date">oral small molecule</span></div><div class="meta">SMN2 splicing modifier · once daily</div><p>An oral SMN2 splicing modifier studied in FIREFISH and SUNFISH. FIREFISH used historical controls; the motor and survival results are supportive but not a randomized placebo comparison. Systemic exposure brings systemic adverse effects and interaction questions.</p></div>
+    <div class="drug"><div class="drug-head"><h3>Onasemnogene abeparvovec</h3><span class="pill-date">AAV9 gene therapy</span></div><div class="meta">One-time intravenous SMN1 cDNA · label-defined age and eligibility</div><p>A one-time AAV9 SMN1 gene-replacement therapy. Pre-existing AAV9 antibodies, liver injury, immune responses, cardiac events and durability are central uncertainties. It is not a one-time cure.</p></div>
+    <div class="drug"><div class="drug-head"><h3>Supportive and multidisciplinary care</h3><span class="pill-date">always relevant</span></div><div class="meta">Respiratory · bulbar · nutrition · orthopaedic · rehabilitation</div><p>Airway clearance, non-invasive ventilation, feeding support, scoliosis and contracture management, physiotherapy and family support remain essential. They are not optional extras to a drug.</p></div>
+    <p class="note"><strong>What this page does not do:</strong> it does not provide dose management, eligibility criteria or an individual treatment plan. Approval is not access, and a motor milestone is not a complete functional cure.</p>
+  </section>
+
+  <section class="block"><h2><span class="num">06</span>In the pipeline</h2><ul class="plain">
+    <li><strong>Presymptomatic treatment.</strong> Newborn screening and early treatment can preserve motor units; the trials support earlier treatment, not guaranteed normal function.</li>
+    <li><strong>Next-generation SMN restoration.</strong> Higher-dose, next-generation ASOs and new delivery approaches are research-stage; they need randomized functional and safety data.</li>
+    <li><strong>Add-on biology.</strong> Myostatin-pathway and muscle-directed agents are being studied, but they are not established replacements for SMN restoration.</li>
+    <li><strong>Outcome measurement.</strong> Respiratory and bulbar outcomes are under-measured relative to motor scales; a walking test is not the whole disease.</li>
+    <li><strong>Access and delivery.</strong> Specialist centres, intrathecal capacity and gene-therapy infrastructure determine whether an approved therapy reaches the patient.</li>
+  </ul></section>
+
+  <section class="block"><h2><span class="num">07</span>Source checks</h2><p class="lead">What was checked for this release, and what remains open.</p><ul class="verif">
+    <li><strong>Identity:</strong> UniProt Q16637 = SMN1 / survival motor neuron protein, 294 aa — source-checked 14 November 2026.</li>
+    <li><strong>Disease code:</strong> Orphanet ORPHA:70 = proximal spinal muscular atrophy — source-checked.</li>
+    <li><strong>Genetics:</strong> SMN1 loss, SMN2 copy number and exon 7 splicing — source-checked against GeneReviews, ClinVar and the 2021 review literature.</li>
+    <li><strong>Labels:</strong> current DailyMed labels for nusinersen, risdiplam and onasemnogene — source-checked.</li>
+    <li><strong>Trial landscape:</strong> 470 ClinicalTrials.gov studies, queried 14 November 2026. A registry count is not a count of positive trials.</li>
+    <li class="warn"><strong>Open item:</strong> long-term durability, comparative ranking, adult data and jurisdiction-specific access remain open review questions. Exact prevalence is a population estimate.</li>
+  </ul><div class="warnbox">Amber items are open questions, not hidden caveats. Approval is not access; a motor milestone is not a complete cure.</div></section>
+
+  <section class="block"><h2><span class="num">08</span>Selected sources</h2><div class="table-wrap"><table class="src">
+    <tr><th>Source</th><th>Used for</th><th>Link</th></tr>
+    <tr><td>UniProt Q16637</td><td>Protein identity and length</td><td><a href="https://rest.uniprot.org/uniprotkb/Q16637" rel="noopener">Q16637</a></td></tr>
+    <tr><td>Orphanet ORPHA:70</td><td>Disease definition and code</td><td><a href="https://www.orpha.net/en/disease/detail/70" rel="noopener">ORPHA:70</a></td></tr>
+    <tr><td>GeneReviews NBK1352</td><td>Diagnosis, genetics and management</td><td><a href="https://www.ncbi.nlm.nih.gov/books/NBK1352/" rel="noopener">NBK1352</a></td></tr>
+    <tr><td>ClinVar — SMN1</td><td>Variant context</td><td><a href="https://www.ncbi.nlm.nih.gov/clinvar/?term=SMN1%5Bgene%5D" rel="noopener">SMN1 variants</a></td></tr>
+    <tr><td>NCBI Gene — SMN1 / SMN2</td><td>Gene identity</td><td><a href="https://www.ncbi.nlm.nih.gov/gene/6606" rel="noopener">SMN1</a> · <a href="https://www.ncbi.nlm.nih.gov/gene/6607" rel="noopener">SMN2</a></td></tr>
+    <tr><td>SMA care considerations, parts 1–2</td><td>Diagnosis, respiratory, nutrition and orthopaedic care</td><td><a href="https://doi.org/10.1016/j.nmd.2017.11.005" rel="noopener">Part 1</a> · <a href="https://doi.org/10.1016/j.nmd.2017.11.004" rel="noopener">Part 2</a></td></tr>
+    <tr><td>DailyMed — SPINRAZA</td><td>Nusinersen label</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94" rel="noopener">label</a></td></tr>
+    <tr><td>DailyMed — EVRYSDI</td><td>Risdiplam label</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eceb9a99-7191-4be5-87c3-0102707cf98e" rel="noopener">label</a></td></tr>
+    <tr><td>DailyMed — ZOLGENSMA</td><td>Onasemnogene label</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=68cd4f06-70e1-40d8-bedb-609ec0afa471" rel="noopener">label</a></td></tr>
+    <tr><td>NCT02193074 (ENDEAR)</td><td>Randomized infantile-onset evidence</td><td><a href="https://clinicaltrials.gov/study/NCT02193074" rel="noopener">record</a></td></tr>
+    <tr><td>NCT02292537 (CHERISH)</td><td>Randomized later-onset evidence</td><td><a href="https://clinicaltrials.gov/study/NCT02292537" rel="noopener">record</a></td></tr>
+    <tr><td>NCT02913482 (FIREFISH)</td><td>Risdiplam type 1 evidence</td><td><a href="https://clinicaltrials.gov/study/NCT02913482" rel="noopener">record</a></td></tr>
+    <tr><td>NCT03505099 (SPR1NT)</td><td>Presymptomatic gene-therapy evidence</td><td><a href="https://clinicaltrials.gov/study/NCT03505099" rel="noopener">record</a></td></tr>
+    <tr><td>ClinicalTrials.gov</td><td>Trial landscape</td><td><a href="https://clinicaltrials.gov/search?cond=Spinal%20Muscular%20Atrophy" rel="noopener">SMA search</a></td></tr>
+  </table></div><p style="font-size:13px;color:var(--steel);margin-top:10px;">Selected sources only. The full 31-source register and 25-claim ledger are in the access-controlled dossier.</p></section>
+
+  <section class="block"><h2><span class="num">09</span>Scope and limits</h2><div class="note">This page is a public research summary for scientific communication. It is not medical advice, a diagnosis, an eligibility decision or a treatment recommendation. NEXUS NIGHTINGALE is a computational research programme; it is not clinically validated and no output has regulatory approval. The dossier is a source-linked synthesis, not a systematic review or a clinical trial. Independent clinical review is outstanding. No patient data are used.</div></section>
+
+  <div class="pager"><a href="/work/dossier-2-0-2026-11-08/">← Dossier 2.0</a><a href="/diseases/">All diseases</a><a href="mailto:lee.oulton@sabretek.co.uk?subject=SMA%20dossier%20access%20request">Request the full dossier</a></div>
+</main>
+
+<footer><div class="fwrap"><div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited programme.</p><p>Public release SMA-001 v1.0 · 14 November 2026 · research use only.</p></div><div><p><a href="/diseases/">All diseases</a></p><p><a href="/method/">Method and limits</a></p><p><a href="/#contact">Contact</a></p></div></div><div class="legal">© 2026 Sabre-Tek Limited. · Research and teaching use only — not clinical advice.</div></footer>
+</body>
+</html>

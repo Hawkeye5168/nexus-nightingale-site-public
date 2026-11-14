@@ -61,6 +61,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sabretek.ltd/diseases/spinal-muscular-atrophy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sabretek.ltd/diseases/sickle-cell-disease/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sabretek.ltd/diseases/fabry-disease/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
