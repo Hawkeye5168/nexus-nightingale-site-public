@@ -11,6 +11,8 @@ Scope: research update, not medical advice
 
 **Update, 11 November 2026:** This episode is a 6 November 2026 snapshot. The current programme has five benchmark dossiers — Dengue, Friedreich ataxia, NSCLC, Gaucher and Fabry — and the current pipeline has fourteen stages. The counts in the episode remain the record of that date.
 
+**Update, 15 November 2026:** This remains the 6 November 2026 snapshot. The current library has 26 source-linked dossiers, including seven loss-of-function editions added on 15 November 2026. The five reference dossiers named in Episode 03 remain the depth standard.
+
 **SABRE:**
 
 Eleven thousand six hundred and forty-five.

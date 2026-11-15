@@ -8,6 +8,8 @@ Scope: research update, not medical advice
 
 ---
 
+**Update, 15 November 2026:** The benchmark and the five reference dossiers in this episode still stand. The current library has 26 source-linked dossiers, including seven loss-of-function editions added on 15 November 2026. The pipeline now starts with a data-first evidence preflight; this audio is the 10 November 2026 record.
+
 **SABRE:**
 
 A dossier is not a longer report.
