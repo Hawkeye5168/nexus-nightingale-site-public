@@ -73,6 +73,8 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
   <div class="scope"><b>Research use only.</b> NEXUS is a computational research platform. It is not clinically validated, has no regulatory approval, and does not provide diagnosis, treatment or clinical advice. Every output requires independent experimental and clinical validation.</div>
   <p style="margin:-12px 0 24px; font-size:14px;"><a href="/method/" style="font-weight:700;">Read the method and limits behind these stages →</a></p>
 
+  <p class="note"><strong>Evidence preflight.</strong> A target is not accepted with an empty evidence layer. The disease, gene/protein, structural, trial, countermeasure and diagnostic records the dossier will need are loaded and source-linked first; a missing class is shown as a gap, not smoothed over after the run.</p>
+
   <section class="stages">
     <article class="stage">
       <div class="n">Phase I · Stage 01</div>
@@ -84,7 +86,7 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
     <article class="stage">
       <div class="n">Phase I · Stage 02</div>
       <h2>Evidence assembly</h2>
-      <p>The pipeline gathers public evidence from biomedical databases and registries, then binds each statement to a source and an evidence tier. The result is an evidence chain, not an unsourced summary.</p>
+      <p>Before the run, an evidence preflight loads the required classes — disease, gene and protein, structures, trials, countermeasures and diagnostics — and records any missing class as an explicit gap. The pipeline does not start from an empty evidence layer. It then gathers public evidence from biomedical databases and registries and binds each statement to a source and an evidence tier.</p>
       <ul><li>Disease, gene, structure and trial evidence</li><li>Source identifiers and retrieval dates</li><li>Evidence tiers and explicit gaps</li></ul>
     </article>
 
@@ -180,7 +182,7 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
       <thead><tr><th>Stage</th><th>Input</th><th>What runs</th><th>Output</th></tr></thead>
       <tbody>
         <tr><td><strong>01 Intake &amp; identity</strong></td><td>Target, accession, sequence, gene or disease</td><td>Resolve identity against public reference data; fail loudly when an identifier cannot be resolved</td><td>Structured research record</td></tr>
-        <tr><td><strong>02 Evidence assembly</strong></td><td>Structured record</td><td>Query biomedical databases and registries; bind every statement to a source, date and evidence tier</td><td>Source-linked evidence chain</td></tr>
+        <tr><td><strong>02 Evidence assembly</strong></td><td>Structured record</td><td>Run the evidence preflight for the required classes; record missing classes as explicit gaps; query biomedical databases and registries; bind every statement to a source, date and evidence tier</td><td>Source-linked evidence chain</td></tr>
         <tr><td><strong>03 Research record</strong></td><td>Evidence chain</td><td>Frame the decision question; separate known, uncertain and missing; state the falsifier</td><td>Testable decision frame</td></tr>
         <tr><td><strong>04 Supervised structural recovery</strong></td><td>Sequence and a named experimental reference</td><td>Recover the structure against the reference; record TM-score, RMSD, construct and caveat</td><td>Reconstruction, not blind prediction</td></tr>
         <tr><td><strong>05 Research folding path</strong></td><td>Sequence without a template</td><td>Attempt a separate template-free fold as a research preview</td><td>Research model; never the production claim</td></tr>
