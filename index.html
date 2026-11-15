@@ -332,7 +332,7 @@
     <!-- PHASE II -->
     <div class="detail" style="border-top:1px solid rgba(169,207,217,0.25);">
       <h3 style="color:#fff;">Phase II · Solve the structure</h3>
-      <p class="why">Structure is solved by the supervised <b>NIGHTINGALE</b> path and, for research, by the ab initio research engine. Both report a <b>TM-score</b> (1.0 perfect, above 0.5 the same fold) and an <b>RMSD</b> in ångströms against the experimental reference. Guided numbers are labelled as reconstruction, not blind prediction; the unguided run is reported separately. Domains and binding pockets are located before any design begins.</p>
+      <p class="why">Structure is solved by the supervised <b>NIGHTINGALE</b> path against a named reference. It reports a <b>TM-score</b> (1.0 perfect, above 0.5 the same fold) and an <b>RMSD</b> in ångströms against that reference. The score is a reconstruction result, not a promise of blind-prediction accuracy. Domains and binding pockets are located before any design begins.</p>
       <div class="io">
         <div class="card"><div class="t">Input</div></div>
         <div class="card"><div class="t">Output</div></div>
@@ -407,7 +407,7 @@
       <div class="stat"><div class="num">0.9706</div><div class="label">TM-score — peak supervised fold of EGFR against PDB 1XKK (1,000 iterations, corrected 2 Nov 2026 build)</div></div>
       <div class="stat"><div class="num">24</div><div class="label">biomedical databases cross-referenced per target</div></div>
       <div class="stat"><div class="num">9</div><div class="label">disease mechanisms, each routed to its correct intervention</div></div>
-      <div class="stat"><div class="num">18</div><div class="label">benchmark dossiers, each with 30+ sections and 30+ sources</div></div>
+      <div class="stat"><div class="num">19</div><div class="label">benchmark dossiers, each with 30+ sections and 30+ sources</div></div>
     </div>
   </div>
 </section>
@@ -422,6 +422,7 @@
     <p style="margin-top:14px;"><a href="/diseases/" style="font-weight:700;">Browse the initial disease dossier set →</a> &nbsp;·&nbsp; <a href="/work/revalidation-2026-11-07/" style="font-weight:700;">See the revalidation example →</a></p>
     <p style="margin-top:8px;"><a href="/work/orphan-rebuilds-2026-11-14/" style="font-weight:700;">See the orphan rebuild series →</a> &nbsp;·&nbsp; <a href="/work/dossier-2-0-2026-11-08/" style="font-weight:700;">See Dossier 2.0 — the decision, countercase and claim ledger →</a></p>
     <div class="diseases">
+      <a class="disease" href="/diseases/ebola/"><div class="name">Ebola Disease (Bundibugyo virus)</div><div class="tag">BDBV · infectious disease · public release</div><div class="more">Open public release →</div></a>
       <a class="disease" href="/diseases/hutchinson-gilford-progeria/"><div class="name">Hutchinson-Gilford Progeria</div><div class="tag">LMNA · toxic GoF · degrader</div><div class="more">Read the dossier →</div></a>
       <a class="disease" href="/diseases/friedreich-ataxia/"><div class="name">Friedreich Ataxia</div><div class="tag">FXN · enzyme LoF · gene therapy</div><div class="more">Read the dossier →</div></a>
       <a class="disease" href="/diseases/lesch-nyhan-syndrome/"><div class="name">Lesch-Nyhan Syndrome</div><div class="tag">HPRT1 · enzyme LoF · public release</div><div class="more">Open public release →</div></a>

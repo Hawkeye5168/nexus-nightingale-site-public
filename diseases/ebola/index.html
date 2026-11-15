@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebola Disease — NEXUS NIGHTINGALE public release</title>
+<meta name="description" content="Ebola disease in 2026 is Bundibugyo virus disease: outbreak status, the diagnostic gap, the countermeasure gap and the construct-level structural evidence. EBOLA-001 v1.1; research use only.">
+<link rel="canonical" href="https://sabretek.ltd/diseases/ebola/">
+<meta name="theme-color" content="#173F5F">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ebola Disease — NEXUS NIGHTINGALE public release">
+<meta property="og:description" content="Bundibugyo virus disease: the 2026 outbreak, the diagnostic and countermeasure gaps, and the construct-level structural evidence. Research use only.">
+<meta property="og:url" content="https://sabretek.ltd/diseases/ebola/">
+<meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
+<style>
+  :root{--navy:#173F5F;--navy-deep:#0E2A40;--steel:#41789B;--cerulean:#76B5C5;--cyan:#A9CFD9;--slate:#D1D9E0;--offwhite:#F3F7F9;--white:#fff;--verified:#1FA88C;--warning:#E0A94B}
+  *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--offwhite);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--cerulean);text-decoration:none} a:hover{text-decoration:underline}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:rgba(243,247,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--slate)}
+  nav .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:1px;color:var(--navy)} nav .brand img{height:40px;width:40px;border-radius:50%;object-fit:cover} nav .brand span i{font-style:normal;color:var(--steel)} nav .links{display:flex;gap:22px;font-size:14px} nav .links a{color:var(--navy);font-weight:600}
+  header.dhero{padding:128px 24px 52px;background:linear-gradient(180deg,var(--offwhite) 0%,#E7EEF2 100%);border-bottom:1px solid var(--slate)} .dhero .wrap{max-width:1060px;margin:0 auto}
+  .kicker{text-transform:uppercase;letter-spacing:4px;font-size:11.5px;font-weight:800;color:var(--cerulean);margin-bottom:14px} header.dhero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.08;font-weight:800;margin-bottom:14px;max-width:20ch} header.dhero .sub{font-size:18px;color:var(--steel);margin-bottom:20px}
+  .badges{display:flex;gap:8px;flex-wrap:wrap}.badge{display:inline-block;font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;background:var(--white);border:1px solid var(--slate);color:var(--steel)}.badge.ok{color:var(--verified);border-color:rgba(31,168,140,.35);background:rgba(31,168,140,.07)}.badge.warn{color:#8A6417;border-color:rgba(224,169,75,.5);background:rgba(224,169,75,.10)}
+  main{max-width:1060px;margin:0 auto;padding:48px 24px 80px} section.block{margin-bottom:44px} section.block h2{font-size:24px;line-height:1.2;margin-bottom:14px} section.block h2 .num{color:var(--cerulean);font-weight:800;margin-right:8px} section.block p{font-size:16.5px;color:#2C4E66;margin-bottom:.9em;max-width:78ch}.lead{font-size:18.5px;color:var(--steel)}
+  .glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.fact{background:var(--white);border:1px solid var(--slate);border-radius:10px;padding:16px 18px}.fact .k{font-size:10.5px;text-transform:uppercase;letter-spacing:1.5px;font-weight:800;color:var(--cerulean);margin-bottom:5px}.fact .v{font-size:14.5px;font-weight:600;color:var(--navy);line-height:1.45;word-break:break-word}.fact .v small{display:block;font-weight:400;color:var(--steel);font-size:12.5px;margin-top:3px}
+  .route{background:var(--navy);color:var(--white);border-radius:14px;padding:28px 30px}.route h2{color:var(--white)}.route p{color:var(--cyan)}.route p strong{color:var(--white)}.route .why{color:var(--slate);font-size:15px}.route .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.route .pill{font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;background:rgba(169,207,217,.14);color:var(--cyan);border:1px solid rgba(169,207,217,.3)}.route .pill.yes{background:rgba(31,168,140,.18);color:#8FE3D2;border-color:rgba(31,168,140,.4)}.route .pill.no{background:rgba(199,86,47,.18);color:#F2B39B;border-color:rgba(199,86,47,.4)}
+  .drug{background:var(--white);border:1px solid var(--slate);border-radius:12px;padding:20px 22px;margin-bottom:12px}.drug-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}.drug-head h3{font-size:18px}.drug .meta{font-size:12.5px;color:var(--cerulean);font-weight:700;margin-bottom:8px}.drug p{font-size:14.5px;color:var(--steel);margin:0}.pill-date{font-size:11.5px;font-weight:800;color:var(--verified);background:rgba(31,168,140,.08);border:1px solid rgba(31,168,140,.25);padding:4px 9px;border-radius:999px;white-space:nowrap}
+  ul.plain{margin:0 0 0 1.15em;color:#2C4E66;font-size:15.5px}ul.plain li{margin-bottom:.4em}
+  table.src{width:100%;border-collapse:collapse;font-size:13.5px}table.src th,table.src td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--slate);vertical-align:top}table.src th{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--steel)}table.src a{word-break:break-all}.table-wrap{overflow-x:auto}
+  .note{background:#EDF3F6;border-left:4px solid var(--steel);border-radius:8px;padding:16px 20px;font-size:14.5px;color:#2F5B76}.warnbox{background:#FDF8EF;border-left:4px solid var(--warning);border-radius:8px;padding:16px 20px;font-size:14px;color:#7A5B1E;margin-top:12px}
+  .pager{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--slate);padding-top:24px;margin-top:48px;flex-wrap:wrap}.pager a{font-size:14px;font-weight:700;color:var(--navy);border:1px solid var(--slate);border-radius:8px;padding:11px 16px;background:var(--white)}.pager a:hover{border-color:var(--navy);text-decoration:none}
+  footer{background:var(--navy-deep);color:var(--slate);padding:44px 40px 30px}footer .fwrap{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}footer p{font-size:13px;margin-bottom:6px}footer a{color:var(--cyan)}footer .legal{border-top:1px solid rgba(169,207,217,.2);margin-top:28px;padding-top:18px;max-width:1060px;margin-left:auto;margin-right:auto;font-size:12px;text-align:center}
+  @media(max-width:820px){nav{padding:14px 20px}nav .links{display:none}header.dhero{padding:108px 18px 40px}main{padding:32px 18px 64px}.route{padding:22px}}
+</style>
+</head>
+<body>
+<nav><a class="brand" href="/" style="text-decoration:none;"><img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE"><span><b>NEXUS</b> <i>NIGHTINGALE</i></span></a><div class="links"><a href="/">Home</a><a href="/pipeline/">Pipeline</a><a href="/diseases/">Diseases</a><a href="/method/">Method</a><a href="/course/">Course</a><a href="/#contact">Contact</a></div></nav>
+
+<header class="dhero"><div class="wrap"><div class="kicker">Public release · EBOLA-001 v1.1 · 15 November 2026</div><h1>Ebola Disease</h1><p class="sub">Bundibugyo virus · 2026 outbreak · no licensed BDBV vaccine or therapeutic</p><div class="badges"><span class="badge ok">Source-linked research release</span><span class="badge">BDBV</span><span class="badge">83 pages</span><span class="badge">40 sections</span><span class="badge">52 sources</span><span class="badge">40 claims</span></div></div></header>
+
+<main>
+  <p class="note"><strong>Public release · 15 November 2026:</strong> EBOLA-001 v1.1, benchmark-grade. This is the public summary. The full 83-page dossier, claim ledger, red-team record and buyer versions are held privately and are not published on this site. Access is arranged directly. The next scheduled review is 15 February 2027.</p>
+
+  <section class="block"><h2><span class="num">01</span>At a glance</h2><div class="glance">
+    <div class="fact"><div class="k">Pathogen</div><div class="v">Bundibugyo virus<small>BDBV · <em>Orthoebolavirus bundibugyoense</em> · the 2026 outbreak is not Zaire Ebola</small></div></div>
+    <div class="fact"><div class="k">Genome</div><div class="v">Negative-sense RNA<small>~18.9 kb; seven genes in a conserved order: NP, VP35, VP40, GP, VP30, VP24 and L</small></div></div>
+    <div class="fact"><div class="k">Outbreak</div><div class="v">DRC, declared 15 May 2026<small>WHO declared a Public Health Emergency of International Concern on 17 May 2026</small></div></div>
+    <div class="fact"><div class="k">DRC snapshot</div><div class="v">11,197 confirmed cases · 5,471 deaths<small>As of 12 November 2026; a moving reporting snapshot, not a fixed epidemic curve</small></div></div>
+    <div class="fact"><div class="k">Licensed BDBV products</div><div class="v">None<small>No BDBV vaccine or therapeutic has a marketing authorisation as of 15 November 2026</small></div></div>
+    <div class="fact"><div class="k">EBOV products</div><div class="v">Ervebo · Inmazeb · Ebanga<small>Licensed for Zaire ebolavirus disease; not licensed for Bundibugyo virus disease</small></div></div>
+    <div class="fact"><div class="k">Diagnostics</div><div class="v">First BDBV molecular test under WHO EUL<small>Listed 2 July 2026; an Emergency Use Listing is not a marketing authorisation</small></div></div>
+    <div class="fact"><div class="k">Release</div><div class="v">EBOLA-001 v1.1<small>83 pages · 40 sections · 52 sources · 40 claims · 10 red-team items · 8 figures · 20 tables</small></div></div>
+  </div></section>
+
+  <section class="block"><h2><span class="num">02</span>What it is</h2>
+    <p class="lead">Ebola disease is the umbrella term for illness caused by viruses in the genus <em>Orthoebolavirus</em>. The 2026 emergency is caused by Bundibugyo virus, not by the Zaire species that the approved vaccines and antibodies target.</p>
+    <p>BDBV is one of three orthoebolaviruses known to cause large human outbreaks, alongside Ebola virus (EBOV) and Sudan virus (SUDV). The genus also contains Taï Forest virus, Reston virus and Bombali virus. The species distinction is not taxonomic housekeeping: product labels, vaccine stockpiles and monoclonal antibodies are virus-specific.</p>
+    <p>The clinical syndrome overlaps with EBOV disease — fever, fatigue, gastrointestinal symptoms, bleeding in a minority, and multi-organ involvement — but the evidence for any product must be generated in the species causing the outbreak. A statement that “Ebola is preventable” or “Ebola is treatable” is incomplete unless it names the virus and the product.</p>
+    <p class="note"><strong>Scope:</strong> this page is a research summary, not a diagnosis, treatment recommendation, eligibility decision or regulatory conclusion. Treatment decisions belong to a qualified clinical team and the current local label.</p>
+  </section>
+
+  <section class="block"><h2><span class="num">03</span>The 2026 outbreak</h2>
+    <p>The Democratic Republic of the Congo declared the outbreak in Ituri Province on 15 May 2026. By 12 November 2026 it had reported 11,197 confirmed cases and 5,471 deaths, with 3,045 people recovered and 1,676 hospitalised in isolation. Eight provinces have reported cases; Ituri and Nord-Kivu account for about 94% of confirmed cases.</p>
+    <p>Kenya reported a nine-case cluster with two deaths, and Nigeria reported one case in a traveller. Uganda’s linked outbreak was declared over in July 2026. A British healthcare worker was evacuated to the UK on 5 November 2026 and admitted to the Royal Free high-level isolation unit.</p>
+    <p>The response is constrained by insecurity, mobile populations, cross-border trade and refugee movements. Those are not background details: they determine whether contact tracing and isolation reach the people at risk. The case count is a reporting snapshot, not a stable epidemic curve.</p>
+    <div class="warnbox"><strong>Do not compare case-fatality rates as if they were controlled evidence.</strong> The DRC’s reported BDBV case fatality has been much higher than the ~10% in the Uganda cohort, but the groups differ in presentation, access and support. The difference cannot establish that any experimental treatment works.</div>
+  </section>
+
+  <section class="block"><h2><span class="num">04</span>Diagnosis: the first assay missed BDBV</h2>
+    <p>Acute diagnosis relies on molecular testing, with antigen and serology as complements. In the 2026 outbreak, the first deployed real-time RT-PCR cartridge was EBOV-focused and returned a negative result; broader testing at the Institut National de Recherche Biomédicale identified BDBV. WHO listed the first BDBV molecular test under its Emergency Use Listing on 2 July 2026.</p>
+    <p>The lesson is operational, not merely technical: a negative EBOV-only result is not a rule-out for BDBV. Pan-orthoebolavirus assays and sequencing are part of preparedness, and a diagnostic that is not validated for the circulating species can delay the response.</p>
+    <p>The dossier separates a CE-marked or EUL-listed test from a marketed diagnostic and separates a detection result from a clinical decision. No test in this release is presented as a standalone rule-out.</p>
+  </section>
+
+  <section class="block"><div class="route"><h2><span class="num">05</span>The countermeasure gap</h2><div class="pillrow"><span class="pill">EBOV: licensed products</span><span class="pill no">BDBV: no licensed product</span><span class="pill">supportive care is the foundation</span><span class="pill no">not a clinical recommendation</span></div>
+    <p style="color:#DCEBF2;"><strong style="color:#FFFFFF;">Licensed for EBOV:</strong> Ervebo (rVSVΔG-ZEBOV-GP), Inmazeb (atoltivimab / maftivimab / odesivimab) and Ebanga (ansuvimab). These are not licensed for BDBV, and a label for one species does not create a genus-wide licence.</p>
+    <p class="why">No BDBV vaccine or therapeutic has a marketing authorisation as of 15 November 2026. The response relies on supportive care, infection prevention and control, surveillance, contact tracing and community engagement. BDBV candidates — including ChAdOx1 BDBV, mRNA-1469 and the Tumaini and PARTNERS platform trials — are investigational; no BDBV efficacy result exists yet.</p></div>
+  </section>
+
+  <section class="block"><h2><span class="num">06</span>What the structural evidence is — and is not</h2>
+    <p>The NEXUS NIGHTINGALE structural layer was run on the EBOV glycoprotein accession Q05320: GP, 676 aa, 74,464 Da, Zaire ebolavirus strain Mayinga-76. The supervised fold resolved to PDB 2EBO and recovered the 222-residue GP2 core. 2EBO is a construct, not the full-length, membrane-anchored GP1,2 trimer.</p>
+    <p>That result is a construct-level recovery against a deposited template. It is not a prediction of the full 676-residue GP, and it is not a BDBV structure. No full-length BDBV GP structure was used. The BDBV deposits that do exist are mucin-deleted GP trimers, an NP C-terminal domain and a VP40 dimer; none is the full-length GP1,2.</p>
+    <p class="note"><strong>Construct note:</strong> a high recovery score against a domain fragment can be true and still say nothing about the full protein or about a different species. The construct, the chain and the missing regions must be read with any structural number.</p>
+  </section>
+
+  <section class="block"><h2><span class="num">07</span>What this release does not establish</h2>
+    <ul class="plain">
+      <li>No claim that any vaccine, antibody or small molecule treats or prevents BDBV disease.</li>
+      <li>No full-length BDBV GP structure and no BDBV-specific structural model.</li>
+      <li>No randomized BDBV efficacy result; the Uganda remdesivir experience is uncontrolled.</li>
+      <li>No independent Ebola specialist review has been completed. This is an internal draft for that review.</li>
+      <li>The case counts are a 15 November 2026 snapshot and will change.</li>
+    </ul>
+    <p class="warnbox">A structural or source check is not a claim of clinical validation. The dossier names its gates and its limits so a specialist can attack the weakest points first.</p>
+  </section>
+
+  <section class="block"><h2><span class="num">08</span>Selected sources</h2>
+    <div class="table-wrap"><table class="src"><thead><tr><th>ID</th><th>Source</th><th>Link</th></tr></thead><tbody>
+      <tr><td>S1</td><td>WHO — Ebola disease fact sheet, 24 April 2025</td><td><a href="https://www.who.int/news-room/fact-sheets/detail/ebola-disease">who.int</a></td></tr>
+      <tr><td>S3</td><td>ECDC — Ebola disease outbreak caused by Bundibugyo virus, multi-country, 13 November 2026</td><td><a href="https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-13">ecdc.europa.eu</a></td></tr>
+      <tr><td>S6</td><td>WHO — Two new candidate vaccines to join the Ebola trial, 4 November 2026</td><td><a href="https://www.who.int/news/item/04-11-2026-two-new-candidate-vaccines-to-join-ebola-trial-as-treatment-research-advances">who.int</a></td></tr>
+      <tr><td>S23</td><td>RCSB PDB — 2EBO, core structure of GP2 from Ebola virus</td><td><a href="https://www.rcsb.org/structure/2EBO">rcsb.org</a></td></tr>
+      <tr><td>S38</td><td>Mutegeki et al. — Clinical characteristics of BDBV disease, Uganda 2026, MMWR 75(35):551–553</td><td><a href="https://www.cdc.gov/mmwr/volumes/75/wr/mm7535a2.htm">cdc.gov</a></td></tr>
+      <tr><td>S42</td><td>Accelerated qualification of diagnostic tests during the 2026 BDBV outbreak, Lancet Infectious Diseases 2026</td><td><a href="https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(26)00465-2/fulltext">thelancet.com</a></td></tr>
+      <tr><td>S43</td><td>WHO — First diagnostic test for Ebola Bundibugyo virus added to the Emergency Use Listing, 2 July 2026</td><td><a href="https://www.who.int/news/item/02-07-2026-who-adds-first-diagnostic-test-for-ebola-bundibugyo-virus-to-its-emergency-use-listing">who.int</a></td></tr>
+      <tr><td>S45</td><td>University of Oxford — First Phase I Bundibugyo ebolavirus vaccine trial, 13 July 2026</td><td><a href="https://www.ox.ac.uk/news/2026-07-13-worlds-first-phase-i-bundibugyo-ebolavirus-vaccine-trial-launched-by">ox.ac.uk</a></td></tr>
+      <tr><td>S49</td><td>RCSB PDB — 6DZM, Bundibugyo virus GP (mucin-deleted) with ADI-15878 Fab</td><td><a href="https://www.rcsb.org/structure/6DZM">rcsb.org</a></td></tr>
+      <tr><td>S50</td><td>RCSB PDB — 7KEW, Bundibugyo virus GP (mucin-deleted) with BDBV-43 Fab</td><td><a href="https://www.rcsb.org/structure/7KEW">rcsb.org</a></td></tr>
+      <tr><td>S51</td><td>RCSB PDB — 5DSD, C-terminal domain of Bundibugyo virus nucleoprotein</td><td><a href="https://www.rcsb.org/structure/5DSD">rcsb.org</a></td></tr>
+      <tr><td>S52</td><td>RCSB PDB — 31AP, Bundibugyo virus VP40 dimer</td><td><a href="https://www.rcsb.org/structure/31AP">rcsb.org</a></td></tr>
+    </tbody></table></div>
+    <p class="small" style="margin-top:10px;font-size:12.5px;color:var(--steel);">The full dossier carries 52 sources and 40 claims, each with a source ID and a status. This page shows a selected public set.</p>
+  </section>
+
+  <div class="pager"><a href="/diseases/">← All diseases</a><a href="mailto:lee.oulton@sabretek.co.uk?subject=EBOLA-001%20v1.1%20dossier%20access%20request">Request the full dossier →</a></div>
+</main>
+
+<footer><div class="fwrap"><div><p><strong>NEXUS NIGHTINGALE</strong> · Sabre-Tek Limited</p><p>Source-linked research dossiers. Research and teaching use only.</p></div><div><p><a href="/method/">Method and limits</a> · <a href="/diseases/">Disease registry</a> · <a href="/work/dossier-2-0-2026-11-08/">Dossier 2.0</a></p></div></div><div class="legal">© 2026 Sabre-Tek Limited · Not clinical advice, diagnosis, treatment or regulatory submission. No patient data.</div></footer>
+</body>
+</html>
