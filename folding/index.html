@@ -132,6 +132,7 @@
       <h2>What it does not claim</h2>
       <p>These are supervised, template-guided refinements — not blind predictions and not AlphaFold comparisons. A near-1.0 TM means the engine recovered the reference construct it was refined against; it is a check of the folder and the scorer, not evidence of de-novo accuracy.</p>
       <p>The 2 Nov 2026 build replaces the 3×3 superposition in the scorer with a quaternion superposition. The earlier low scores were produced by a numerically unstable alignment, not by the folding path; identical structures now score 1.0 by construction.</p>
+      <p><strong>Metric control:</strong> a score is only published when the scorer can return TM 1.0000 for an identical structure. A lower native-versus-native score is a metric bug, not a finding. These scores are supervised recovery against the named construct, not de novo predictions.</p>
       <p>No efficacy, drug, or clinical claim is made. Research use only. Not clinically validated.</p>
     </div>
   </section>
