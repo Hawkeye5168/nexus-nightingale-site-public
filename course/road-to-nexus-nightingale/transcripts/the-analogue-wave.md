@@ -8,7 +8,7 @@ Scope: research update, not medical advice
 
 ---
 
-**Update, 11 November 2026:** This episode was recorded on 6 November 2026 and uses the earlier seven-pipeline framing. The current NEXUS pipeline has fourteen stages in four phases; Episode 03 covers the current structure and the thirty-section dossier standard.
+**Update, 11 November 2026:** This episode was recorded on 6 November 2026 and uses the earlier seven-pipeline framing. The current NEXUS pipeline has fourteen stages in four phases; Episode 03 covers the current structure, the thirty-section benchmark and the model-assurance part added for model-bearing dossiers.
 
 **Update, 15 November 2026:** This remains the 6 November 2026 record. The current pipeline starts with a data-first evidence preflight across nine evidence classes and has 26 source-linked dossiers; the older seven-pipeline framing is kept as the dated record.
 
