@@ -49,12 +49,20 @@ footer{background:var(--deep);color:var(--slate);padding:46px 40px 30px}footer .
 <div class="warn"><strong>Not a clinical or regulatory validation.</strong> A pack is a methods and performance document. It does not diagnose, recommend treatment, establish patient benefit or replace a prospective clinical study, a regulatory submission or an independent clinical reviewer. No patient identifiers are published.</div>
 <p>The pack can recommend <strong>not deploying</strong> the model. A negative result is a valid, useful deliverable. A pack that can only say yes is not an assurance pack.</p></section>
 
-<section class="block"><h2>Sample pack — AX-001</h2>
-<div class="sample"><div class="k">Public-data demonstrator · EEG seizure classifier</div><h3>500 subjects. Subject-held-out. 11% detection at a 1% false-positive budget.</h3>
-<p>AX-001 is a real run on the public UCI Epileptic Seizure Recognition dataset. It is deliberately not a success story: the signal is real but modest, and the pack recommends against deployment.</p>
+<section class="block"><h2>Two controls: one passes, one fails</h2>
+<p>A service that can only say no is not credible either. The same pack has to report a pass when the model earns one, and a rejection when it does not.</p>
+
+<div class="sample"><div class="k">Positive control · BC-001 · sample-level</div><h3>A model that passes: 95.8% detection at a 0.56% actual false-positive rate.</h3>
+<p>BC-001 is a real run on the public Breast Cancer Wisconsin dataset. The L2 logistic classifier reaches AUC 0.996 across five held-out sample folds. The null collapses to AUC 0.502. It is a technical positive control: sample-level, public, and not a patient-held-out or clinical claim.</p>
+<div class="nums"><div class="num"><b>0.996</b><span>AUC mean — contrast only</span></div><div class="num"><b>95.8%</b><span>TPR at 0.56% actual FPR</span></div><div class="num"><b>0.502</b><span>Null AUC</span></div><div class="num"><b>2.4%</b><span>Null TPR at the same budget</span></div></div>
+<div class="btns"><a class="btn" href="/work/model-assurance-bc-001-2026-11-16/">Read the positive control →</a><a class="btn ghost" href="/work/model-assurance-bc-001-2026-11-16/BC-001_ASSURANCE_PACK.pdf">Open the pack PDF</a></div></div>
+
+<div class="sample"><div class="k">Negative control · AX-001 · subject-held-out</div><h3>A model that fails: 11% detection at a 1% false-positive budget.</h3>
+<p>AX-001 is a real run on the public EEG seizure dataset. The signal is real but modest, and the pack recommends against deployment. It is the control that shows the pack can reject a model rather than dress it up.</p>
 <div class="nums"><div class="num"><b>0.687</b><span>AUC mean — contrast only</span></div><div class="num"><b>11%</b><span>TPR at 1% FPR</span></div><div class="num"><b>0.504</b><span>Null AUC</span></div><div class="num"><b>1%</b><span>Null TPR at 1% (collapse)</span></div></div>
-<p class="small">At 5% FPR the TPR is 16%; at 10%, 25%. The per-category table shows most 1% false positives came from one background class.</p>
-<div class="btns"><a class="btn" href="/work/model-assurance-ax-001-2026-11-16/">Read the sample summary →</a><a class="btn ghost" href="/work/model-assurance-ax-001-2026-11-16/AX-001_ASSURANCE_PACK.pdf">Open the pack PDF</a></div></div></section>
+<div class="btns"><a class="btn" href="/work/model-assurance-ax-001-2026-11-16/">Read the negative control →</a><a class="btn ghost" href="/work/model-assurance-ax-001-2026-11-16/AX-001_ASSURANCE_PACK.pdf">Open the pack PDF</a></div></div>
+
+<p class="small">A client pack replaces these public controls with the client's locked data. The positive control is sample-level; the negative control is subject-held-out. Neither is a clinical validation.</p></section>
 
 <section class="block"><h2>How a client pack is built</h2>
 <div class="table-wrap"><table><thead><tr><th>Step</th><th>What happens</th></tr></thead><tbody>
