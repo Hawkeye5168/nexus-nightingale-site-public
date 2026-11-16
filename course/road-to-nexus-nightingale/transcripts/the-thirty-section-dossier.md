@@ -8,6 +8,8 @@ Scope: research update, not medical advice
 
 ---
 
+**Update, 16 November 2026:** All dossiers now carry the v2 review additions. The page counts in this episode are the 10 November v1 snapshot; the current reference dossiers are longer. External clinical review remains pending.
+
 **Update, 15 November 2026:** The benchmark and the five reference dossiers in this episode still stand. The current library has 26 source-linked dossiers, including seven loss-of-function editions added on 15 November 2026. The pipeline now starts with a data-first evidence preflight; this audio is the 10 November 2026 record.
 
 **SABRE:**

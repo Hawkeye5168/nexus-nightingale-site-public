@@ -8,6 +8,8 @@ Scope: research update, not medical advice
 
 ---
 
+**Update, 16 November 2026:** The v2 additions increase the seven LOF dossiers from 40 to 48 pages; the 40-page figure spoken here is the 15 November v1 snapshot. External clinical review remains pending.
+
 **SABRE:**
 
 A dossier is not a longer report.
