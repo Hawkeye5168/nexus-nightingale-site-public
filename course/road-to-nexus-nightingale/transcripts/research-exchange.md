@@ -1,0 +1,225 @@
+# The Research Exchange
+
+**Road to NEXUS Nightingale**  
+Episode 05 · 15 November 2026  
+Host: Sabre  
+Style: long-form, conversational, evidence-first  
+Scope: research update, not medical advice
+
+---
+
+**SABRE:**
+
+A disease is not a solo project.
+
+That sounds obvious. It is not how most research is organised.
+
+A rare disease may have a clinician who sees ten patients in a lifetime. A pathologist who knows what the tissue looks like. A geneticist who can interpret the variant. A structural biologist who can see the pocket. A computational group that can build the model. A patient organisation that knows what the families actually need. A trialist who knows why the last study failed.
+
+Each of those people may be excellent. Each may be working on the same question. And many of them will never meet.
+
+That is the gap I want to talk about in this episode.
+
+Not a gap in data. A gap in connection.
+
+We built something called the Research Exchange. It is a consent-based way for clinicians, scientists and research organisations to find each other around a specific question, without scraping profiles, without publishing private email addresses, and without turning patients into a contact list.
+
+The first version is focused on EGFR-mutant NSCLC resistance. That is deliberate. A broad directory sounds impressive and is usually useless. A narrow question with real clinical friction is a better place to start.
+
+But the principle is bigger than one cancer.
+
+The principle is: the person who can test the question may not be in the room where the question was written.
+
+And if we can shorten the distance between those two rooms, even a little, the dossier becomes more than a document. It becomes a route to an experiment.
+
+Let me start with why this is hard.
+
+Research is full of adjacent expertise. The oncologist sees the patient. The pathologist sees the tissue. The radiologist sees the image. The ctDNA lab sees the shed DNA. The structural biologist sees the protein. The medicinal chemist sees the molecule. The access researcher sees the system that decides who gets it.
+
+Each perspective is partial. Each is necessary.
+
+Let me make that concrete, without using a real patient.
+
+Imagine a person whose lung cancer has progressed on an EGFR inhibitor. The oncologist knows the clinical history. The pathologist has a tissue sample from two years ago and a new biopsy that is small and difficult. The ctDNA laboratory has a blood result with a variant fraction that may or may not reflect the tumour. The structural biologist has a model of the kinase domain and a hypothesis about why the drug no longer fits. The trialist knows that the eligible cohort is defined by a test that is not run in every hospital.
+
+Each of them has a piece. None of them has the whole picture.
+
+Now imagine that the oncologist wants to know whether the new ctDNA result is real, or whether it is an artefact of the assay. The ctDNA lab wants to know whether the clinical progression matches the variant. The pathologist wants to know whether the tissue is adequate for the question. The structural biologist wants to know whether the mutation is actually in the relevant clone. The trialist wants to know whether the patient would meet a cohort definition that is still being written.
+
+Those conversations do not require a new database. They require an introduction.
+
+But they also require trust. The oncologist does not want to send a patient's history to a stranger. The ctDNA lab does not want its method misrepresented. The pathologist does not want a tissue image circulated without consent. The structural biologist does not want a model treated as a measurement.
+
+That is why the Exchange is not a message board.
+
+It is a consent layer around a professional introduction.
+
+The profile is deliberately short. Role. Institution. Public affiliation. Research interests. The collaboration sought. A conflict statement.
+
+Not a CV. Not a list of every paper. Not a personal biography. Not a patient story.
+
+The question is the important part. "I work on resistance mechanisms in EGFR-mutant NSCLC and I am looking for a ctDNA group that can help define a comparable cohort." That is useful. "I am a researcher interested in cancer" is not.
+
+The institution is important because it lets the other person check that you are who you say you are. A public institutional page or an ORCID is enough. We do not need a private email. We do not need a phone number. We do not need a copy of your passport.
+
+The conflict statement is important because the Exchange is not a place to hide a commercial relationship. If you work for a company with an interest in the answer, say so. If you have a patent, say so. If you have a competing programme, say so. That does not disqualify you. It lets the other person decide.
+
+And the introduction is relayed. That means a human on our side reads the request, checks that it is specific and appropriate, and passes it on. It does not mean we endorse the person. It does not mean we vouch for the science. It means we have not automated a mass email.
+
+That manual step is a feature. It is slower. It is also the only way to keep the exchange from becoming a spam channel.
+
+Why not just use an existing social network?
+
+Because a general network is designed for reach, not for consent. It rewards visibility. It mixes professional updates with opinions, job posts and advertising. It does not verify affiliation. It does not give you a clean, specific, removable profile. And it does not give either side a simple way to say: introduce me to this question, not to this person's entire network.
+
+A conference is better. A conference is curated, and the conversations are real. But a conference happens once a year, in one place, and costs money to attend. The person you need may not be there.
+
+The Exchange is not trying to replace either. It is trying to fill the gap between them: a small, consent-based, question-first introduction layer that works between conferences.
+
+It is also not a patient-matching service. That distinction matters.
+
+The Exchange is not a patient-matching service. It is for professional collaboration, not individual clinical advice. It cannot make a diagnosis, recommend a treatment, or arrange access to an unapproved therapy.
+
+A patient organisation can be part of the conversation, but only as an organisation with a public role, not as a source of patient records. The Exchange does not publish patient data, and it does not ask for it.
+
+There is also a difference between a connection and a collaboration.
+
+A connection is an introduction. A collaboration is work: a shared protocol, a replicated assay, a joint dataset, a paper, a grant, a trial concept. The Exchange can create the first. It cannot manufacture the second.
+
+So we should not measure success by the number of profiles. We should measure it by the number of introductions that turn into a concrete next step.
+
+That is a slower metric. It is also the only one that means anything.
+
+The broader hope is that the same pattern can work across the library.
+
+A rare-disease dossier may identify a diagnostic gap that a clinical geneticist can help close. A cancer dossier may identify a resistance mechanism that a structural biologist and a ctDNA lab can attack together. An infectious-disease dossier may identify a diagnostic or countermeasure gap that a public-health lab can test.
+
+The Exchange does not need a thousand categories. It needs one question at a time, with the right two or three people in the room.
+
+That is how it can grow without becoming a directory.
+
+And that is why the first cohort is small.
+
+The founding cohort is open, and there are no published profiles yet. We will not fill it with names from papers, conference lists or hospital pages. We will not invent a partner. We will not pretend that a public network is an endorsement.
+
+The first profile will appear only when a person gives explicit consent and their public affiliation is checked.
+
+If that is you, the invitation is simple: tell us the question, tell us what you can offer, and tell us what kind of collaboration you want.
+
+Not your whole CV. Not a sales pitch. One question.
+
+That is how trust starts.
+
+The first questions are in EGFR-mutant NSCLC resistance. For example: the structural biology of C797S. MET assay concordance across laboratories. How to define a ctDNA cohort that is comparable between sites. What happens after osimertinib in different access settings. Which candidate modalities deserve a closer review.
+
+Those are not abstract questions. They are the kind of questions that get stuck because the right two people have not met.
+
+And that is the first thing the exchange is designed to fix.
+
+Not by promising a match. By making the introduction possible.
+
+Let me explain the steps, because the details are where trust lives.
+
+Step one: express interest. A person sends a short professional profile and the collaboration they want. Not a CV. Not a list of every paper. The specific question they want to work on.
+
+Step two: check affiliation. We confirm the public institutional page or ORCID. We do not publish a private email. We do not ask for a patient record. We do not take a profile on trust just because it sounds impressive.
+
+Step three: publish with consent. The profile is short: role, institution, interests, collaboration sought, conflict statement. The person approves the text before it appears. They can remove it later.
+
+Step four: relay the introduction. If someone wants to connect, we relay the request. We do not hand over a contact list. We do not automate a mass introduction. We do not sell the introduction.
+
+That last point matters. The exchange is not a lead-generation business. It is a trust mechanism. If we start treating introductions as inventory, we destroy the thing that makes them useful.
+
+The same rule applies to the public networks we list on the page. IASLC, ETOP, Cancer Research UK, the ECMC network. They are public starting points, not partners, not endorsements, not a claim that they have joined anything.
+
+We have to be careful with language here. It is easy to imply a partnership by putting a logo on a page. We are not doing that. A public network is a public network. An endorsement is a decision that only the institution can make.
+
+Now, why start with NSCLC?
+
+Because resistance is a team problem with a clear clinical edge.
+
+A patient responds to an EGFR inhibitor. Then the tumour finds a way around it. The resistance may be a new mutation, a bypass pathway, a histological transformation, or something the assay does not capture. The oncologist sees the progression. The pathologist sees the tissue. The ctDNA lab sees the variant fraction. The structural biologist sees why a drug no longer fits. The trialist sees which cohort might answer the question.
+
+No single person sees the whole thing.
+
+That is the kind of problem where an introduction can change the next experiment.
+
+And it is the kind of problem where a bad introduction is worse than none. A patient cannot be handed around. A researcher does not want to be spammed. A clinician does not want to be quoted out of context. So consent, affiliation and a relay are not bureaucracy. They are the conditions that make the conversation possible.
+
+The broader hope is that the same pattern can work for other diseases.
+
+Not by opening a thousand directories. By starting with one question where the gap is real, and building the trust layer before the scale.
+
+A rare disease may need a clinician, a geneticist, a structural biologist and a patient organisation in the same conversation. A cancer may need a pathologist, a ctDNA group and a trialist. An infectious disease may need a diagnostics lab, a clinical team and a countermeasure group.
+
+The Exchange does not decide who should collaborate. It makes it possible for the people who already want to collaborate to find each other.
+
+That is a modest claim. It is also a useful one.
+
+There is a temptation, when building something like this, to measure success by the number of profiles. That is the wrong metric. A directory with a thousand names and no conversations is a failure. A directory with ten names and one real collaboration is a success.
+
+So the metric is not sign-ups. It is introductions that lead to a concrete next step: a shared assay, a joint protocol, a replicated analysis, a grant application, a paper, a trial concept.
+
+That is what we will be watching.
+
+And if the Exchange does not produce that, we should say so. Not keep adding profiles to hide the fact that the model is not working.
+
+The same honesty rule we apply to dossiers applies here. A connection is not a collaboration until something happens. A profile is not a partnership. A public network is not an endorsement. An introduction is not a result.
+
+We should be able to tell the difference.
+
+There is also a privacy rule that is not negotiable.
+
+No patient data. No private email addresses. No phone numbers. No scraped profiles. No names taken from papers and published without consent. No implication that a clinician or institution has joined when they have not.
+
+The initial contact goes through a Sabre-Tek address. The person can withdraw at any time. The profile can be removed. The introduction can be declined.
+
+That is not just compliance. It is the only way a busy clinician will trust the page enough to use it.
+
+And it is the only way the privacy rule can be credible: this is not a recruitment funnel.
+
+The Exchange is for professionals who want to find each other. It is not for patients looking for a second opinion, and it is not a place to post identifiable case details. The public page says that plainly.
+
+So what does success look like in twelve months?
+
+One: a small number of profiles that are real, consented and current.
+
+Two: a handful of introductions that turn into a concrete conversation.
+
+Three: at least one collaboration that produces something an outsider can see: a shared dataset, a methods note, a joint experiment, a review, a grant.
+
+Four: a clear record of what did not work. If a question attracted no one, that is information. It may mean the question was too broad, the wrong community was invited, or the timing was wrong.
+
+Five: no privacy incident. No scraped profile. No patient data. No implied endorsement.
+
+That is a real scorecard.
+
+The Exchange is not the whole answer to translational research. It is a small piece of infrastructure. But it is the piece that turns a dossier from a static document into an invitation.
+
+A dossier can say: here is the evidence, here is the gap, here is the question.
+
+The Exchange can say: here is a person who can help you test it.
+
+That is the link I want.
+
+And it starts with a question, not a directory.
+
+If you are working on EGFR-mutant NSCLC resistance, or on a rare disease where the right expert is in another city, another institution, or another country, the founding cohort is open. There are no published profiles yet. That is deliberate. The first profile will appear only when a person gives explicit consent and their public affiliation is checked.
+
+If that is you, write to us with the subject Research Exchange. Tell us the question, not your entire CV. Tell us what kind of collaboration you want. Tell us what you can offer, and what you need.
+
+And if you are not sure, that is fine. A good introduction starts with a clear question, not a sales pitch.
+
+The Exchange is a hope, not a promise. It is a way of connecting people who are already working on the same things, without pretending that a website can manufacture trust.
+
+Trust is built one introduction at a time.
+
+That is the work.
+
+We are Sabre-Tek. We are the Light.
+
+Thanks for listening.
+
+---
+
+*Research update, not medical advice. No clinical or regulatory claim is made. The voice is synthetic. All results are computational unless explicitly labelled experimental.*
