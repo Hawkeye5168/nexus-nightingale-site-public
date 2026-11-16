@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model assurance packs — NEXUS NIGHTINGALE</title>
+<meta name="description" content="Model assurance packs for biomarker classifiers and diagnostic rules: held-out evaluation, fixed false-positive budgets, per-category error tables, null controls and stated limits. Research use only.">
+<link rel="canonical" href="https://sabretek.ltd/assurance/">
+<meta name="theme-color" content="#173F5F"><link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<style>
+:root{--navy:#173F5F;--deep:#0E2A40;--steel:#41789B;--cerulean:#76B5C5;--cyan:#A9CFD9;--slate:#D1D9E0;--off:#F3F7F9;--white:#fff;--green:#1FA88C;--amber:#B07A1E}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--off);color:var(--navy);line-height:1.65}
+a{color:var(--steel);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:rgba(243,247,249,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--slate)}
+nav .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:1px;color:var(--navy)}nav .brand img{width:40px;height:40px;border-radius:50%;object-fit:cover}nav .brand i{font-style:normal;color:var(--steel)}
+nav .links{display:flex;gap:18px;font-size:13px}nav .links a{color:var(--navy);font-weight:600}nav .links a.here{color:var(--steel)}
+header.hero{padding:150px 24px 64px;text-align:center;background:linear-gradient(180deg,var(--off),#E7EEF2)}
+header .inner{max-width:900px;margin:0 auto}.kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin-bottom:18px}header p{font-size:19px;color:var(--steel);max-width:760px;margin:0 auto}
+main{max-width:1100px;margin:0 auto;padding:24px 24px 80px}.lede{max-width:820px;margin:0 auto 34px;font-size:17px;color:#2C4E66}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:18px 0 30px}.card{background:#fff;border:1px solid var(--slate);border-radius:12px;padding:22px;box-shadow:0 6px 20px rgba(23,63,95,.04)}.card h3{font-size:18px;line-height:1.25;margin-bottom:7px}.card p{font-size:14.5px;color:var(--steel);margin:0}
+section.block{margin:42px 0}section.block h2{font-size:27px;line-height:1.2;margin-bottom:10px}section.block p{font-size:15.5px;color:#2C4E66;max-width:80ch;margin-bottom:10px}
+.quote{border-left:4px solid var(--cerulean);padding:8px 0 8px 18px;margin:22px 0;font-size:18px;font-weight:600;color:var(--navy)}
+.note{background:#EDF3F6;border-left:4px solid var(--steel);border-radius:0 8px 8px 0;padding:16px 18px;color:#2F5B76;font-size:14.5px;margin:18px 0}.warn{background:#FFF8E8;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:16px 18px;color:#6b5520;font-size:14.5px;margin:18px 0}
+.sample{background:#fff;border:1px solid var(--slate);border-radius:14px;padding:26px 28px;margin:22px 0;box-shadow:0 8px 28px rgba(23,63,95,.06)}.sample .k{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--steel);font-weight:800;margin-bottom:7px}.sample h3{font-size:22px;margin-bottom:10px}.sample .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}.sample .num{background:var(--off);border:1px solid var(--slate);border-radius:8px;padding:12px 14px}.sample .num b{display:block;font-size:22px;line-height:1.1}.sample .num span{font-size:12px;color:var(--steel);font-weight:700}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}.nums .num{background:#fff;border:1px solid var(--slate);border-radius:8px;padding:14px 16px}.nums .num b{display:block;font-size:24px;line-height:1.1}.nums .num span{font-size:12px;color:var(--steel);font-weight:700}.small{font-size:13.5px;color:var(--steel)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.btn{display:inline-block;background:var(--navy);color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:700}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--slate)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;margin:14px 0;border:1px solid var(--slate);border-radius:8px;overflow:hidden}.table-wrap{overflow-x:auto}th{background:var(--navy);color:#fff;text-align:left;padding:9px 10px;font-size:10.5px;text-transform:uppercase;letter-spacing:.7px}td{padding:9px 10px;border-bottom:1px solid var(--slate);vertical-align:top}tr:last-child td{border-bottom:0}
+footer{background:var(--deep);color:var(--slate);padding:46px 40px 30px}footer .fwrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:30px}footer h4{color:#fff;margin-bottom:10px;font-size:15px}footer p{font-size:13px;margin-bottom:7px}footer a{color:var(--cyan)}footer .legal{border-top:1px solid rgba(169,207,217,.2);margin-top:26px;padding-top:16px;text-align:center;font-size:12px;max-width:1100px;margin-left:auto;margin-right:auto}
+@media(max-width:820px){nav{padding:14px 20px}nav .links{display:none}header.hero{padding:120px 20px 44px}main{padding:16px 18px 56px}footer{padding:36px 20px 24px}footer .fwrap{grid-template-columns:1fr}}
+@media print{nav{position:static}header.hero{padding:40px 0}body{background:#fff}}
+</style></head><body><nav><a class="brand" href="/"><img src="/assets/logo-512.jpg" alt="NEXUS NIGHTINGALE"><span><b>NEXUS</b> <i>NIGHTINGALE</i></span></a><div class="links"><a href="/">Home</a><a href="/pipeline/">Pipeline</a><a href="/diseases/">Diseases</a><a href="/method/">Method</a><a href="/foundations/">Foundations</a><a href="/assurance/" class="here">Assurance</a><a href="/course/">Course</a><a href="/#contact">Contact</a></div></nav>
+<header class="hero"><div class="inner"><div class="kicker">NEXUS NIGHTINGALE · Model assurance</div>
+<h1>A model is not evidence until it survives its control.</h1>
+<p>Assurance packs for biomarker classifiers and diagnostic rules: what the model detects, at an acceptable false-positive budget, on data it did not train on — and what it still does not establish.</p></div></header>
+<main>
+<p class="lede">This is the companion to a NEXUS dossier. The dossier answers <em>what should happen next in this disease or target</em>. The assurance pack answers <em>does this model actually work well enough to be used</em>. Same evidence discipline, different question.</p>
+
+<section class="block"><h2>What a pack gives you</h2>
+<div class="grid">
+<div class="card"><h3>Held-out performance</h3><p>Subject-, patient-, site- or capture-level separation. Not a random row split that leaks the same patient into both sides.</p></div>
+<div class="card"><h3>Fixed operating points</h3><p>Detection at explicit false-positive rates, with the counts behind each number. AUC is shown for contrast, never as the claim.</p></div>
+<div class="card"><h3>Per-category errors</h3><p>One class is allowed to dominate the aggregate only if the table shows it. You see where the false alarms actually come from.</p></div>
+<div class="card"><h3>A null control</h3><p>Permuted labels or a known-identity input, run through the identical pipeline. The result must collapse to the alarm budget.</p></div>
+<div class="card"><h3>Leakage checks</h3><p>Duplicate rows, train/test overlap, identifiers used as features, and the dataset's documented traps.</p></div>
+<div class="card"><h3>A decision, not a dashboard</h3><p>Deploy, iterate or stop — with the evidence that would change the answer and the limits stated plainly.</p></div>
+</div></section>
+
+<section class="block"><h2>What it is not</h2>
+<div class="warn"><strong>Not a clinical or regulatory validation.</strong> A pack is a methods and performance document. It does not diagnose, recommend treatment, establish patient benefit or replace a prospective clinical study, a regulatory submission or an independent clinical reviewer. No patient identifiers are published.</div>
+<p>The pack can recommend <strong>not deploying</strong> the model. A negative result is a valid, useful deliverable. A pack that can only say yes is not an assurance pack.</p></section>
+
+<section class="block"><h2>Sample pack — AX-001</h2>
+<div class="sample"><div class="k">Public-data demonstrator · EEG seizure classifier</div><h3>500 subjects. Subject-held-out. 11% detection at a 1% false-positive budget.</h3>
+<p>AX-001 is a real run on the public UCI Epileptic Seizure Recognition dataset. It is deliberately not a success story: the signal is real but modest, and the pack recommends against deployment.</p>
+<div class="nums"><div class="num"><b>0.687</b><span>AUC mean — contrast only</span></div><div class="num"><b>11%</b><span>TPR at 1% FPR</span></div><div class="num"><b>0.504</b><span>Null AUC</span></div><div class="num"><b>1%</b><span>Null TPR at 1% (collapse)</span></div></div>
+<p class="small">At 5% FPR the TPR is 16%; at 10%, 25%. The per-category table shows most 1% false positives came from one background class.</p>
+<div class="btns"><a class="btn" href="/work/model-assurance-ax-001-2026-11-16/">Read the sample summary →</a><a class="btn ghost" href="/work/model-assurance-ax-001-2026-11-16/AX-001_ASSURANCE_PACK.pdf">Open the pack PDF</a></div></div></section>
+
+<section class="block"><h2>How a client pack is built</h2>
+<div class="table-wrap"><table><thead><tr><th>Step</th><th>What happens</th></tr></thead><tbody>
+<tr><td><strong>1. Question</strong></td><td>One intended use and one decision. The false-positive budget is agreed before the run.</td></tr>
+<tr><td><strong>2. Data</strong></td><td>Client data stays in the client environment unless a written handling agreement says otherwise. Source, checksum and split unit are recorded.</td></tr>
+<tr><td><strong>3. Evaluation</strong></td><td>Held-out unit respected; fixed-FPR table; per-category table; null control; leakage checks.</td></tr>
+<tr><td><strong>4. Pack</strong></td><td>A client-facing PDF/HTML with the decision, numbers, controls, limits and source register. No dashboard, no code licence.</td></tr>
+</tbody></table></div>
+<p>The deliverable is the pack. It is not a model handover, a software licence, a clinical service or a regulatory submission.</p></section>
+
+<section class="block"><h2>Who it is for</h2>
+<p>Diagnostic and biomarker teams with a locked dataset and a classifier, risk score or rule that is being considered for a pilot. The same buyer as a NEXUS dossier, one stage later: the dossier decides the target; the assurance pack tests the instrument.</p>
+<div class="note"><strong>Research use only.</strong> No patient data, clinical advice, diagnosis, treatment recommendation, regulatory approval or claim of patient benefit is provided. A clinical claim needs a named clinical reviewer and the appropriate regulatory pathway.</div>
+<div class="btns"><a class="btn" href="mailto:lee.oulton@sabretek.co.uk?subject=Model%20assurance%20pilot%20enquiry">Discuss a pilot →</a><a class="btn ghost" href="/method/">Read the method and limits →</a></div></section>
+</main><footer><div class="fwrap"><div><h4>NEXUS NIGHTINGALE</h4><p>Source-linked research dossiers and model assurance packs from Sabre-Tek Limited.</p><p>Research use only. Not clinical advice, diagnosis, treatment or regulatory approval.</p></div><div><h4>Explore</h4><p><a href="/diseases/">Dossiers</a> · <a href="/method/">Method</a></p><p><a href="/foundations/">Foundations</a> · <a href="/course/">Course</a></p><p><a href="/#contact">Contact</a></p></div></div><div class="legal">© 2026 Sabre-Tek Limited · Research and teaching use only — not clinical advice.</div></footer></body></html>

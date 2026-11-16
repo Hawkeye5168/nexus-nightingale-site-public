@@ -56,6 +56,7 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
     <a href="/work/dossier-2-0-2026-11-08/">Dossier 2.0</a>
     <a href="/method/" class="here">Method</a>
     <a href="/foundations/">Foundations</a>
+    <a href="/assurance/">Assurance</a>
     <a href="/course/">Course</a>
     <a href="/#contact">Contact</a>
   </div>
@@ -145,10 +146,11 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
     <p>A number is not evidence because it has decimal places. Every model result is read with the control that could have made it fail.</p>
     <ul>
       <li><strong>Fold scores:</strong> the scorer must return <strong>TM 1.0000</strong> for an identical structure. A lower native-versus-native score is a metric bug, not a finding. Published fold scores are supervised recovery against a named construct, not de novo predictions.</li>
-      <li><strong>Classifiers and detectors:</strong> report detections at a fixed false-positive rate (for example 1%, 0.1% and 0.01%), beside the per-category breakdown and a null or label-permutation control. A result that does not collapse under the null is not accepted.</li>
+      <li><strong>Classifiers and detectors:</strong> report detections at a fixed false-positive rate the test set can resolve, beside the per-category breakdown and a null or label-permutation control. A result that does not collapse under the null is not accepted.</li>
       <li><strong>No single aggregate:</strong> AUC, accuracy and F1 can rank models; they do not establish an operating point. They are reported for contrast, never as the claim.</li>
     </ul>
     <p>If the control is missing, the number is held back. The same rule applies to a public score, a dossier figure and a client appendix.</p>
+    <p><a href="/assurance/"><strong>See how the same rule becomes a model assurance pack →</strong></a></p>
   </article>
 
   <article class="outcome">
@@ -210,6 +212,6 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
     </div>
   </div>
   <div class="legal">© 2026 Sabre-Tek Limited. All rights reserved. · Computational research platform — not clinically validated; no regulatory approval.</div>
-<p style="max-width:1160px;margin:18px auto 0;text-align:center;font-size:13px;"><a href="/foundations/" style="color:inherit;text-decoration:underline;">Foundations and support organisations</a> — public signposting, not clinical advice.</p></footer>
+<p style="max-width:1160px;margin:18px auto 0;text-align:center;font-size:13px;"><a href="/foundations/" style="color:inherit;text-decoration:underline;">Foundations and support organisations</a> — public signposting, not clinical advice. · <a href="/assurance/" style="color:inherit;text-decoration:underline;">Model assurance</a> — held-out evaluation, not clinical validation.</p></footer>
 </body>
 </html>
