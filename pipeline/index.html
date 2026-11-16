@@ -217,7 +217,7 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
         <tr><td><strong>Claims across the five reference dossiers</strong></td><td class="num">129</td><td>25–28 claims per reference dossier, each status-marked</td></tr>
         <tr><td><strong>Sources across the five reference dossiers</strong></td><td class="num">153</td><td>30–33 unique sources per reference dossier; no duplicate URLs</td></tr>
         <tr><td><strong>Figures / tables (reference set)</strong></td><td class="num">30 / 37</td><td>At least six factual figures and six quantitative tables per reference dossier</td></tr>
-        <tr><td><strong>Pages across the five reference dossiers</strong></td><td class="num">271</td><td>49–60 printed pages per reference dossier</td></tr>
+        <tr><td><strong>Pages across the five reference dossiers</strong></td><td class="num">320</td><td>58–70 printed pages per reference dossier</td></tr>
         <tr><td><strong>Daily watch entities</strong></td><td class="num">11,657</td><td>Catalogue plus precise dossier watch terms, scanned daily</td></tr>
       </tbody>
     </table></div>
@@ -225,11 +225,11 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
     <div class="table-wrap"><table class="data-table">
       <thead><tr><th>Dossier</th><th class="num">Version</th><th class="num">Pages</th><th class="num">Sections</th><th class="num">Sources</th><th class="num">Claims</th><th class="num">Tables</th><th class="num">Figures</th></tr></thead>
       <tbody>
-        <tr><td><strong>Dengue</strong></td><td class="num">4.4</td><td class="num">60</td><td class="num">31</td><td class="num">33</td><td class="num">26</td><td class="num">7</td><td class="num">6</td></tr>
-        <tr><td><strong>Friedreich ataxia</strong></td><td class="num">4.0</td><td class="num">51</td><td class="num">30</td><td class="num">30</td><td class="num">25</td><td class="num">8</td><td class="num">6</td></tr>
-        <tr><td><strong>NSCLC / EGFR-mutant</strong></td><td class="num">4.0</td><td class="num">49</td><td class="num">30</td><td class="num">30</td><td class="num">25</td><td class="num">10</td><td class="num">6</td></tr>
-        <tr><td><strong>Gaucher disease</strong></td><td class="num">2.0</td><td class="num">58</td><td class="num">30</td><td class="num">30</td><td class="num">28</td><td class="num">6</td><td class="num">6</td></tr>
-        <tr><td><strong>Fabry disease</strong></td><td class="num">2.0</td><td class="num">53</td><td class="num">31</td><td class="num">30</td><td class="num">25</td><td class="num">6</td><td class="num">6</td></tr>
+        <tr><td><strong>Dengue</strong></td><td class="num">4.4</td><td class="num">70</td><td class="num">31</td><td class="num">33</td><td class="num">26</td><td class="num">7</td><td class="num">6</td></tr>
+        <tr><td><strong>Friedreich ataxia</strong></td><td class="num">4.0</td><td class="num">60</td><td class="num">30</td><td class="num">30</td><td class="num">25</td><td class="num">8</td><td class="num">6</td></tr>
+        <tr><td><strong>NSCLC / EGFR-mutant</strong></td><td class="num">4.0</td><td class="num">58</td><td class="num">30</td><td class="num">30</td><td class="num">25</td><td class="num">10</td><td class="num">6</td></tr>
+        <tr><td><strong>Gaucher disease</strong></td><td class="num">2.0</td><td class="num">69</td><td class="num">30</td><td class="num">30</td><td class="num">28</td><td class="num">6</td><td class="num">6</td></tr>
+        <tr><td><strong>Fabry disease</strong></td><td class="num">2.0</td><td class="num">63</td><td class="num">31</td><td class="num">30</td><td class="num">25</td><td class="num">6</td><td class="num">6</td></tr>
       </tbody>
     </table></div>
     <p>The source register is unique, every claim is status-marked, and every section states what would change its conclusion. New papers and trials are scanned daily and enter a review queue; they do not silently rewrite a claim.</p>
@@ -241,6 +241,7 @@ footer{background:var(--navy-deep);color:var(--slate);padding:52px 40px 34px}foo
     <p>Every dossier now begins with the evidence, not with a structure or a design. The preflight checks nine evidence classes and up to 81 source checks per target, records every missing class as a gap, and cleans the sequence alignment where one exists. The source records are loaded before the structural and therapeutic stages, so the dossier starts from the best available evidence rather than an empty layer.</p>
     <p>The first pass exposed real gaps: a 676-residue viral glycoprotein with no full-length experimental structure, a viral family with only construct-level structures, and an alignment too shallow for a reliable contact map. Those are now recorded as <b>BLOCKED</b> or <b>PARTIAL</b> rather than being turned into false positives. The deep sequence work expanded one viral glycoprotein alignment to <b>3,887 aligned sequences</b>; the cleaned subset was still not enough for a validated contact map, so no contact claim was published.</p>
     <p>The same data-first path was used for the seven loss-of-function dossiers: Woodhouse-Sakati syndrome, Zellweger spectrum disorder, LAMA2-related muscular dystrophy, Aicardi-Goutieres syndrome, Warsaw breakage syndrome, ribose-5-phosphate isomerase deficiency and GFER-related mitochondrial disease.</p>
+    <p><strong>v2 review additions.</strong> Every dossier now also carries an external-review record, a foundation and patient-priority record, a source ledger, an access note, an authorship/conflict statement and an evidence-synthesis statement. The external-review record is currently <b>pending</b> for every dossier; the documents are not described as externally reviewed or clinically validated.</p>
   </section>
 
   <section class="outcome">
