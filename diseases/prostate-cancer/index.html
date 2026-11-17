@@ -6,14 +6,14 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prostate cancer — NEXUS NIGHTINGALE public release</title>
-<meta name="description" content="Prostate cancer and the androgen receptor: burden, diagnosis, genomics, AR biology, treatment landscape, trial evidence and stated limits. Public release of PRCA-001 v1.0; research use only.">
+<meta name="description" content="Prostate cancer and the androgen receptor: burden, diagnosis, genomics, AR biology, treatment landscape, trial evidence and stated limits. Public release of PRCA-001 v1.1; research use only.">
 <link rel="canonical" href="https://sabretek.ltd/diseases/prostate-cancer/">
 <meta name="theme-color" content="#173F5F">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Prostate cancer — NEXUS NIGHTINGALE public release">
-<meta property="og:description" content="Prostate cancer and the androgen receptor: burden, diagnosis, genomics, AR biology, treatment landscape, trial evidence and stated limits. Public release of PRCA-001 v1.0; research use only.">
+<meta property="og:description" content="Prostate cancer and the androgen receptor: burden, diagnosis, genomics, AR biology, treatment landscape, trial evidence and stated limits. Public release of PRCA-001 v1.1; research use only.">
 <meta property="og:url" content="https://sabretek.ltd/diseases/prostate-cancer/">
 <meta property="og:image" content="https://sabretek.ltd/assets/og-image.png">
 <style>
@@ -122,7 +122,7 @@
 <nav><a class="brand" href="/"><img src="/assets/logo-512.jpg" width="40" height="40" alt="NEXUS NIGHTINGALE"><span><b>NEXUS</b> <i>NIGHTINGALE</i></span></a><div class="links"><a href="/">Home</a><a href="/pipeline/">Pipeline</a><a href="/diseases/">Diseases</a><a href="/method/">Method</a><a href="/foundations/">Foundations</a>
     <a href="/assurance/">Assurance</a><a href="/course/">Course</a><a href="/#contact">Contact</a></div></nav>
 <header class="dhero"><div class="wrap">
-  <div class="kicker">Public release · PRCA-001 v1.0 · 16 November 2026</div>
+  <div class="kicker">Public release · PRCA-001 v1.1 · 17 November 2026</div>
   <h1>Prostate cancer</h1>
   <p class="sub">Androgen-receptor biology, diagnostic pathway and treatment landscape — with the data gaps stated.</p>
   <div class="badges"><span class="badge ok">Source-linked research release</span><span class="badge">AR · P10275</span><span class="badge">56 pages</span><span class="badge">30 sources</span><span class="badge">29 claims</span><span class="badge">6 figures</span><span class="badge">8 tables</span><span class="badge">Research use only</span></div>
@@ -136,7 +136,7 @@
       <div class="fact"><div class="k">Target</div><div class="v">Androgen receptor (AR)<small>UniProt P10275 · 920 aa · 99,188 Da</small></div></div>
       <div class="fact"><div class="k">Global burden</div><div class="v">1,546,112 cases / 419,849 deaths<small>GLOBOCAN 2024 estimate</small></div></div>
       <div class="fact"><div class="k">UK burden</div><div class="v">57,898 cases / 12,300 deaths per year<small>Cancer Research UK</small></div></div>
-      <div class="fact"><div class="k">Data preflight</div><div class="v">81 nodes · 51 PASS / 28 PARTIAL / 2 BLOCKED<small>No clean MSA for P10275</small></div></div>
+      <div class="fact"><div class="k">Data preflight</div><div class="v">81 nodes · 51 PASS / 28 PARTIAL / 2 BLOCKED<small>Clean MSA built 17 Nov: 61 × 892; DCA not yet run</small></div></div>
       <div class="fact"><div class="k">Structure</div><div class="v">1GS4 · 248-aa LBD construct<small>Not the full 920-aa receptor</small></div></div>
       <div class="fact"><div class="k">Supervised fold</div><div class="v">TM 0.9954 / RMSD 0.52 Å<small>Template recovery, not blind prediction</small></div></div>
     </div>
@@ -159,8 +159,8 @@
   <section class="block">
     <h2><span class="num">04</span>How NEXUS routes it</h2>
     <div class="route">
-      <div class="pillrow"><span class="pill yes">Target resolved: AR / P10275</span><span class="pill">Data-first preflight</span><span class="pill no">No clean MSA</span><span class="pill no">Construct-only structure</span></div>
-      <p><strong>Stage 0 — data first.</strong> The NEXUS data plane probed 81 source nodes before any structural or therapeutic step. It returned 51 PASS, 28 PARTIAL and 2 BLOCKED. These are availability signals, not clinical certainty.</p>
+      <div class="pillrow"><span class="pill yes">Target resolved: AR / P10275</span><span class="pill">Data-first preflight</span><span class="pill yes">Clean MSA built</span><span class="pill no">Construct-only structure</span></div>
+      <p><strong>Stage 0 — data first.</strong> The NEXUS data plane probed 81 source nodes before any structural or therapeutic step. It returned 51 PASS, 28 PARTIAL and 2 BLOCKED. These are availability signals, not clinical certainty. A clean AR MSA was built on 17 November 2026 (81 raw sequences × 920 columns; 61 clean sequences × 892 columns). DCA has not yet been run.</p>
       <p><strong>Structure.</strong> The supervised path resolved 1GS4 and returned TM 0.9954 / RMSD 0.52 Å. That is recovery of a 248-aa ligand-binding-domain construct, not a blind fold of the 920-aa receptor.</p>
       <p><strong>Mechanism.</strong> The automatic router returned “UNKNOWN (RESEARCH NEEDED)”. This dossier therefore makes no molecule, efficacy or treatment recommendation. The honest output is a focused evidence review.</p>
       <p class="why">The pipeline is disease-agnostic. Prostate cancer is a new indication, not a new platform claim.</p>
@@ -191,7 +191,7 @@
   <section class="block">
     <h2><span class="num">07</span>Source checks and stated gaps</h2>
     <p>The dossier passed the Sabre-Tek Dossier 2.0 benchmark audit: 31 substantive sections, six appendices, 30 sources, 29 claims, eight tables and six figures. It is an internal, source-linked review.</p>
-    <div class="warnbox"><strong>Not completed:</strong> independent clinical review, a foundation or patient-priority review, a clean MSA for P10275, a full-length AR structure, and a complete UK access assessment. These are stated gaps, not hidden footnotes.</div>
+    <div class="warnbox"><strong>Not completed:</strong> independent clinical review, a foundation or patient-priority review, a completed DCA from the clean MSA, a full-length AR structure, and a complete UK access assessment. These are stated gaps, not hidden footnotes.</div>
     <p>The v2 review additions are present: external-review record, foundation/patient-priority record, source ledger, access note, authorship/COI and evidence-synthesis statement. External review is <strong>NOT_STARTED</strong>; the foundation pack is <strong>NOT_OBTAINED</strong>.</p>
   </section>
 
@@ -233,7 +233,7 @@
 <footer>
   <div class="fwrap">
     <div><p><strong style="color:#fff;">NEXUS NIGHTINGALE</strong> — a Sabre-Tek Limited program.</p>
-      <p>Public release PRCA-001 v1.0 · 16 November 2026 · 30 sources · 29 claims.</p></div>
+      <p>Public release PRCA-001 v1.1 · 17 November 2026 · 30 sources · 29 claims.</p></div>
     <div><p><a href="/diseases/">All diseases</a></p><p><a href="/work/dossier-2-0-2026-11-08/">Dossier 2.0</a></p><p><a href="/#contact">Contact</a></p></div>
   </div>
   <div class="legal">© 2026 Sabre-Tek Limited. · Research and teaching use only — not clinical advice.</div>
