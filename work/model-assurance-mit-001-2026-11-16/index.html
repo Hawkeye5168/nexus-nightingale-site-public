@@ -31,7 +31,7 @@ footer{background:var(--deep);color:var(--slate);padding:46px 40px 30px}footer .
 <header class="hero"><div class="inner"><div class="kicker">Model assurance positive control · MIT-001 · 16 November 2026</div>
 <h1>Ventricular ectopy classifier</h1><p>Record-held-out on MIT-BIH. A normal-baseline calibrated control that passes at a declared 5% budget — and reports that the 1% target is not met.</p></div></header>
 <main>
-<div class="note"><strong>Record-held-out, not a full patient map.</strong> 48 MIT-BIH records, 46 groups (201/202 grouped). No patient names; no clinical review. The threshold uses a labelled normal baseline from each held-out record, and those calibration beats are excluded from the evaluation.</div>
+<div class="note"><strong>Record-held-out, not a clinical validation.</strong> 48 MIT-BIH records from 47 subjects; 201/202 grouped; record 232 has no N/V beats, so the V-versus-N evaluation uses 47 records and 46 groups. No patient names; no clinical review. The threshold uses a labelled normal baseline from each held-out record, and those calibration beats are excluded from the evaluation.</div>
 <section class="block"><h2>The result</h2>
 <div class="nums"><div class="num"><b>0.992</b><span>AUC mean</span></div><div class="num"><b>94.1%</b><span>TPR at 4.18% actual FPR</span></div><div class="num"><b>0.493</b><span>Null AUC</span></div><div class="num"><b>5.0%</b><span>Null TPR at its own FPR</span></div></div>
 <table><thead><tr><th>Calibration threshold</th><th>Actual FPR</th><th>TPR</th><th>TP</th><th>FN</th><th>FP</th><th>TN</th></tr></thead><tbody>
@@ -39,8 +39,8 @@ footer{background:var(--deep);color:var(--slate);padding:46px 40px 30px}footer .
 <tr><td>5% normal baseline</td><td>10.15%</td><td>97.5%</td><td>6,444</td><td>163</td><td>6,838</td><td>60,531</td></tr>
 <tr><td>10% normal baseline</td><td>14.78%</td><td>98.5%</td><td>6,510</td><td>97</td><td>9,955</td><td>57,414</td></tr>
 </tbody></table>
-<p><strong>Declared budget: 5%.</strong> The 1% calibration threshold gives 4.18% actual FPR, inside the 5% budget, at 94.1% TPR. The 1% target itself is not met and is not claimed. Null AUC is 0.493; its detection is 5.0% at its own 5.1% false-positive rate, so the signal collapses.</p>
-<div class="btns"><a class="btn" href="MIT-001_ASSURANCE_PACK_2026-11-16.pdf?v=20261116">Open the 9-page pack PDF →</a><a class="btn ghost" href="/assurance/">Model assurance packs →</a></div></section>
+<p><strong>Declared budget: 5%.</strong> The 1% calibration threshold gives 4.18% actual FPR, inside the 5% budget, at 94.1% TPR. The 1% target itself is not met and is not claimed. A single global threshold gives 18.4% actual FPR at the 1% target, which is why the control uses a per-record normal baseline. Null AUC is 0.493; its detection is 5.0% at its own 5.1% false-positive rate, so the signal collapses.</p>
+<div class="btns"><a class="btn" href="MIT-001_ASSURANCE_PACK_2026-11-16.pdf?v=20261116b">Open the 9-page pack PDF →</a><a class="btn ghost" href="/assurance/">Model assurance packs →</a></div></section>
 <section class="block"><h2>Why this control exists</h2><p>The earlier BC-001 control was sample-level and could not answer a reviewer’s patient-grouping objection. MIT-001 is split by record/patient group and calibrated on a normal baseline; it is the positive control that answers that objection without pretending to be a clinical validation.</p>
 <div class="warn"><strong>Not a clinical claim.</strong> This is a V-versus-N research control, not a diagnosis, treatment recommendation, regulatory submission or evidence of patient benefit. Other arrhythmia symbols are excluded.</div></section>
 <section class="block"><h2>Source</h2><p>MIT-BIH Arrhythmia Database v1.0.0, DOI <a href="https://doi.org/10.13026/C2F305">10.13026/C2F305</a>; PhysioNet. Full source register, archive SHA-256 and protocol are in the pack.</p></section>
