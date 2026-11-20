@@ -10,6 +10,8 @@ Scope: research update, not medical advice
 
 **Update, 16 November 2026:** The v2 additions increase the seven LOF dossiers from 40 to 48 pages; the 40-page figure spoken here is the 15 November v1 snapshot. External clinical review remains pending.
 
+**Update, 20 November 2026 — section counts:** The benchmark floor remains thirty substantive sections. The current full dossiers run **36–46 sections**: most have 36, DENV-001 has 38 and EBOLA-001 has 46. This audio is the 15 November record and has not been re-voiced.
+
 **SABRE:**
 
 A dossier is not a longer report.

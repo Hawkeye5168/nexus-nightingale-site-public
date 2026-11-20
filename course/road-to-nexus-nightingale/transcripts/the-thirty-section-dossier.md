@@ -1,4 +1,4 @@
-# The Thirty-Section Dossier
+# The Dossier Benchmark
 
 **Road to NEXUS Nightingale**  
 Episode 03 · 10 November 2026  
@@ -11,6 +11,8 @@ Scope: research update, not medical advice
 **Update, 16 November 2026:** All dossiers now carry the v2 review additions. The page counts in this episode are the 10 November v1 snapshot; the current reference dossiers are longer. External clinical review remains pending.
 
 **Update, 16 November 2026 — model assurance:** The core benchmark remains thirty substantive sections. A dossier that publishes a model result adds a thirty-first part, the model-assurance record, and must pass the release gate. The PRCA-001 v3 test dossier has thirty-eight parts because it already had thirty-seven core sections; thirty-one is the floor for a model-bearing dossier. This audio is still the 10 November 2026 record and has not been re-voiced.
+
+**Update, 20 November 2026 — section counts:** The benchmark floor remains thirty substantive sections. The current full dossiers run **36–46 sections**: most have 36, DENV-001 has 38 and EBOLA-001 has 46. The five reference dossiers in this recording were 30–31 sections at the 10 November cut. This audio has not been re-voiced.
 
 **Update, 15 November 2026:** The benchmark and the five reference dossiers in this episode still stand. The current library has 26 source-linked dossiers, including seven loss-of-function editions added on 15 November 2026. The pipeline now starts with a data-first evidence preflight; this audio is the 10 November 2026 record.
 
