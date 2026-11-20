@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/prostate-cancer/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -51,14 +51,14 @@
   
   <url>
     <loc>https://sabretek.ltd/diseases/angelman-syndrome/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://sabretek.ltd/diseases/duchenne-muscular-dystrophy/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/sickle-cell-disease/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -102,7 +102,7 @@
   
   <url>
     <loc>https://sabretek.ltd/diseases/lesch-nyhan-syndrome/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -141,18 +141,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://sabretek.ltd/work/orphan-rebuilds-2026-11-14/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/primary-hyperoxaluria-type-1/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/work/orphan-rebuilds-2026-11-14/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/primary-hyperoxaluria-type-1/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://sabretek.ltd/diseases/fields-disease/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/mapt-related-tauopathy/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/miller-dieker-syndrome/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/action-myoclonus-renal-failure-syndrome/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/myhre-syndrome/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/sod1-als/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/mapt-related-tauopathy/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/miller-dieker-syndrome/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/action-myoclonus-renal-failure-syndrome/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/myhre-syndrome/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/sod1-als/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://sabretek.ltd/diseases/syngap1-related-intellectual-disability/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/fnip1-deficiency/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/fnip1-deficiency/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://sabretek.ltd/work/verification-2026-11-14/</loc><lastmod>2026-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sabretek.ltd/diseases/ebola/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sabretek.ltd/diseases/ebola/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://sabretek.ltd/diseases/woodhouse-sakati/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://sabretek.ltd/diseases/zellweger-spectrum/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://sabretek.ltd/diseases/lama2-muscular-dystrophy/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
