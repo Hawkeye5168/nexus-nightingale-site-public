@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sabretek.ltd/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/pipeline/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -44,28 +44,18 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/foundations/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/alpha-1-antitrypsin-deficiency/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://sabretek.ltd/diseases/angelman-syndrome/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/cystic-fibrosis/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://sabretek.ltd/diseases/duchenne-muscular-dystrophy/</loc>
     <lastmod>2026-11-13</lastmod>
@@ -74,7 +64,7 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/spinal-muscular-atrophy/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,76 +76,41 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/fabry-disease/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/nsclc/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/friedreich-ataxia/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sabretek.ltd/diseases/gaucher-disease/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/huntington-disease/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/hutchinson-gilford-progeria/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
+  
   <url>
     <loc>https://sabretek.ltd/diseases/lesch-nyhan-syndrome/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/myotonic-dystrophy-1/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/neonatal-diabetes/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/pompe-disease/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/ttr-amyloidosis/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sabretek.ltd/diseases/wilson-disease/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
+  
+  
+  
+  
   <url>
     <loc>https://sabretek.ltd/course/road-to-nexus-nightingale/</loc>
     <lastmod>2026-11-06</lastmod>
@@ -176,13 +131,13 @@
   </url>
   <url>
     <loc>https://sabretek.ltd/work/dossier-2-0-2026-11-08/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sabretek.ltd/research-exchange/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -209,4 +164,16 @@
 <url><loc>https://sabretek.ltd/work/model-assurance-mit-001-2026-11-16/</loc><lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://sabretek.ltd/work/model-assurance-bc-001-2026-11-16/</loc><lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://sabretek.ltd/work/model-assurance-ax-001-2026-11-16/</loc><lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://sabretek.ltd/work/revalidation-2026-11-20/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sabretek.ltd/diseases/dengue/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
